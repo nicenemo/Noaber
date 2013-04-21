@@ -6,9 +6,9 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Runtime.CompilerServices;
 
-    /// <summary>
-    /// Extensions for Tuples
-    /// </summary>
+/// <summary>
+/// Extensions for Tuples
+/// </summary>
     public static class TuplesExtensions
     {
 
@@ -73,6 +73,14 @@ using System.Runtime.CompilerServices;
         #endregion
 
         #region "Tuples First Extensions"
+        /// <summary>
+        /// Firsts element of a Tuple, alias of <c>Item1</c> property of the Tuple
+        /// <para><b>PRECONDITION:</b>value is not null</para>
+        /// </summary>
+        /// <typeparam name="T1">The type of the 1.</typeparam>
+        /// <param name="value">tuple to get the first element from</param>
+        /// <returns>The value of of Item1</returns>
+        /// <exception cref="System.ArgumentNullException">value;value should not be null</exception>
         public static T1 First<T1>(this Tuple<T1> value)
         {
             if (value == null)
