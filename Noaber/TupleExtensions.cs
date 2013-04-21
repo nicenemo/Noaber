@@ -77,7 +77,7 @@ using System.Runtime.CompilerServices;
         /// Firsts element of a Tuple, alias of <c>Item1</c> property of the Tuple
         /// <para><b>PRECONDITION:</b>value is not null</para>
         /// </summary>
-        /// <typeparam name="T1">The type of the 1.</typeparam>
+        /// <typeparam name="T1">The type of the the first element of the Tuple</typeparam>
         /// <param name="value">tuple to get the first element from</param>
         /// <returns>The value of of Item1</returns>
         /// <exception cref="System.ArgumentNullException">value;value should not be null</exception>
