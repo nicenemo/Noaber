@@ -5163,7 +5163,7 @@ using System.Runtime.CompilerServices;
             {
                 throw new ArgumentNullException("f", "f is null");
             }
-            decimal sum = decimal.MinValue;
+            decimal sum = 0;
             int i = value.Count();
             while (0 < i)
             {
@@ -5186,7 +5186,7 @@ using System.Runtime.CompilerServices;
             {
                 throw new ArgumentNullException("f", "f is null");
             }
-            decimal sum = decimal.MinValue;
+            decimal sum = 0;
             int i = value.Count();
             while (0 < i)
             {
@@ -5209,7 +5209,7 @@ using System.Runtime.CompilerServices;
             {
                 throw new ArgumentNullException("f", "f is null");
             }
-            decimal sum = decimal.MinValue;
+            decimal sum = 0;
             int i = value.Count();
             while (0 < i)
             {
@@ -5232,7 +5232,7 @@ using System.Runtime.CompilerServices;
             {
                 throw new ArgumentNullException("f", "f is null");
             }
-            decimal sum = decimal.MinValue;
+            decimal sum = 0;
             int i = value.Count();
             while (0 < i)
             {
@@ -5255,7 +5255,7 @@ using System.Runtime.CompilerServices;
             {
                 throw new ArgumentNullException("f", "f is null");
             }
-            decimal sum = decimal.MinValue;
+            decimal sum = 0;
             int i = value.Count();
             while (0 < i)
             {
@@ -5278,7 +5278,7 @@ using System.Runtime.CompilerServices;
             {
                 throw new ArgumentNullException("f", "f is null");
             }
-            decimal sum = decimal.MinValue;
+            decimal sum = 0;
             int i = value.Count();
             while (0 < i)
             {
@@ -5318,7 +5318,7 @@ using System.Runtime.CompilerServices;
             {
                 throw new ArgumentNullException("f", "f is null");
             }
-            decimal? sum = decimal.MinValue;
+            decimal? sum = 0;
             int i = value.Count();
             while (0 < i)
             {
@@ -5344,7 +5344,7 @@ using System.Runtime.CompilerServices;
             {
                 throw new ArgumentNullException("f", "f is null");
             }
-            decimal? sum = decimal.MinValue;
+            decimal? sum = 0;
             int i = value.Count();
             while (0 < i)
             {
@@ -5370,7 +5370,7 @@ using System.Runtime.CompilerServices;
             {
                 throw new ArgumentNullException("f", "f is null");
             }
-            decimal? sum = decimal.MinValue;
+            decimal? sum = 0;
             int i = value.Count();
             while (0 < i)
             {
@@ -5396,7 +5396,7 @@ using System.Runtime.CompilerServices;
             {
                 throw new ArgumentNullException("f", "f is null");
             }
-            decimal? sum = decimal.MinValue;
+            decimal? sum = 0;
             int i = value.Count();
             while (0 < i)
             {
@@ -5422,7 +5422,7 @@ using System.Runtime.CompilerServices;
             {
                 throw new ArgumentNullException("f", "f is null");
             }
-            decimal? sum = decimal.MinValue;
+            decimal? sum = 0;
             int i = value.Count();
             while (0 < i)
             {
@@ -5448,7 +5448,7 @@ using System.Runtime.CompilerServices;
             {
                 throw new ArgumentNullException("f", "f is null");
             }
-            decimal? sum = decimal.MinValue;
+            decimal? sum = 0;
             int i = value.Count();
             while (0 < i)
             {
@@ -5491,7 +5491,7 @@ using System.Runtime.CompilerServices;
             {
                 throw new ArgumentNullException("f", "f is null");
             }
-            int sum = int.MinValue;
+            int sum = 0;
             int i = value.Count();
             while (0 < i)
             {
@@ -5514,7 +5514,7 @@ using System.Runtime.CompilerServices;
             {
                 throw new ArgumentNullException("f", "f is null");
             }
-            int sum = int.MinValue;
+            int sum = 0;
             int i = value.Count();
             while (0 < i)
             {
@@ -5537,7 +5537,7 @@ using System.Runtime.CompilerServices;
             {
                 throw new ArgumentNullException("f", "f is null");
             }
-            int sum = int.MinValue;
+            int sum = 0;
             int i = value.Count();
             while (0 < i)
             {
@@ -5560,7 +5560,7 @@ using System.Runtime.CompilerServices;
             {
                 throw new ArgumentNullException("f", "f is null");
             }
-            int sum = int.MinValue;
+            int sum = 0;
             int i = value.Count();
             while (0 < i)
             {
@@ -5583,7 +5583,7 @@ using System.Runtime.CompilerServices;
             {
                 throw new ArgumentNullException("f", "f is null");
             }
-            int sum = int.MinValue;
+            int sum = 0;
             int i = value.Count();
             while (0 < i)
             {
@@ -5606,7 +5606,7 @@ using System.Runtime.CompilerServices;
             {
                 throw new ArgumentNullException("f", "f is null");
             }
-            int sum = int.MinValue;
+            int sum = 0;
             int i = value.Count();
             while (0 < i)
             {
@@ -5646,7 +5646,7 @@ using System.Runtime.CompilerServices;
             {
                 throw new ArgumentNullException("f", "f is null");
             }
-            int? sum = int.MinValue;
+            int? sum = 0;
             int i = value.Count();
             while (0 < i)
             {
@@ -5672,7 +5672,7 @@ using System.Runtime.CompilerServices;
             {
                 throw new ArgumentNullException("f", "f is null");
             }
-            int? sum = int.MinValue;
+            int? sum = 0;
             int i = value.Count();
             while (0 < i)
             {
@@ -5698,7 +5698,7 @@ using System.Runtime.CompilerServices;
             {
                 throw new ArgumentNullException("f", "f is null");
             }
-            int? sum = int.MinValue;
+            int? sum = 0;
             int i = value.Count();
             while (0 < i)
             {
@@ -5724,7 +5724,7 @@ using System.Runtime.CompilerServices;
             {
                 throw new ArgumentNullException("f", "f is null");
             }
-            int? sum = int.MinValue;
+            int? sum = 0;
             int i = value.Count();
             while (0 < i)
             {
@@ -5750,7 +5750,7 @@ using System.Runtime.CompilerServices;
             {
                 throw new ArgumentNullException("f", "f is null");
             }
-            int? sum = int.MinValue;
+            int? sum = 0;
             int i = value.Count();
             while (0 < i)
             {
@@ -5776,7 +5776,7 @@ using System.Runtime.CompilerServices;
             {
                 throw new ArgumentNullException("f", "f is null");
             }
-            int? sum = int.MinValue;
+            int? sum = 0;
             int i = value.Count();
             while (0 < i)
             {
@@ -5819,7 +5819,7 @@ using System.Runtime.CompilerServices;
             {
                 throw new ArgumentNullException("f", "f is null");
             }
-            long? sum = long.MinValue;
+            long? sum = 0;
             int i = value.Count();
             while (0 < i)
             {
@@ -5845,7 +5845,7 @@ using System.Runtime.CompilerServices;
             {
                 throw new ArgumentNullException("f", "f is null");
             }
-            long? sum = long.MinValue;
+            long? sum = 0;
             int i = value.Count();
             while (0 < i)
             {
@@ -5871,7 +5871,7 @@ using System.Runtime.CompilerServices;
             {
                 throw new ArgumentNullException("f", "f is null");
             }
-            long? sum = long.MinValue;
+            long? sum = 0;
             int i = value.Count();
             while (0 < i)
             {
@@ -5897,7 +5897,7 @@ using System.Runtime.CompilerServices;
             {
                 throw new ArgumentNullException("f", "f is null");
             }
-            long? sum = long.MinValue;
+            long? sum = 0;
             int i = value.Count();
             while (0 < i)
             {
@@ -5923,7 +5923,7 @@ using System.Runtime.CompilerServices;
             {
                 throw new ArgumentNullException("f", "f is null");
             }
-            long? sum = long.MinValue;
+            long? sum = 0;
             int i = value.Count();
             while (0 < i)
             {
@@ -5949,7 +5949,7 @@ using System.Runtime.CompilerServices;
             {
                 throw new ArgumentNullException("f", "f is null");
             }
-            long? sum = long.MinValue;
+            long? sum = 0;
             int i = value.Count();
             while (0 < i)
             {
@@ -5992,7 +5992,7 @@ using System.Runtime.CompilerServices;
             {
                 throw new ArgumentNullException("f", "f is null");
             }
-            double sum = double.MinValue;
+            double sum = 0;
             int i = value.Count();
             while (0 < i)
             {
@@ -6015,7 +6015,7 @@ using System.Runtime.CompilerServices;
             {
                 throw new ArgumentNullException("f", "f is null");
             }
-            double sum = double.MinValue;
+            double sum = 0;
             int i = value.Count();
             while (0 < i)
             {
@@ -6038,7 +6038,7 @@ using System.Runtime.CompilerServices;
             {
                 throw new ArgumentNullException("f", "f is null");
             }
-            double sum = double.MinValue;
+            double sum = 0;
             int i = value.Count();
             while (0 < i)
             {
@@ -6061,7 +6061,7 @@ using System.Runtime.CompilerServices;
             {
                 throw new ArgumentNullException("f", "f is null");
             }
-            double sum = double.MinValue;
+            double sum = 0;
             int i = value.Count();
             while (0 < i)
             {
@@ -6084,7 +6084,7 @@ using System.Runtime.CompilerServices;
             {
                 throw new ArgumentNullException("f", "f is null");
             }
-            double sum = double.MinValue;
+            double sum = 0;
             int i = value.Count();
             while (0 < i)
             {
@@ -6107,7 +6107,7 @@ using System.Runtime.CompilerServices;
             {
                 throw new ArgumentNullException("f", "f is null");
             }
-            double sum = double.MinValue;
+            double sum = 0;
             int i = value.Count();
             while (0 < i)
             {
@@ -6144,10 +6144,10 @@ using System.Runtime.CompilerServices;
             }
 
             if (f == null)
-            {
+            {   
                 throw new ArgumentNullException("f", "f is null");
             }
-            double? sum = double.MinValue;
+            double sum  =0;
             int i = value.Count();
             while (0 < i)
             {
@@ -6173,7 +6173,7 @@ using System.Runtime.CompilerServices;
             {
                 throw new ArgumentNullException("f", "f is null");
             }
-            double? sum = double.MinValue;
+            double? sum = 0;
             int i = value.Count();
             while (0 < i)
             {
@@ -6199,7 +6199,7 @@ using System.Runtime.CompilerServices;
             {
                 throw new ArgumentNullException("f", "f is null");
             }
-            double? sum = double.MinValue;
+            double? sum = 0;
             int i = value.Count();
             while (0 < i)
             {
@@ -6225,7 +6225,7 @@ using System.Runtime.CompilerServices;
             {
                 throw new ArgumentNullException("f", "f is null");
             }
-            double? sum = double.MinValue;
+            double? sum = 0;
             int i = value.Count();
             while (0 < i)
             {
@@ -6251,7 +6251,7 @@ using System.Runtime.CompilerServices;
             {
                 throw new ArgumentNullException("f", "f is null");
             }
-            double? sum = double.MinValue;
+            double? sum = 0;
             int i = value.Count();
             while (0 < i)
             {
@@ -6277,7 +6277,7 @@ using System.Runtime.CompilerServices;
             {
                 throw new ArgumentNullException("f", "f is null");
             }
-            double? sum = double.MinValue;
+            double? sum = 0;
             int i = value.Count();
             while (0 < i)
             {
@@ -6320,7 +6320,7 @@ using System.Runtime.CompilerServices;
             {
                 throw new ArgumentNullException("f", "f is null");
             }
-            short sum = short.MinValue;
+            short sum  =0;
             int i = value.Count();
             while (0 < i)
             {
@@ -6343,7 +6343,7 @@ using System.Runtime.CompilerServices;
             {
                 throw new ArgumentNullException("f", "f is null");
             }
-            short sum = short.MinValue;
+            short sum  =0;
             int i = value.Count();
             while (0 < i)
             {
@@ -6366,7 +6366,7 @@ using System.Runtime.CompilerServices;
             {
                 throw new ArgumentNullException("f", "f is null");
             }
-            short sum = short.MinValue;
+            short sum  =0;
             int i = value.Count();
             while (0 < i)
             {
@@ -6389,7 +6389,7 @@ using System.Runtime.CompilerServices;
             {
                 throw new ArgumentNullException("f", "f is null");
             }
-            short sum = short.MinValue;
+            short sum  =0;
             int i = value.Count();
             while (0 < i)
             {
@@ -6412,7 +6412,7 @@ using System.Runtime.CompilerServices;
             {
                 throw new ArgumentNullException("f", "f is null");
             }
-            short sum = short.MinValue;
+            short sum  =0;
             int i = value.Count();
             while (0 < i)
             {
@@ -6435,7 +6435,7 @@ using System.Runtime.CompilerServices;
             {
                 throw new ArgumentNullException("f", "f is null");
             }
-            short sum = short.MinValue;
+            short sum  =0;
             int i = value.Count();
             while (0 < i)
             {
@@ -6475,7 +6475,7 @@ using System.Runtime.CompilerServices;
             {
                 throw new ArgumentNullException("f", "f is null");
             }
-            short? sum = short.MinValue;
+            short? sum  =0;
             int i = value.Count();
             while (0 < i)
             {
@@ -6501,7 +6501,7 @@ using System.Runtime.CompilerServices;
             {
                 throw new ArgumentNullException("f", "f is null");
             }
-            short? sum = short.MinValue;
+            short? sum  =0;
             int i = value.Count();
             while (0 < i)
             {
@@ -6527,7 +6527,7 @@ using System.Runtime.CompilerServices;
             {
                 throw new ArgumentNullException("f", "f is null");
             }
-            short? sum = short.MinValue;
+            short? sum  =0;
             int i = value.Count();
             while (0 < i)
             {
@@ -6553,7 +6553,7 @@ using System.Runtime.CompilerServices;
             {
                 throw new ArgumentNullException("f", "f is null");
             }
-            short? sum = short.MinValue;
+            short? sum  =0;
             int i = value.Count();
             while (0 < i)
             {
@@ -6579,7 +6579,7 @@ using System.Runtime.CompilerServices;
             {
                 throw new ArgumentNullException("f", "f is null");
             }
-            short? sum = short.MinValue;
+            short? sum  =0;
             int i = value.Count();
             while (0 < i)
             {
@@ -6605,7 +6605,7 @@ using System.Runtime.CompilerServices;
             {
                 throw new ArgumentNullException("f", "f is null");
             }
-            short? sum = short.MinValue;
+            short? sum  =0;
             int i = value.Count();
             while (0 < i)
             {
