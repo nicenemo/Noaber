@@ -1065,6 +1065,78 @@ using System.Runtime.CompilerServices;
             return 7;
         }
         #endregion
+      
+        #region "LongLength"
+
+        public static long LongLength<T1>(this Tuple<T1> value)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value should not be null");
+            }
+            return 1L;
+        }
+
+
+        public static long LongLength<T1, T2>(this Tuple<T1, T2> value)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value should not be null");
+            }
+            return 2L;
+        }
+
+
+        public static long LongLength<T1, T2, T3>(this Tuple<T1, T2, T3> value)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value should not be null");
+            }
+            return 3L;
+        }
+
+
+        public static long LongLength<T1, T2, T3, T4>(this Tuple<T1, T2, T3, T4> value)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value should not be null");
+            }
+            return 4L;
+        }
+
+
+        public static long LongLength<T1, T2, T3, T4, T5>(this Tuple<T1, T2, T3, T4, T5> value)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value should not be null");
+            }
+            return 5L;
+        }
+
+
+        public static long LongLength<T1, T2, T3, T4, T5, T6>(this Tuple<T1, T2, T3, T4, T5, T6> value)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value should not be null");
+            }
+            return 6L;
+        }
+
+
+        public static long LongLength<T1, T2, T3, T4, T5, T6, T7>(this Tuple<T1, T2, T3, T4, T5, T6, T7> value)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value should not be null");
+            }
+            return 7L;
+        }
+        #endregion
 
         #region "Count"
 
@@ -1138,9 +1210,9 @@ using System.Runtime.CompilerServices;
         }
         #endregion
 
-        #region "LongLength"
+        #region "LongCount"
 
-        public static long LongLength<T1>(this Tuple<T1> value)
+        public static long LongCount<T1>(this Tuple<T1> value)
         {
             if (value == null)
             {
@@ -1150,7 +1222,7 @@ using System.Runtime.CompilerServices;
         }
 
 
-        public static long LongLength<T1, T2>(this Tuple<T1, T2> value)
+        public static long LongCount<T1, T2>(this Tuple<T1, T2> value)
         {
             if (value == null)
             {
@@ -1160,7 +1232,7 @@ using System.Runtime.CompilerServices;
         }
 
 
-        public static long LongLength<T1, T2, T3>(this Tuple<T1, T2, T3> value)
+        public static long LongCount<T1, T2, T3>(this Tuple<T1, T2, T3> value)
         {
             if (value == null)
             {
@@ -1170,7 +1242,7 @@ using System.Runtime.CompilerServices;
         }
 
 
-        public static long LongLength<T1, T2, T3, T4>(this Tuple<T1, T2, T3, T4> value)
+        public static long LongCount<T1, T2, T3, T4>(this Tuple<T1, T2, T3, T4> value)
         {
             if (value == null)
             {
@@ -1180,7 +1252,7 @@ using System.Runtime.CompilerServices;
         }
 
 
-        public static long LongLength<T1, T2, T3, T4, T5>(this Tuple<T1, T2, T3, T4, T5> value)
+        public static long LongCount<T1, T2, T3, T4, T5>(this Tuple<T1, T2, T3, T4, T5> value)
         {
             if (value == null)
             {
@@ -1190,7 +1262,7 @@ using System.Runtime.CompilerServices;
         }
 
 
-        public static long LongLength<T1, T2, T3, T4, T5, T6>(this Tuple<T1, T2, T3, T4, T5, T6> value)
+        public static long LongCount<T1, T2, T3, T4, T5, T6>(this Tuple<T1, T2, T3, T4, T5, T6> value)
         {
             if (value == null)
             {
@@ -1200,7 +1272,7 @@ using System.Runtime.CompilerServices;
         }
 
 
-        public static long LongLength<T1, T2, T3, T4, T5, T6, T7>(this Tuple<T1, T2, T3, T4, T5, T6, T7> value)
+        public static long LongCount<T1, T2, T3, T4, T5, T6, T7>(this Tuple<T1, T2, T3, T4, T5, T6, T7> value)
         {
             if (value == null)
             {
@@ -1208,6 +1280,466 @@ using System.Runtime.CompilerServices;
             }
             return 7L;
         }
+        #endregion
+
+        #region "Count with predicate"
+
+        public static int Count<T1>(this Tuple<T1>value,Func<object, Boolean> predicate)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (predicate == null)
+            {
+                throw new ArgumentNullException("predicate","predicate is null");
+            }
+
+
+            if (predicate(value.Item1))
+            {
+                return 1;
+            }
+            else
+            {
+                return 0;
+            }
+        }
+
+        public static int Count<T1,T2>(this Tuple<T1,T2> value, Func<object, Boolean> predicate)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (predicate == null)
+            {
+                throw new ArgumentNullException("predicate", "predicate is null");
+            }
+
+            int count=0;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                if (predicate(v))
+                {
+                    count++;
+                }
+            }
+            return count;
+        }
+
+        public static int Count<T1, T2,T3>(this Tuple<T1, T2,T3> value, Func<object, Boolean> predicate)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (predicate == null)
+            {
+                throw new ArgumentNullException("predicate", "predicate is null");
+            }
+
+            int count = 0;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                if (predicate(v))
+                {
+                    count++;
+                }
+            }
+            return count;
+        }
+
+        public static int Count<T1, T2, T3,T4>(this Tuple<T1, T2, T3,T4> value, Func<object, Boolean> predicate)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (predicate == null)
+            {
+                throw new ArgumentNullException("predicate", "predicate is null");
+            }
+
+            int count = 0;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                if (predicate(v))
+                {
+                    count++;
+                }
+            }
+            return count;
+        }
+
+
+        public static int Count<T1, T2, T3, T4,T5>(this Tuple<T1, T2, T3, T4,T5> value, Func<object, Boolean> predicate)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (predicate == null)
+            {
+                throw new ArgumentNullException("predicate", "predicate is null");
+            }
+
+            int count = 0;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                if (predicate(v))
+                {
+                    count++;
+                }
+            }
+            return count;
+        }
+
+        public static int Count<T1, T2, T3, T4, T5,T6>(this Tuple<T1, T2, T3, T4, T5,T6> value, Func<object, Boolean> predicate)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+            if (predicate == null)
+            {
+                throw new ArgumentNullException("predicate", "predicate is null");
+            }
+
+            int count = 0;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                if (predicate(v))
+                {
+                    count++;
+                }
+            }
+            return count;
+        }
+
+        public static int Count<T1, T2, T3, T4, T5, T6,T7>(this Tuple<T1, T2, T3, T4, T5, T6,T7> value, Func<object, Boolean> predicate)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (predicate == null)
+            {
+                throw new ArgumentNullException("predicate", "predicate is null");
+            }
+
+            int count = 0;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                if (predicate(v))
+                {
+                    count++;
+                }
+            }
+            return count;
+        }
+        #endregion
+
+        #region "LongCount with predicate"
+
+        public static long LongCount<T1>(this Tuple<T1> value, Func<object, Boolean> predicate)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (predicate == null)
+            {
+                throw new ArgumentNullException("predicate", "predicate is null");
+            }
+
+            if (predicate(value.Item1))
+            {
+                return 1L;
+            }
+            else
+            {
+                return 0L;
+            }
+        }
+
+        public static long LongCount<T1, T2>(this Tuple<T1, T2> value, Func<object, Boolean> predicate)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (predicate == null)
+            {
+                throw new ArgumentNullException("predicate", "predicate is null");
+            }
+
+            long LongCount = 0;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                if (predicate(v))
+                {
+                    LongCount++;
+                }
+            }
+            return LongCount;
+        }
+
+        public static long LongCount<T1, T2, T3>(this Tuple<T1, T2, T3> value, Func<object, Boolean> predicate)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (predicate == null)
+            {
+                throw new ArgumentNullException("predicate", "predicate is null");
+            }
+
+            long LongCount = 0;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                if (predicate(v))
+                {
+                    LongCount++;
+                }
+            }
+            return LongCount;
+        }
+
+        public static long LongCount<T1, T2, T3, T4>(this Tuple<T1, T2, T3, T4> value, Func<object, Boolean> predicate)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (predicate == null)
+            {
+                throw new ArgumentNullException("predicate", "predicate is null");
+            }
+
+            long LongCount = 0;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                if (predicate(v))
+                {
+                    LongCount++;
+                }
+            }
+            return LongCount;
+        }
+
+
+        public static long LongCount<T1, T2, T3, T4, T5>(this Tuple<T1, T2, T3, T4, T5> value, Func<object, Boolean> predicate)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (predicate == null)
+            {
+                throw new ArgumentNullException("predicate", "predicate is null");
+            }
+
+            long LongCount = 0;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                if (predicate(v))
+                {
+                    LongCount++;
+                }
+            }
+            return LongCount;
+        }
+
+        public static long LongCount<T1, T2, T3, T4, T5, T6>(this Tuple<T1, T2, T3, T4, T5, T6> value, Func<object, Boolean> predicate)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (predicate == null)
+            {
+                throw new ArgumentNullException("predicate", "predicate is null");
+            }
+
+            long LongCount = 0;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                if (predicate(v))
+                {
+                    LongCount++;
+                }
+            }
+            return LongCount;
+        }
+
+        public static long LongCount<T1, T2, T3, T4, T5, T6, T7>(this Tuple<T1, T2, T3, T4, T5, T6,T7> value, Func<object, Boolean> predicate)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (predicate == null)
+            {
+                throw new ArgumentNullException("predicate", "predicate is null");
+            }
+
+            long LongCount = 0;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                if (predicate(v))
+                {
+                    LongCount++;
+                }
+            }
+            return LongCount;
+        }
+        #endregion
+
+        #region "Cast"
+        public static Tuple<TResult> Cast<TResult,T1>(this Tuple<T1> value) 
+            where T1:TResult
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+            return new Tuple<TResult>((TResult) value.Item1);   
+        }
+
+        public static Tuple<TResult,TResult> Cast<TResult, T1,T2>(this Tuple<T1,T2> value) 
+            where T1:TResult 
+            where T2:TResult
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+            return new Tuple<TResult,TResult>((TResult)value.Item1,(TResult) value.Item2);
+        }
+
+        public static Tuple<TResult,TResult,TResult> Cast<TResult, T1,T2,T3>(this Tuple<T1,T2,T3> value)
+            where T1:TResult 
+            where T2:TResult
+            where T3:TResult
+
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+            return new Tuple<TResult,TResult,TResult>((TResult)value.Item1,(TResult) value.Item2,(TResult) value.Item3);
+        }
+
+        public static Tuple<TResult, TResult, TResult,TResult> Cast<TResult, T1, T2, T3,T4>(this Tuple<T1, T2, T3,T4> value)
+            where T1 : TResult
+            where T2 : TResult
+            where T3 : TResult
+            where T4 : TResult
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+            return new Tuple<TResult, TResult, TResult,TResult>((TResult)value.Item1, (TResult)value.Item2, (TResult)value.Item3,(TResult) value.Item4);
+        }
+
+        public static Tuple<TResult, TResult, TResult, TResult,TResult> Cast<TResult, T1, T2, T3, T4,T5>(this Tuple<T1, T2, T3, T4,T5> value)
+            where T1 : TResult
+            where T2 : TResult
+            where T3 : TResult
+            where T4 : TResult
+            where T5 : TResult
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+            return new Tuple<TResult, TResult, TResult, TResult,TResult>((TResult)value.Item1, (TResult)value.Item2, (TResult)value.Item3, (TResult)value.Item4, (TResult) value.Item5);
+        }
+
+        public static Tuple<TResult, TResult, TResult, TResult, TResult,TResult> Cast<TResult, T1, T2, T3, T4, T5,T6>(this Tuple<T1, T2, T3, T4, T5,T6> value)
+            where T1 : TResult
+            where T2 : TResult
+            where T3 : TResult
+            where T4 : TResult
+            where T5 : TResult
+            where T6 : TResult
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+            return new Tuple<TResult, TResult, TResult, TResult, TResult,TResult>((TResult)value.Item1, (TResult)value.Item2, (TResult)value.Item3, (TResult)value.Item4, (TResult)value.Item5,(TResult) value.Item6);
+        }
+
+        public static Tuple<TResult, TResult, TResult, TResult, TResult, TResult,TResult> Cast<TResult, T1, T2, T3, T4, T5, T6,T7>(this Tuple<T1, T2, T3, T4, T5, T6,T7> value)
+            where T1 : TResult
+            where T2 : TResult
+            where T3 : TResult
+            where T4 : TResult
+            where T5 : TResult
+            where T6 : TResult
+            where T7 : TResult
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+            return new Tuple<TResult, TResult, TResult, TResult, TResult,TResult,TResult>((TResult)value.Item1, (TResult)value.Item2, (TResult)value.Item3, (TResult)value.Item4, (TResult)value.Item5,(TResult) value.Item6,(TResult) value.Item7);
+        }
+
+
         #endregion
 
         #region "Enumerator Extensions"
@@ -1309,6 +1841,4784 @@ using System.Runtime.CompilerServices;
         }
         #endregion
 
+        #region "Max of Decimal"
+
+        public static decimal Max<T1>(this Tuple<T1> value, Func<object, decimal> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            return f(value.Item1);
+        }
+        
+        public static decimal Max<T1,T2>(this Tuple<T1,T2> value, Func<object, decimal> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            decimal max = decimal.MinValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                decimal fValue = f(v);
+                max = System.Math.Max(max, fValue);
+            }
+            return max;
+        }
+
+        public static decimal Max<T1,T2,T3>(this Tuple<T1, T2,T3> value, Func<object, decimal> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            decimal max = decimal.MinValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                decimal fValue = f(v);
+                max = System.Math.Max(max, fValue);
+            }
+            return max;
+        }
+
+        public static decimal Max<T1, T2, T3,T4>(this Tuple<T1, T2, T3,T4> value, Func<object, decimal> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            decimal max = decimal.MinValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                decimal fValue = f(v);
+                max = System.Math.Max(max, fValue);
+            }
+            return max;
+        }
+
+        public static decimal Max<T1, T2, T3, T4,T5>(this Tuple<T1, T2, T3, T4,T5> value, Func<object, decimal> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            decimal max = decimal.MinValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                decimal fValue = f(v);
+                max = System.Math.Max(max, fValue);
+            }
+            return max;
+        }
+
+        public static decimal Max<T1, T2, T3, T4, T5,T6>(this Tuple<T1, T2, T3, T4, T5,T6> value, Func<object, decimal> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            decimal max = decimal.MinValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                decimal fValue = f(v);
+                max = System.Math.Max(max, fValue);
+            }
+            return max;
+        }
+
+        public static decimal Max<T1, T2, T3, T4, T5, T6,T7>(this Tuple<T1, T2, T3, T4, T5, T6,T7> value, Func<object, decimal> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            decimal max = decimal.MinValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                decimal fValue = f(v);
+                max = System.Math.Max(max, fValue);
+            }
+            return max;
+        }
+        #endregion
+
+        #region "Min of Decimal"
+
+        public static decimal Min<T1>(this Tuple<T1> value, Func<object, decimal> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            return f(value.Item1);
+        }
+
+        public static decimal Min<T1, T2>(this Tuple<T1, T2> value, Func<object, decimal> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            decimal min = decimal.MaxValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                decimal fValue = f(v);
+                min = System.Math.Min(min, fValue);
+            }
+            return min;
+        }
+
+        public static decimal Min<T1, T2, T3>(this Tuple<T1, T2, T3> value, Func<object, decimal> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            decimal min = decimal.MaxValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                decimal fValue = f(v);
+                min = System.Math.Min(min, fValue);
+            }
+            return min;
+        }
+
+        public static decimal Min<T1, T2, T3, T4>(this Tuple<T1, T2, T3, T4> value, Func<object, decimal> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            decimal min = decimal.MaxValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                decimal fValue = f(v);
+                min = System.Math.Min(min, fValue);
+            }
+            return min;
+        }
+
+        public static decimal Min<T1, T2, T3, T4, T5>(this Tuple<T1, T2, T3, T4, T5> value, Func<object, decimal> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            decimal min = decimal.MaxValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                decimal fValue = f(v);
+                min = System.Math.Min(min, fValue);
+            }
+            return min;
+        }
+
+        public static decimal Min<T1, T2, T3, T4, T5, T6>(this Tuple<T1, T2, T3, T4, T5, T6> value, Func<object, decimal> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            decimal min = decimal.MaxValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                decimal fValue = f(v);
+                min = System.Math.Min(min, fValue);
+            }
+            return min;
+        }
+
+        public static decimal Min<T1, T2, T3, T4, T5, T6, T7>(this Tuple<T1, T2, T3, T4, T5, T6, T7> value, Func<object, decimal> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            decimal min = decimal.MaxValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                decimal fValue = f(v);
+                min = System.Math.Min(min, fValue);
+            }
+            return min;
+        }
+        #endregion
+
+        #region "Max of Decimal?"
+
+        public static decimal? Max<T1>(this Tuple<T1> value, Func<object, decimal?> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            return f(value.Item1);
+        }
+
+        public static decimal? Max<T1, T2>(this Tuple<T1, T2> value, Func<object, decimal?> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            decimal? max = decimal.MinValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                decimal? fValue = f(v);
+                if (fValue.HasValue)
+                {
+                    max = System.Math.Max(max.Value, fValue.Value);
+                }
+            }
+            return max;
+        }
+
+        public static decimal? Max<T1, T2, T3>(this Tuple<T1, T2, T3> value, Func<object, decimal?> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            decimal? max = decimal.MinValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                decimal? fValue = f(v);
+                if (fValue.HasValue)
+                {
+                    max = System.Math.Max(max.Value, fValue.Value);
+                }
+            }
+            return max;
+        }
+
+        public static decimal? Max<T1, T2, T3, T4>(this Tuple<T1, T2, T3, T4> value, Func<object, decimal?> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            decimal? max = decimal.MinValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                decimal? fValue = f(v);
+                if (fValue.HasValue)
+                {
+                    max = System.Math.Max(max.Value, fValue.Value);
+                }
+            }
+            return max;
+        }
+
+        public static decimal? Max<T1, T2, T3, T4, T5>(this Tuple<T1, T2, T3, T4, T5> value, Func<object, decimal?> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            decimal? max = decimal.MinValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                decimal? fValue = f(v);
+                if (fValue.HasValue)
+                {
+                    max = System.Math.Max(max.Value, fValue.Value);
+                }
+            }
+            return max;
+        }
+
+        public static decimal? Max<T1, T2, T3, T4, T5, T6>(this Tuple<T1, T2, T3, T4, T5, T6> value, Func<object, decimal?> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            decimal? max = decimal.MinValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                decimal? fValue = f(v);
+                if (fValue.HasValue)
+                {
+                    max = System.Math.Max(max.Value, fValue.Value);
+                }
+            }
+            return max;
+        }
+
+        public static decimal? Max<T1, T2, T3, T4, T5, T6, T7>(this Tuple<T1, T2, T3, T4, T5, T6, T7> value, Func<object, decimal?> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            decimal? max = decimal.MinValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                decimal? fValue = f(v);
+                if (fValue.HasValue)
+                {
+                    max = System.Math.Max(max.Value, fValue.Value);
+                }
+            }
+            return max;
+        }
+        #endregion
+
+        #region "Min of Decimal?"
+
+        public static decimal? Min<T1>(this Tuple<T1> value, Func<object, decimal?> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            return f(value.Item1);
+        }
+
+        public static decimal? Min<T1, T2>(this Tuple<T1, T2> value, Func<object, decimal?> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            decimal? min = decimal.MaxValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                decimal? fValue = f(v);
+                if (fValue.HasValue)
+                {
+                    min = System.Math.Min(min.Value, fValue.Value);
+                }
+            }
+            return min;
+        }
+
+        public static decimal? Min<T1, T2, T3>(this Tuple<T1, T2, T3> value, Func<object, decimal?> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            decimal? min = decimal.MaxValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                decimal? fValue = f(v);
+                if (fValue.HasValue)
+                {
+                    min = System.Math.Min(min.Value, fValue.Value);
+                }
+            }
+            return min;
+        }
+
+        public static decimal? Min<T1, T2, T3, T4>(this Tuple<T1, T2, T3, T4> value, Func<object, decimal?> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            decimal? min = decimal.MaxValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                decimal? fValue = f(v);
+                if (fValue.HasValue)
+                {
+                    if (fValue.HasValue)
+                    {
+                        min = System.Math.Min(min.Value, fValue.Value);
+                    }
+                }
+            }
+            return min;
+        }
+
+        public static decimal? Min<T1, T2, T3, T4, T5>(this Tuple<T1, T2, T3, T4, T5> value, Func<object, decimal?> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            decimal? min = decimal.MaxValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                decimal? fValue = f(v);
+                if (fValue.HasValue)
+                {
+                    min = System.Math.Min(min.Value, fValue.Value);
+                }
+            }
+            return min;
+        }
+
+        public static decimal? Min<T1, T2, T3, T4, T5, T6>(this Tuple<T1, T2, T3, T4, T5, T6> value, Func<object, decimal?> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            decimal? min = decimal.MaxValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                decimal? fValue = f(v);
+                if (fValue.HasValue)
+                {
+                    min = System.Math.Min(min.Value, fValue.Value);
+                }
+            }
+            return min;
+        }
+
+        public static decimal? Min<T1, T2, T3, T4, T5, T6, T7>(this Tuple<T1, T2, T3, T4, T5, T6, T7> value, Func<object, decimal?> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            decimal? min = decimal.MaxValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                decimal? fValue = f(v);
+                if (fValue.HasValue)
+                {
+                    min = System.Math.Min(min.Value, fValue.Value);
+                }
+            }
+            return min;
+        }
+        #endregion
+
+        #region "Max of Integer"
+
+        public static int Max<T1>(this Tuple<T1> value, Func<object, int> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            return f(value.Item1);
+        }
+
+        public static int Max<T1, T2>(this Tuple<T1, T2> value, Func<object, int> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            int max = int.MinValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                int fValue = f(v);
+                max = System.Math.Max(max, fValue);
+            }
+            return max;
+        }
+
+        public static int Max<T1, T2, T3>(this Tuple<T1, T2, T3> value, Func<object, int> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            int max = int.MinValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                int fValue = f(v);
+                max = System.Math.Max(max, fValue);
+            }
+            return max;
+        }
+
+        public static int Max<T1, T2, T3, T4>(this Tuple<T1, T2, T3, T4> value, Func<object, int> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            int max = int.MinValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                int fValue = f(v);
+                max = System.Math.Max(max, fValue);
+            }
+            return max;
+        }
+
+        public static int Max<T1, T2, T3, T4, T5>(this Tuple<T1, T2, T3, T4, T5> value, Func<object, int> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            int max = int.MinValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                int fValue = f(v);
+                max = System.Math.Max(max, fValue);
+            }
+            return max;
+        }
+
+        public static int Max<T1, T2, T3, T4, T5, T6>(this Tuple<T1, T2, T3, T4, T5, T6> value, Func<object, int> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            int max = int.MinValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                int fValue = f(v);
+                max = System.Math.Max(max, fValue);
+            }
+            return max;
+        }
+
+        public static int Max<T1, T2, T3, T4, T5, T6, T7>(this Tuple<T1, T2, T3, T4, T5, T6, T7> value, Func<object, int> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            int max = int.MinValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                int fValue = f(v);
+                max = System.Math.Max(max, fValue);
+            }
+            return max;
+        }
+        #endregion
+
+        #region "Min of Integer"
+
+        public static int Min<T1>(this Tuple<T1> value, Func<object, int> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            return f(value.Item1);
+        }
+
+        public static int Min<T1, T2>(this Tuple<T1, T2> value, Func<object, int> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            int min = int.MaxValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                int fValue = f(v);
+                min = System.Math.Min(min, fValue);
+            }
+            return min;
+        }
+
+        public static int Min<T1, T2, T3>(this Tuple<T1, T2, T3> value, Func<object, int> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            int min = int.MaxValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                int fValue = f(v);
+                min = System.Math.Min(min, fValue);
+            }
+            return min;
+        }
+
+        public static int Min<T1, T2, T3, T4>(this Tuple<T1, T2, T3, T4> value, Func<object, int> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            int min = int.MaxValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                int fValue = f(v);
+                min = System.Math.Min(min, fValue);
+            }
+            return min;
+        }
+
+        public static int Min<T1, T2, T3, T4, T5>(this Tuple<T1, T2, T3, T4, T5> value, Func<object, int> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            int min = int.MaxValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                int fValue = f(v);
+                min = System.Math.Min(min, fValue);
+            }
+            return min;
+        }
+
+        public static int Min<T1, T2, T3, T4, T5, T6>(this Tuple<T1, T2, T3, T4, T5, T6> value, Func<object, int> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            int min = int.MaxValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                int fValue = f(v);
+                min = System.Math.Min(min, fValue);
+            }
+            return min;
+        }
+
+        public static int Min<T1, T2, T3, T4, T5, T6, T7>(this Tuple<T1, T2, T3, T4, T5, T6, T7> value, Func<object, int> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            int min = int.MaxValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                int fValue = f(v);
+                min = System.Math.Min(min, fValue);
+            }
+            return min;
+        }
+        #endregion
+
+        #region "Max of Integer?"
+
+        public static int? Max<T1>(this Tuple<T1> value, Func<object, int?> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            return f(value.Item1);
+        }
+
+        public static int? Max<T1, T2>(this Tuple<T1, T2> value, Func<object, int?> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            int? max = int.MinValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                int? fValue = f(v);
+                if (fValue.HasValue)
+                {
+                    max = System.Math.Max(max.Value, fValue.Value);
+                }
+            }
+            return max;
+        }
+
+        public static int? Max<T1, T2, T3>(this Tuple<T1, T2, T3> value, Func<object, int?> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            int? max = int.MinValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                int? fValue = f(v);
+                if (fValue.HasValue)
+                {
+                    max = System.Math.Max(max.Value, fValue.Value);
+                }
+            }
+            return max;
+        }
+
+        public static int? Max<T1, T2, T3, T4>(this Tuple<T1, T2, T3, T4> value, Func<object, int?> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            int? max = int.MinValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                int? fValue = f(v);
+                if (fValue.HasValue)
+                {
+                    max = System.Math.Max(max.Value, fValue.Value);
+                }
+            }
+            return max;
+        }
+
+        public static int? Max<T1, T2, T3, T4, T5>(this Tuple<T1, T2, T3, T4, T5> value, Func<object, int?> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            int? max = int.MinValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                int? fValue = f(v);
+                if (fValue.HasValue)
+                {
+                    max = System.Math.Max(max.Value, fValue.Value);
+                }
+            }
+            return max;
+        }
+
+        public static int? Max<T1, T2, T3, T4, T5, T6>(this Tuple<T1, T2, T3, T4, T5, T6> value, Func<object, int?> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            int? max = int.MinValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                int? fValue = f(v);
+                if (fValue.HasValue)
+                {
+                    max = System.Math.Max(max.Value, fValue.Value);
+                }
+            }
+            return max;
+        }
+
+        public static int? Max<T1, T2, T3, T4, T5, T6, T7>(this Tuple<T1, T2, T3, T4, T5, T6, T7> value, Func<object, int?> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            int? max = int.MinValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                int? fValue = f(v);
+                if (fValue.HasValue)
+                {
+                    max = System.Math.Max(max.Value, fValue.Value);
+                }
+            }
+            return max;
+        }
+        #endregion
+
+        #region "Min of Integer?"
+
+        public static int? Min<T1>(this Tuple<T1> value, Func<object, int?> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            return f(value.Item1);
+        }
+
+        public static int? Min<T1, T2>(this Tuple<T1, T2> value, Func<object, int?> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            int? min = int.MaxValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                int? fValue = f(v);
+                if (fValue.HasValue)
+                {
+                    min = System.Math.Min(min.Value, fValue.Value);
+                }
+            }
+            return min;
+        }
+
+        public static int? Min<T1, T2, T3>(this Tuple<T1, T2, T3> value, Func<object, int?> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            int? min = int.MaxValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                int? fValue = f(v);
+                if (fValue.HasValue)
+                {
+                    min = System.Math.Min(min.Value, fValue.Value);
+                }
+            }
+            return min;
+        }
+
+        public static int? Min<T1, T2, T3, T4>(this Tuple<T1, T2, T3, T4> value, Func<object, int?> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            int? min = int.MaxValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                int? fValue = f(v);
+                if (fValue.HasValue)
+                {
+                    if (fValue.HasValue)
+                    {
+                        min = System.Math.Min(min.Value, fValue.Value);
+                    }
+                }
+            }
+            return min;
+        }
+
+        public static int? Min<T1, T2, T3, T4, T5>(this Tuple<T1, T2, T3, T4, T5> value, Func<object, int?> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            int? min = int.MaxValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                int? fValue = f(v);
+                if (fValue.HasValue)
+                {
+                    min = System.Math.Min(min.Value, fValue.Value);
+                }
+            }
+            return min;
+        }
+
+        public static int? Min<T1, T2, T3, T4, T5, T6>(this Tuple<T1, T2, T3, T4, T5, T6> value, Func<object, int?> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            int? min = int.MaxValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                int? fValue = f(v);
+                if (fValue.HasValue)
+                {
+                    min = System.Math.Min(min.Value, fValue.Value);
+                }
+            }
+            return min;
+        }
+
+        public static int? Min<T1, T2, T3, T4, T5, T6, T7>(this Tuple<T1, T2, T3, T4, T5, T6, T7> value, Func<object, int?> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            int? min = int.MaxValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                int? fValue = f(v);
+                if (fValue.HasValue)
+                {
+                    min = System.Math.Min(min.Value, fValue.Value);
+                }
+            }
+            return min;
+        }
+        #endregion
+
+        #region "Max of Long"
+
+        public static long Max<T1>(this Tuple<T1> value, Func<object, long> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            return f(value.Item1);
+        }
+
+        public static long Max<T1, T2>(this Tuple<T1, T2> value, Func<object, long> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            long max = long.MinValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                long fValue = f(v);
+                max = System.Math.Max(max, fValue);
+            }
+            return max;
+        }
+
+        public static long Max<T1, T2, T3>(this Tuple<T1, T2, T3> value, Func<object, long> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            long max = long.MinValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                long fValue = f(v);
+                max = System.Math.Max(max, fValue);
+            }
+            return max;
+        }
+
+        public static long Max<T1, T2, T3, T4>(this Tuple<T1, T2, T3, T4> value, Func<object, long> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            long max = long.MinValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                long fValue = f(v);
+                max = System.Math.Max(max, fValue);
+            }
+            return max;
+        }
+
+        public static long Max<T1, T2, T3, T4, T5>(this Tuple<T1, T2, T3, T4, T5> value, Func<object, long> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            long max = long.MinValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                long fValue = f(v);
+                max = System.Math.Max(max, fValue);
+            }
+            return max;
+        }
+
+        public static long Max<T1, T2, T3, T4, T5, T6>(this Tuple<T1, T2, T3, T4, T5, T6> value, Func<object, long> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            long max = long.MinValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                long fValue = f(v);
+                max = System.Math.Max(max, fValue);
+            }
+            return max;
+        }
+
+        public static long Max<T1, T2, T3, T4, T5, T6, T7>(this Tuple<T1, T2, T3, T4, T5, T6, T7> value, Func<object, long> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            long max = long.MinValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                long fValue = f(v);
+                max = System.Math.Max(max, fValue);
+            }
+            return max;
+        }
+        #endregion
+
+        #region "Min of Long"
+
+        public static long Min<T1>(this Tuple<T1> value, Func<object, long> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            return f(value.Item1);
+        }
+
+        public static long Min<T1, T2>(this Tuple<T1, T2> value, Func<object, long> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            long min = long.MaxValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                long fValue = f(v);
+                min = System.Math.Min(min, fValue);
+            }
+            return min;
+        }
+
+        public static long Min<T1, T2, T3>(this Tuple<T1, T2, T3> value, Func<object, long> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            long min = long.MaxValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                long fValue = f(v);
+                min = System.Math.Min(min, fValue);
+            }
+            return min;
+        }
+
+        public static long Min<T1, T2, T3, T4>(this Tuple<T1, T2, T3, T4> value, Func<object, long> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            long min = long.MaxValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                long fValue = f(v);
+                min = System.Math.Min(min, fValue);
+            }
+            return min;
+        }
+
+        public static long Min<T1, T2, T3, T4, T5>(this Tuple<T1, T2, T3, T4, T5> value, Func<object, long> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            long min = long.MaxValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                long fValue = f(v);
+                min = System.Math.Min(min, fValue);
+            }
+            return min;
+        }
+
+        public static long Min<T1, T2, T3, T4, T5, T6>(this Tuple<T1, T2, T3, T4, T5, T6> value, Func<object, long> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            long min = long.MaxValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                long fValue = f(v);
+                min = System.Math.Min(min, fValue);
+            }
+            return min;
+        }
+
+        public static long Min<T1, T2, T3, T4, T5, T6, T7>(this Tuple<T1, T2, T3, T4, T5, T6, T7> value, Func<object, long> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            long min = long.MaxValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                long fValue = f(v);
+                min = System.Math.Min(min, fValue);
+            }
+            return min;
+        }
+        #endregion
+
+        #region "Max of Long?"
+
+        public static long? Max<T1>(this Tuple<T1> value, Func<object, long?> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            return f(value.Item1);
+        }
+
+        public static long? Max<T1, T2>(this Tuple<T1, T2> value, Func<object, long?> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            long? max = long.MinValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                long? fValue = f(v);
+                if (fValue.HasValue)
+                {
+                    max = System.Math.Max(max.Value, fValue.Value);
+                }
+            }
+            return max;
+        }
+
+        public static long? Max<T1, T2, T3>(this Tuple<T1, T2, T3> value, Func<object, long?> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            long? max = long.MinValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                long? fValue = f(v);
+                if (fValue.HasValue)
+                {
+                    max = System.Math.Max(max.Value, fValue.Value);
+                }
+            }
+            return max;
+        }
+
+        public static long? Max<T1, T2, T3, T4>(this Tuple<T1, T2, T3, T4> value, Func<object, long?> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            long? max = long.MinValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                long? fValue = f(v);
+                if (fValue.HasValue)
+                {
+                    max = System.Math.Max(max.Value, fValue.Value);
+                }
+            }
+            return max;
+        }
+
+        public static long? Max<T1, T2, T3, T4, T5>(this Tuple<T1, T2, T3, T4, T5> value, Func<object, long?> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            long? max = long.MinValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                long? fValue = f(v);
+                if (fValue.HasValue)
+                {
+                    max = System.Math.Max(max.Value, fValue.Value);
+                }
+            }
+            return max;
+        }
+
+        public static long? Max<T1, T2, T3, T4, T5, T6>(this Tuple<T1, T2, T3, T4, T5, T6> value, Func<object, long?> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            long? max = long.MinValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                long? fValue = f(v);
+                if (fValue.HasValue)
+                {
+                    max = System.Math.Max(max.Value, fValue.Value);
+                }
+            }
+            return max;
+        }
+
+        public static long? Max<T1, T2, T3, T4, T5, T6, T7>(this Tuple<T1, T2, T3, T4, T5, T6, T7> value, Func<object, long?> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            long? max = long.MinValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                long? fValue = f(v);
+                if (fValue.HasValue)
+                {
+                    max = System.Math.Max(max.Value, fValue.Value);
+                }
+            }
+            return max;
+        }
+        #endregion
+
+        #region "Min of Long?"
+
+        public static long? Min<T1>(this Tuple<T1> value, Func<object, long?> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            return f(value.Item1);
+        }
+
+        public static long? Min<T1, T2>(this Tuple<T1, T2> value, Func<object, long?> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            long? min = long.MaxValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                long? fValue = f(v);
+                if (fValue.HasValue)
+                {
+                    min = System.Math.Min(min.Value, fValue.Value);
+                }
+            }
+            return min;
+        }
+
+        public static long? Min<T1, T2, T3>(this Tuple<T1, T2, T3> value, Func<object, long?> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            long? min = long.MaxValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                long? fValue = f(v);
+                if (fValue.HasValue)
+                {
+                    min = System.Math.Min(min.Value, fValue.Value);
+                }
+            }
+            return min;
+        }
+
+        public static long? Min<T1, T2, T3, T4>(this Tuple<T1, T2, T3, T4> value, Func<object, long?> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            long? min = long.MaxValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                long? fValue = f(v);
+                if (fValue.HasValue)
+                {
+                    if (fValue.HasValue)
+                    {
+                        min = System.Math.Min(min.Value, fValue.Value);
+                    }
+                }
+            }
+            return min;
+        }
+
+        public static long? Min<T1, T2, T3, T4, T5>(this Tuple<T1, T2, T3, T4, T5> value, Func<object, long?> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            long? min = long.MaxValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                long? fValue = f(v);
+                if (fValue.HasValue)
+                {
+                    min = System.Math.Min(min.Value, fValue.Value);
+                }
+            }
+            return min;
+        }
+
+        public static long? Min<T1, T2, T3, T4, T5, T6>(this Tuple<T1, T2, T3, T4, T5, T6> value, Func<object, long?> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            long? min = long.MaxValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                long? fValue = f(v);
+                if (fValue.HasValue)
+                {
+                    min = System.Math.Min(min.Value, fValue.Value);
+                }
+            }
+            return min;
+        }
+
+        public static long? Min<T1, T2, T3, T4, T5, T6, T7>(this Tuple<T1, T2, T3, T4, T5, T6, T7> value, Func<object, long?> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            long? min = long.MaxValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                long? fValue = f(v);
+                if (fValue.HasValue)
+                {
+                    min = System.Math.Min(min.Value, fValue.Value);
+                }
+            }
+            return min;
+        }
+        #endregion
+
+         #region "Max of Double"
+
+        public static double Max<T1>(this Tuple<T1> value, Func<object, double> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            return f(value.Item1);
+        }
+        
+        public static double Max<T1,T2>(this Tuple<T1,T2> value, Func<object, double> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            double max = double.MinValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                double fValue = f(v);
+                max = System.Math.Max(max, fValue);
+            }
+            return max;
+        }
+
+        public static double Max<T1,T2,T3>(this Tuple<T1, T2,T3> value, Func<object, double> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            double max = double.MinValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                double fValue = f(v);
+                max = System.Math.Max(max, fValue);
+            }
+            return max;
+        }
+
+        public static double Max<T1, T2, T3,T4>(this Tuple<T1, T2, T3,T4> value, Func<object, double> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            double max = double.MinValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                double fValue = f(v);
+                max = System.Math.Max(max, fValue);
+            }
+            return max;
+        }
+
+        public static double Max<T1, T2, T3, T4,T5>(this Tuple<T1, T2, T3, T4,T5> value, Func<object, double> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            double max = double.MinValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                double fValue = f(v);
+                max = System.Math.Max(max, fValue);
+            }
+            return max;
+        }
+
+        public static double Max<T1, T2, T3, T4, T5,T6>(this Tuple<T1, T2, T3, T4, T5,T6> value, Func<object, double> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            double max = double.MinValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                double fValue = f(v);
+                max = System.Math.Max(max, fValue);
+            }
+            return max;
+        }
+
+        public static double Max<T1, T2, T3, T4, T5, T6,T7>(this Tuple<T1, T2, T3, T4, T5, T6,T7> value, Func<object, double> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            double max = double.MinValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                double fValue = f(v);
+                max = System.Math.Max(max, fValue);
+            }
+            return max;
+        }
+        #endregion
+
+        #region "Min of Double"
+
+        public static double Min<T1>(this Tuple<T1> value, Func<object, double> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            return f(value.Item1);
+        }
+
+        public static double Min<T1, T2>(this Tuple<T1, T2> value, Func<object, double> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            double min = double.MaxValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                double fValue = f(v);
+                min = System.Math.Min(min, fValue);
+            }
+            return min;
+        }
+
+        public static double Min<T1, T2, T3>(this Tuple<T1, T2, T3> value, Func<object, double> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            double min = double.MaxValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                double fValue = f(v);
+                min = System.Math.Min(min, fValue);
+            }
+            return min;
+        }
+
+        public static double Min<T1, T2, T3, T4>(this Tuple<T1, T2, T3, T4> value, Func<object, double> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            double min = double.MaxValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                double fValue = f(v);
+                min = System.Math.Min(min, fValue);
+            }
+            return min;
+        }
+
+        public static double Min<T1, T2, T3, T4, T5>(this Tuple<T1, T2, T3, T4, T5> value, Func<object, double> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            double min = double.MaxValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                double fValue = f(v);
+                min = System.Math.Min(min, fValue);
+            }
+            return min;
+        }
+
+        public static double Min<T1, T2, T3, T4, T5, T6>(this Tuple<T1, T2, T3, T4, T5, T6> value, Func<object, double> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            double min = double.MaxValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                double fValue = f(v);
+                min = System.Math.Min(min, fValue);
+            }
+            return min;
+        }
+
+        public static double Min<T1, T2, T3, T4, T5, T6, T7>(this Tuple<T1, T2, T3, T4, T5, T6, T7> value, Func<object, double> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            double min = double.MaxValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                double fValue = f(v);
+                min = System.Math.Min(min, fValue);
+            }
+            return min;
+        }
+        #endregion
+
+        #region "Max of Double?"
+
+        public static double? Max<T1>(this Tuple<T1> value, Func<object, double?> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            return f(value.Item1);
+        }
+
+        public static double? Max<T1, T2>(this Tuple<T1, T2> value, Func<object, double?> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            double? max = double.MinValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                double? fValue = f(v);
+                if (fValue.HasValue)
+                {
+                    max = System.Math.Max(max.Value, fValue.Value);
+                }
+            }
+            return max;
+        }
+
+        public static double? Max<T1, T2, T3>(this Tuple<T1, T2, T3> value, Func<object, double?> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            double? max = double.MinValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                double? fValue = f(v);
+                if (fValue.HasValue)
+                {
+                    max = System.Math.Max(max.Value, fValue.Value);
+                }
+            }
+            return max;
+        }
+
+        public static double? Max<T1, T2, T3, T4>(this Tuple<T1, T2, T3, T4> value, Func<object, double?> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            double? max = double.MinValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                double? fValue = f(v);
+                if (fValue.HasValue)
+                {
+                    max = System.Math.Max(max.Value, fValue.Value);
+                }
+            }
+            return max;
+        }
+
+        public static double? Max<T1, T2, T3, T4, T5>(this Tuple<T1, T2, T3, T4, T5> value, Func<object, double?> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            double? max = double.MinValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                double? fValue = f(v);
+                if (fValue.HasValue)
+                {
+                    max = System.Math.Max(max.Value, fValue.Value);
+                }
+            }
+            return max;
+        }
+
+        public static double? Max<T1, T2, T3, T4, T5, T6>(this Tuple<T1, T2, T3, T4, T5, T6> value, Func<object, double?> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            double? max = double.MinValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                double? fValue = f(v);
+                if (fValue.HasValue)
+                {
+                    max = System.Math.Max(max.Value, fValue.Value);
+                }
+            }
+            return max;
+        }
+
+        public static double? Max<T1, T2, T3, T4, T5, T6, T7>(this Tuple<T1, T2, T3, T4, T5, T6, T7> value, Func<object, double?> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            double? max = double.MinValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                double? fValue = f(v);
+                if (fValue.HasValue)
+                {
+                    max = System.Math.Max(max.Value, fValue.Value);
+                }
+            }
+            return max;
+        }
+        #endregion
+
+        #region "Min of Double?"
+
+        public static double? Min<T1>(this Tuple<T1> value, Func<object, double?> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            return f(value.Item1);
+        }
+
+        public static double? Min<T1, T2>(this Tuple<T1, T2> value, Func<object, double?> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            double? min = double.MaxValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                double? fValue = f(v);
+                if (fValue.HasValue)
+                {
+                    min = System.Math.Min(min.Value, fValue.Value);
+                }
+            }
+            return min;
+        }
+
+        public static double? Min<T1, T2, T3>(this Tuple<T1, T2, T3> value, Func<object, double?> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            double? min = double.MaxValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                double? fValue = f(v);
+                if (fValue.HasValue)
+                {
+                    min = System.Math.Min(min.Value, fValue.Value);
+                }
+            }
+            return min;
+        }
+
+        public static double? Min<T1, T2, T3, T4>(this Tuple<T1, T2, T3, T4> value, Func<object, double?> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            double? min = double.MaxValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                double? fValue = f(v);
+                if (fValue.HasValue)
+                {
+                    if (fValue.HasValue)
+                    {
+                        min = System.Math.Min(min.Value, fValue.Value);
+                    }
+                }
+            }
+            return min;
+        }
+
+        public static double? Min<T1, T2, T3, T4, T5>(this Tuple<T1, T2, T3, T4, T5> value, Func<object, double?> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            double? min = double.MaxValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                double? fValue = f(v);
+                if (fValue.HasValue)
+                {
+                    min = System.Math.Min(min.Value, fValue.Value);
+                }
+            }
+            return min;
+        }
+
+        public static double? Min<T1, T2, T3, T4, T5, T6>(this Tuple<T1, T2, T3, T4, T5, T6> value, Func<object, double?> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            double? min = double.MaxValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                double? fValue = f(v);
+                if (fValue.HasValue)
+                {
+                    min = System.Math.Min(min.Value, fValue.Value);
+                }
+            }
+            return min;
+        }
+
+        public static double? Min<T1, T2, T3, T4, T5, T6, T7>(this Tuple<T1, T2, T3, T4, T5, T6, T7> value, Func<object, double?> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            double? min = double.MaxValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                double? fValue = f(v);
+                if (fValue.HasValue)
+                {
+                    min = System.Math.Min(min.Value, fValue.Value);
+                }
+            }
+            return min;
+        }
+        #endregion
+
+        #region "Max of Short"
+
+        public static short Max<T1>(this Tuple<T1> value, Func<object, short> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            return f(value.Item1);
+        }
+
+        public static short Max<T1, T2>(this Tuple<T1, T2> value, Func<object, short> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            short max = short.MinValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                short fValue = f(v);
+                max = System.Math.Max(max, fValue);
+            }
+            return max;
+        }
+
+        public static short Max<T1, T2, T3>(this Tuple<T1, T2, T3> value, Func<object, short> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            short max = short.MinValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                short fValue = f(v);
+                max = System.Math.Max(max, fValue);
+            }
+            return max;
+        }
+
+        public static short Max<T1, T2, T3, T4>(this Tuple<T1, T2, T3, T4> value, Func<object, short> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            short max = short.MinValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                short fValue = f(v);
+                max = System.Math.Max(max, fValue);
+            }
+            return max;
+        }
+
+        public static short Max<T1, T2, T3, T4, T5>(this Tuple<T1, T2, T3, T4, T5> value, Func<object, short> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            short max = short.MinValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                short fValue = f(v);
+                max = System.Math.Max(max, fValue);
+            }
+            return max;
+        }
+
+        public static short Max<T1, T2, T3, T4, T5, T6>(this Tuple<T1, T2, T3, T4, T5, T6> value, Func<object, short> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            short max = short.MinValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                short fValue = f(v);
+                max = System.Math.Max(max, fValue);
+            }
+            return max;
+        }
+
+        public static short Max<T1, T2, T3, T4, T5, T6, T7>(this Tuple<T1, T2, T3, T4, T5, T6, T7> value, Func<object, short> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            short max = short.MinValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                short fValue = f(v);
+                max = System.Math.Max(max, fValue);
+            }
+            return max;
+        }
+        #endregion
+
+        #region "Min of Short"
+
+        public static short Min<T1>(this Tuple<T1> value, Func<object, short> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            return f(value.Item1);
+        }
+
+        public static short Min<T1, T2>(this Tuple<T1, T2> value, Func<object, short> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            short min = short.MaxValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                short fValue = f(v);
+                min = System.Math.Min(min, fValue);
+            }
+            return min;
+        }
+
+        public static short Min<T1, T2, T3>(this Tuple<T1, T2, T3> value, Func<object, short> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            short min = short.MaxValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                short fValue = f(v);
+                min = System.Math.Min(min, fValue);
+            }
+            return min;
+        }
+
+        public static short Min<T1, T2, T3, T4>(this Tuple<T1, T2, T3, T4> value, Func<object, short> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            short min = short.MaxValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                short fValue = f(v);
+                min = System.Math.Min(min, fValue);
+            }
+            return min;
+        }
+
+        public static short Min<T1, T2, T3, T4, T5>(this Tuple<T1, T2, T3, T4, T5> value, Func<object, short> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            short min = short.MaxValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                short fValue = f(v);
+                min = System.Math.Min(min, fValue);
+            }
+            return min;
+        }
+
+        public static short Min<T1, T2, T3, T4, T5, T6>(this Tuple<T1, T2, T3, T4, T5, T6> value, Func<object, short> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            short min = short.MaxValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                short fValue = f(v);
+                min = System.Math.Min(min, fValue);
+            }
+            return min;
+        }
+
+        public static short Min<T1, T2, T3, T4, T5, T6, T7>(this Tuple<T1, T2, T3, T4, T5, T6, T7> value, Func<object, short> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            short min = short.MaxValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                short fValue = f(v);
+                min = System.Math.Min(min, fValue);
+            }
+            return min;
+        }
+        #endregion
+
+        #region "Max of Short?"
+
+        public static short? Max<T1>(this Tuple<T1> value, Func<object, short?> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            return f(value.Item1);
+        }
+
+        public static short? Max<T1, T2>(this Tuple<T1, T2> value, Func<object, short?> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            short? max = short.MinValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                short? fValue = f(v);
+                if (fValue.HasValue)
+                {
+                    max = System.Math.Max(max.Value, fValue.Value);
+                }
+            }
+            return max;
+        }
+
+        public static short? Max<T1, T2, T3>(this Tuple<T1, T2, T3> value, Func<object, short?> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            short? max = short.MinValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                short? fValue = f(v);
+                if (fValue.HasValue)
+                {
+                    max = System.Math.Max(max.Value, fValue.Value);
+                }
+            }
+            return max;
+        }
+
+        public static short? Max<T1, T2, T3, T4>(this Tuple<T1, T2, T3, T4> value, Func<object, short?> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            short? max = short.MinValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                short? fValue = f(v);
+                if (fValue.HasValue)
+                {
+                    max = System.Math.Max(max.Value, fValue.Value);
+                }
+            }
+            return max;
+        }
+
+        public static short? Max<T1, T2, T3, T4, T5>(this Tuple<T1, T2, T3, T4, T5> value, Func<object, short?> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            short? max = short.MinValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                short? fValue = f(v);
+                if (fValue.HasValue)
+                {
+                    max = System.Math.Max(max.Value, fValue.Value);
+                }
+            }
+            return max;
+        }
+
+        public static short? Max<T1, T2, T3, T4, T5, T6>(this Tuple<T1, T2, T3, T4, T5, T6> value, Func<object, short?> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            short? max = short.MinValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                short? fValue = f(v);
+                if (fValue.HasValue)
+                {
+                    max = System.Math.Max(max.Value, fValue.Value);
+                }
+            }
+            return max;
+        }
+
+        public static short? Max<T1, T2, T3, T4, T5, T6, T7>(this Tuple<T1, T2, T3, T4, T5, T6, T7> value, Func<object, short?> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            short? max = short.MinValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                short? fValue = f(v);
+                if (fValue.HasValue)
+                {
+                    max = System.Math.Max(max.Value, fValue.Value);
+                }
+            }
+            return max;
+        }
+        #endregion
+
+        #region "Min of Short?"
+
+        public static short? Min<T1>(this Tuple<T1> value, Func<object, short?> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            return f(value.Item1);
+        }
+
+        public static short? Min<T1, T2>(this Tuple<T1, T2> value, Func<object, short?> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            short? min = short.MaxValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                short? fValue = f(v);
+                if (fValue.HasValue)
+                {
+                    min = System.Math.Min(min.Value, fValue.Value);
+                }
+            }
+            return min;
+        }
+
+        public static short? Min<T1, T2, T3>(this Tuple<T1, T2, T3> value, Func<object, short?> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            short? min = short.MaxValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                short? fValue = f(v);
+                if (fValue.HasValue)
+                {
+                    min = System.Math.Min(min.Value, fValue.Value);
+                }
+            }
+            return min;
+        }
+
+        public static short? Min<T1, T2, T3, T4>(this Tuple<T1, T2, T3, T4> value, Func<object, short?> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            short? min = short.MaxValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                short? fValue = f(v);
+                if (fValue.HasValue)
+                {
+                    if (fValue.HasValue)
+                    {
+                        min = System.Math.Min(min.Value, fValue.Value);
+                    }
+                }
+            }
+            return min;
+        }
+
+        public static short? Min<T1, T2, T3, T4, T5>(this Tuple<T1, T2, T3, T4, T5> value, Func<object, short?> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            short? min = short.MaxValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                short? fValue = f(v);
+                if (fValue.HasValue)
+                {
+                    min = System.Math.Min(min.Value, fValue.Value);
+                }
+            }
+            return min;
+        }
+
+        public static short? Min<T1, T2, T3, T4, T5, T6>(this Tuple<T1, T2, T3, T4, T5, T6> value, Func<object, short?> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            short? min = short.MaxValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                short? fValue = f(v);
+                if (fValue.HasValue)
+                {
+                    min = System.Math.Min(min.Value, fValue.Value);
+                }
+            }
+            return min;
+        }
+
+        public static short? Min<T1, T2, T3, T4, T5, T6, T7>(this Tuple<T1, T2, T3, T4, T5, T6, T7> value, Func<object, short?> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            short? min = short.MaxValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                short? fValue = f(v);
+                if (fValue.HasValue)
+                {
+                    min = System.Math.Min(min.Value, fValue.Value);
+                }
+            }
+            return min;
+        }
+        #endregion
+        //
+        #region "Sum of Decimal"
+
+        public static decimal Sum<T1>(this Tuple<T1> value, Func<object, decimal> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            return f(value.Item1);
+        }
+
+        public static decimal Sum<T1, T2>(this Tuple<T1, T2> value, Func<object, decimal> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            decimal sum = decimal.MinValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                decimal fValue = f(v);
+             sum+=fValue;
+            }
+            return sum;
+        }
+
+        public static decimal Sum<T1, T2, T3>(this Tuple<T1, T2, T3> value, Func<object, decimal> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            decimal sum = decimal.MinValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                decimal fValue = f(v);
+             sum+=fValue;
+            }
+            return sum;
+        }
+
+        public static decimal Sum<T1, T2, T3, T4>(this Tuple<T1, T2, T3, T4> value, Func<object, decimal> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            decimal sum = decimal.MinValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                decimal fValue = f(v);
+             sum+=fValue;
+            }
+            return sum;
+        }
+
+        public static decimal Sum<T1, T2, T3, T4, T5>(this Tuple<T1, T2, T3, T4, T5> value, Func<object, decimal> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            decimal sum = decimal.MinValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                decimal fValue = f(v);
+             sum+=fValue;
+            }
+            return sum;
+        }
+
+        public static decimal Sum<T1, T2, T3, T4, T5, T6>(this Tuple<T1, T2, T3, T4, T5, T6> value, Func<object, decimal> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            decimal sum = decimal.MinValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                decimal fValue = f(v);
+             sum+=fValue;
+            }
+            return sum;
+        }
+
+        public static decimal Sum<T1, T2, T3, T4, T5, T6, T7>(this Tuple<T1, T2, T3, T4, T5, T6, T7> value, Func<object, decimal> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            decimal sum = decimal.MinValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                decimal fValue = f(v);
+             sum+=fValue;
+            }
+            return sum;
+        }
+        #endregion
+
+        #region "Sum of Decimal?"
+
+        public static decimal? Sum<T1>(this Tuple<T1> value, Func<object, decimal?> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            return f(value.Item1);
+        }
+
+        public static decimal? Sum<T1, T2>(this Tuple<T1, T2> value, Func<object, decimal?> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            decimal? sum = decimal.MinValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                decimal? fValue = f(v);
+                if (fValue.HasValue)
+                {
+                    sum += fValue.Value;
+                }
+            }
+            return sum;
+        }
+
+        public static decimal? Sum<T1, T2, T3>(this Tuple<T1, T2, T3> value, Func<object, decimal?> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            decimal? sum = decimal.MinValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                decimal? fValue = f(v);
+                if (fValue.HasValue)
+                {
+                    sum += fValue.Value;
+                }
+            }
+            return sum;
+        }
+
+        public static decimal? Sum<T1, T2, T3, T4>(this Tuple<T1, T2, T3, T4> value, Func<object, decimal?> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            decimal? sum = decimal.MinValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                decimal? fValue = f(v);
+                if (fValue.HasValue)
+                {
+                    sum += fValue.Value;
+                }
+            }
+            return sum;
+        }
+
+        public static decimal? Sum<T1, T2, T3, T4, T5>(this Tuple<T1, T2, T3, T4, T5> value, Func<object, decimal?> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            decimal? sum = decimal.MinValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                decimal? fValue = f(v);
+                if (fValue.HasValue)
+                {
+                    sum += fValue.Value;
+                }
+            }
+            return sum;
+        }
+
+        public static decimal? Sum<T1, T2, T3, T4, T5, T6>(this Tuple<T1, T2, T3, T4, T5, T6> value, Func<object, decimal?> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            decimal? sum = decimal.MinValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                decimal? fValue = f(v);
+                if (fValue.HasValue)
+                {
+                    sum += fValue.Value;
+                }
+            }
+            return sum;
+        }
+
+        public static decimal? Sum<T1, T2, T3, T4, T5, T6, T7>(this Tuple<T1, T2, T3, T4, T5, T6, T7> value, Func<object, decimal?> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            decimal? sum = decimal.MinValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                decimal? fValue = f(v);
+                if (fValue.HasValue)
+                {
+                    sum += fValue.Value;
+                }
+            }
+            return sum;
+        }
+        #endregion
+
+        #region "Sum of Integer"
+
+        public static int Sum<T1>(this Tuple<T1> value, Func<object, int> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            return f(value.Item1);
+        }
+
+        public static int Sum<T1, T2>(this Tuple<T1, T2> value, Func<object, int> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            int sum = int.MinValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                int fValue = f(v);
+             sum+=fValue;
+            }
+            return sum;
+        }
+
+        public static int Sum<T1, T2, T3>(this Tuple<T1, T2, T3> value, Func<object, int> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            int sum = int.MinValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                int fValue = f(v);
+             sum+=fValue;
+            }
+            return sum;
+        }
+
+        public static int Sum<T1, T2, T3, T4>(this Tuple<T1, T2, T3, T4> value, Func<object, int> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            int sum = int.MinValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                int fValue = f(v);
+             sum+=fValue;
+            }
+            return sum;
+        }
+
+        public static int Sum<T1, T2, T3, T4, T5>(this Tuple<T1, T2, T3, T4, T5> value, Func<object, int> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            int sum = int.MinValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                int fValue = f(v);
+             sum+=fValue;
+            }
+            return sum;
+        }
+
+        public static int Sum<T1, T2, T3, T4, T5, T6>(this Tuple<T1, T2, T3, T4, T5, T6> value, Func<object, int> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            int sum = int.MinValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                int fValue = f(v);
+             sum+=fValue;
+            }
+            return sum;
+        }
+
+        public static int Sum<T1, T2, T3, T4, T5, T6, T7>(this Tuple<T1, T2, T3, T4, T5, T6, T7> value, Func<object, int> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            int sum = int.MinValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                int fValue = f(v);
+             sum+=fValue;
+            }
+            return sum;
+        }
+        #endregion
+
+        #region "Sum of Integer?"
+
+        public static int? Sum<T1>(this Tuple<T1> value, Func<object, int?> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            return f(value.Item1);
+        }
+
+        public static int? Sum<T1, T2>(this Tuple<T1, T2> value, Func<object, int?> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            int? sum = int.MinValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                int? fValue = f(v);
+                if (fValue.HasValue)
+                {
+                    sum += fValue.Value;
+                }
+            }
+            return sum;
+        }
+
+        public static int? Sum<T1, T2, T3>(this Tuple<T1, T2, T3> value, Func<object, int?> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            int? sum = int.MinValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                int? fValue = f(v);
+                if (fValue.HasValue)
+                {
+                    sum += fValue.Value;
+                }
+            }
+            return sum;
+        }
+
+        public static int? Sum<T1, T2, T3, T4>(this Tuple<T1, T2, T3, T4> value, Func<object, int?> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            int? sum = int.MinValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                int? fValue = f(v);
+                if (fValue.HasValue)
+                {
+                    sum += fValue.Value;
+                }
+            }
+            return sum;
+        }
+
+        public static int? Sum<T1, T2, T3, T4, T5>(this Tuple<T1, T2, T3, T4, T5> value, Func<object, int?> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            int? sum = int.MinValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                int? fValue = f(v);
+                if (fValue.HasValue)
+                {
+                    sum += fValue.Value;
+                }
+            }
+            return sum;
+        }
+
+        public static int? Sum<T1, T2, T3, T4, T5, T6>(this Tuple<T1, T2, T3, T4, T5, T6> value, Func<object, int?> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            int? sum = int.MinValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                int? fValue = f(v);
+                if (fValue.HasValue)
+                {
+                    sum += fValue.Value;
+                }
+            }
+            return sum;
+        }
+
+        public static int? Sum<T1, T2, T3, T4, T5, T6, T7>(this Tuple<T1, T2, T3, T4, T5, T6, T7> value, Func<object, int?> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            int? sum = int.MinValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                int? fValue = f(v);
+                if (fValue.HasValue)
+                {
+                    sum += fValue.Value;
+                }
+            }
+            return sum;
+        }
+        #endregion
+
+        #region "Sum of Long?"
+
+        public static long? Sum<T1>(this Tuple<T1> value, Func<object, long?> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            return f(value.Item1);
+        }
+
+        public static long? Sum<T1, T2>(this Tuple<T1, T2> value, Func<object, long?> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            long? sum = long.MinValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                long? fValue = f(v);
+                if (fValue.HasValue)
+                {
+                    sum += fValue.Value;
+                }
+            }
+            return sum;
+        }
+
+        public static long? Sum<T1, T2, T3>(this Tuple<T1, T2, T3> value, Func<object, long?> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            long? sum = long.MinValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                long? fValue = f(v);
+                if (fValue.HasValue)
+                {
+                    sum += fValue.Value;
+                }
+            }
+            return sum;
+        }
+
+        public static long? Sum<T1, T2, T3, T4>(this Tuple<T1, T2, T3, T4> value, Func<object, long?> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            long? sum = long.MinValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                long? fValue = f(v);
+                if (fValue.HasValue)
+                {
+                    sum += fValue.Value;
+                }
+            }
+            return sum;
+        }
+
+        public static long? Sum<T1, T2, T3, T4, T5>(this Tuple<T1, T2, T3, T4, T5> value, Func<object, long?> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            long? sum = long.MinValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                long? fValue = f(v);
+                if (fValue.HasValue)
+                {
+                    sum += fValue.Value;
+                }
+            }
+            return sum;
+        }
+
+        public static long? Sum<T1, T2, T3, T4, T5, T6>(this Tuple<T1, T2, T3, T4, T5, T6> value, Func<object, long?> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            long? sum = long.MinValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                long? fValue = f(v);
+                if (fValue.HasValue)
+                {
+                    sum += fValue.Value;
+                }
+            }
+            return sum;
+        }
+
+        public static long? Sum<T1, T2, T3, T4, T5, T6, T7>(this Tuple<T1, T2, T3, T4, T5, T6, T7> value, Func<object, long?> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            long? sum = long.MinValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                long? fValue = f(v);
+                if (fValue.HasValue)
+                {
+                    sum += fValue.Value;
+                }
+            }
+            return sum;
+        }
+        #endregion
+
+        #region "Sum of Double"
+
+        public static double Sum<T1>(this Tuple<T1> value, Func<object, double> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            return f(value.Item1);
+        }
+
+        public static double Sum<T1, T2>(this Tuple<T1, T2> value, Func<object, double> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            double sum = double.MinValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                double fValue = f(v);
+             sum+=fValue;
+            }
+            return sum;
+        }
+
+        public static double Sum<T1, T2, T3>(this Tuple<T1, T2, T3> value, Func<object, double> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            double sum = double.MinValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                double fValue = f(v);
+             sum+=fValue;
+            }
+            return sum;
+        }
+
+        public static double Sum<T1, T2, T3, T4>(this Tuple<T1, T2, T3, T4> value, Func<object, double> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            double sum = double.MinValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                double fValue = f(v);
+             sum+=fValue;
+            }
+            return sum;
+        }
+
+        public static double Sum<T1, T2, T3, T4, T5>(this Tuple<T1, T2, T3, T4, T5> value, Func<object, double> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            double sum = double.MinValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                double fValue = f(v);
+             sum+=fValue;
+            }
+            return sum;
+        }
+
+        public static double Sum<T1, T2, T3, T4, T5, T6>(this Tuple<T1, T2, T3, T4, T5, T6> value, Func<object, double> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            double sum = double.MinValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                double fValue = f(v);
+             sum+=fValue;
+            }
+            return sum;
+        }
+
+        public static double Sum<T1, T2, T3, T4, T5, T6, T7>(this Tuple<T1, T2, T3, T4, T5, T6, T7> value, Func<object, double> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            double sum = double.MinValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                double fValue = f(v);
+             sum+=fValue;
+            }
+            return sum;
+        }
+        #endregion
+
+        #region "Sum of Double?"
+
+        public static double? Sum<T1>(this Tuple<T1> value, Func<object, double?> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            return f(value.Item1);
+        }
+
+        public static double? Sum<T1, T2>(this Tuple<T1, T2> value, Func<object, double?> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            double? sum = double.MinValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                double? fValue = f(v);
+                if (fValue.HasValue)
+                {
+                    sum += fValue.Value;
+                }
+            }
+            return sum;
+        }
+
+        public static double? Sum<T1, T2, T3>(this Tuple<T1, T2, T3> value, Func<object, double?> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            double? sum = double.MinValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                double? fValue = f(v);
+                if (fValue.HasValue)
+                {
+                    sum += fValue.Value;
+                }
+            }
+            return sum;
+        }
+
+        public static double? Sum<T1, T2, T3, T4>(this Tuple<T1, T2, T3, T4> value, Func<object, double?> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            double? sum = double.MinValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                double? fValue = f(v);
+                if (fValue.HasValue)
+                {
+                    sum += fValue.Value;
+                }
+            }
+            return sum;
+        }
+
+        public static double? Sum<T1, T2, T3, T4, T5>(this Tuple<T1, T2, T3, T4, T5> value, Func<object, double?> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            double? sum = double.MinValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                double? fValue = f(v);
+                if (fValue.HasValue)
+                {
+                    sum += fValue.Value;
+                }
+            }
+            return sum;
+        }
+
+        public static double? Sum<T1, T2, T3, T4, T5, T6>(this Tuple<T1, T2, T3, T4, T5, T6> value, Func<object, double?> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            double? sum = double.MinValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                double? fValue = f(v);
+                if (fValue.HasValue)
+                {
+                    sum += fValue.Value;
+                }
+            }
+            return sum;
+        }
+
+        public static double? Sum<T1, T2, T3, T4, T5, T6, T7>(this Tuple<T1, T2, T3, T4, T5, T6, T7> value, Func<object, double?> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            double? sum = double.MinValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                double? fValue = f(v);
+                if (fValue.HasValue)
+                {
+                    sum += fValue.Value;
+                }
+            }
+            return sum;
+        }
+        #endregion
+
+        #region "Sum of Short"
+
+        public static short Sum<T1>(this Tuple<T1> value, Func<object, short> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            return f(value.Item1);
+        }
+
+        public static short Sum<T1, T2>(this Tuple<T1, T2> value, Func<object, short> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            short sum = short.MinValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                short fValue = f(v);
+             sum+=fValue;
+            }
+            return sum;
+        }
+
+        public static short Sum<T1, T2, T3>(this Tuple<T1, T2, T3> value, Func<object, short> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            short sum = short.MinValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                short fValue = f(v);
+             sum+=fValue;
+            }
+            return sum;
+        }
+
+        public static short Sum<T1, T2, T3, T4>(this Tuple<T1, T2, T3, T4> value, Func<object, short> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            short sum = short.MinValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                short fValue = f(v);
+             sum+=fValue;
+            }
+            return sum;
+        }
+
+        public static short Sum<T1, T2, T3, T4, T5>(this Tuple<T1, T2, T3, T4, T5> value, Func<object, short> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            short sum = short.MinValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                short fValue = f(v);
+             sum+=fValue;
+            }
+            return sum;
+        }
+
+        public static short Sum<T1, T2, T3, T4, T5, T6>(this Tuple<T1, T2, T3, T4, T5, T6> value, Func<object, short> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            short sum = short.MinValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                short fValue = f(v);
+             sum+=fValue;
+            }
+            return sum;
+        }
+
+        public static short Sum<T1, T2, T3, T4, T5, T6, T7>(this Tuple<T1, T2, T3, T4, T5, T6, T7> value, Func<object, short> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            short sum = short.MinValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                short fValue = f(v);
+             sum+=fValue;
+            }
+            return sum;
+        }
+        #endregion
+
+        #region "Sum of Short?"
+
+        public static short? Sum<T1>(this Tuple<T1> value, Func<object, short?> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            return f(value.Item1);
+        }
+
+        public static short? Sum<T1, T2>(this Tuple<T1, T2> value, Func<object, short?> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            short? sum = short.MinValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                short? fValue = f(v);
+                if (fValue.HasValue)
+                {
+                    sum += fValue.Value;
+                }
+            }
+            return sum;
+        }
+
+        public static short? Sum<T1, T2, T3>(this Tuple<T1, T2, T3> value, Func<object, short?> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            short? sum = short.MinValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                short? fValue = f(v);
+                if (fValue.HasValue)
+                {
+                    sum += fValue.Value;
+                }
+            }
+            return sum;
+        }
+
+        public static short? Sum<T1, T2, T3, T4>(this Tuple<T1, T2, T3, T4> value, Func<object, short?> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            short? sum = short.MinValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                short? fValue = f(v);
+                if (fValue.HasValue)
+                {
+                    sum += fValue.Value;
+                }
+            }
+            return sum;
+        }
+
+        public static short? Sum<T1, T2, T3, T4, T5>(this Tuple<T1, T2, T3, T4, T5> value, Func<object, short?> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            short? sum = short.MinValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                short? fValue = f(v);
+                if (fValue.HasValue)
+                {
+                    sum += fValue.Value;
+                }
+            }
+            return sum;
+        }
+
+        public static short? Sum<T1, T2, T3, T4, T5, T6>(this Tuple<T1, T2, T3, T4, T5, T6> value, Func<object, short?> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            short? sum = short.MinValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                short? fValue = f(v);
+                if (fValue.HasValue)
+                {
+                    sum += fValue.Value;
+                }
+            }
+            return sum;
+        }
+
+        public static short? Sum<T1, T2, T3, T4, T5, T6, T7>(this Tuple<T1, T2, T3, T4, T5, T6, T7> value, Func<object, short?> f)
+        {
+            if (value == null)
+            {
+                throw new ArgumentNullException("value", "value is null");
+            }
+
+            if (f == null)
+            {
+                throw new ArgumentNullException("f", "f is null");
+            }
+            short? sum = short.MinValue;
+            int i = value.Count();
+            while (0 < i)
+            {
+                i--;
+                object v = value.Item(i);
+                short? fValue = f(v);
+                if (fValue.HasValue)
+                {
+                    sum += fValue.Value;
+                }
+            }
+            return sum;
+        }
+        #endregion
+
     }
-
-
