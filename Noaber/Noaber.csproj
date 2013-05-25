@@ -61,11 +61,70 @@
     <Compile Include="TupleEnumerators\ThreeTupleEnumerator.cs" />
     <Compile Include="TupleEnumerators\TupleEnumerator.cs" />
     <Compile Include="TupleEnumerators\TwoTupleEnumerator.cs" />
+    <Compile Include="TupleExtensions\TupleExtensions.AverageOfNullableShort.cs" />
+    <Compile Include="TupleExtensions\TupleExtensions.AverageOfNullableLong.cs" />
+    <Compile Include="TupleExtensions\TupleExtensions.AverageOfNullableInteger.cs" />
+    <Compile Include="TupleExtensions\TupleExtensions.AverageOfNullableDouble.cs" />
+    <Compile Include="TupleExtensions\TupleExtensions.AverageOfNullableDecimal.cs" />
+    <Compile Include="TupleExtensions\TupleExtensions.AverageOfLong.cs" />
+    <Compile Include="TupleExtensions\TupleExtensions.AverageOfInteger.cs" />
+    <Compile Include="TupleExtensions\TupleExtensions.AverageOfDouble.cs" />
+    <Compile Include="TupleExtensions\TupleExtensions.AverageOfDecimal.cs" />
+    <Compile Include="TupleExtensions\TupleExtensions.AsEnumerable.cs" />
+    <Compile Include="TupleExtensions\TupleExtensions.Cast.cs" />
+    <Compile Include="TupleExtensions\TupleExtensions.Cons.cs" />
+    <Compile Include="TupleExtensions\TupleExtensions.Count.cs" />
+    <Compile Include="TupleExtensions\TupleExtensions.CountWithPredicate.cs" />
     <Compile Include="TupleExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TupleExtensions\TupleExtensions.Enumerator.cs" />
+    <Compile Include="TupleExtensions\TupleExtensions.First.cs" />
+    <Compile Include="TupleExtensions\TupleExtensions.FirstOrDefault.cs" />
+    <Compile Include="TupleExtensions\TupleExtensions.Item.cs" />
+    <Compile Include="TupleExtensions\TupleExtensions.Last.cs" />
+    <Compile Include="TupleExtensions\TupleExtensions.LastOrDefault.cs" />
+    <Compile Include="TupleExtensions\TupleExtensions.Length.cs" />
+    <Compile Include="TupleExtensions\TupleExtensions.LongCount.cs" />
+    <Compile Include="TupleExtensions\TupleExtensions.LongCountWithPredicate.cs" />
+    <Compile Include="TupleExtensions\TupleExtensions.LongLength.cs" />
+    <Compile Include="TupleExtensions\TupleExtensions.MaxNullableDouble.cs" />
+    <Compile Include="TupleExtensions\TupleExtensions.MaxOfDouble.cs" />
+    <Compile Include="TupleExtensions\TupleExtensions.MaxOfInteger.cs" />
+    <Compile Include="TupleExtensions\TupleExtensions.MaxOfLong.cs" />
+    <Compile Include="TupleExtensions\TupleExtensions.MaxOfNullableDecimal.cs" />
+    <Compile Include="TupleExtensions\TupleExtensions.MaxOfNullableInteger.cs" />
+    <Compile Include="TupleExtensions\TupleExtensions.MaxofNullableLong.cs" />
+    <Compile Include="TupleExtensions\TupleExtensions.MaxOfNullableShort.cs" />
+    <Compile Include="TupleExtensions\TupleExtensions.MaxOfShort.cs" />
+    <Compile Include="TupleExtensions\TupleExtensions.MinOfDecimal.cs" />
+    <Compile Include="TupleExtensions\TupleExtensions.MinOfDouble.cs" />
+    <Compile Include="TupleExtensions\TupleExtensions.MinOfInteger.cs" />
+    <Compile Include="TupleExtensions\TupleExtensions.MinOfLong.cs" />
+    <Compile Include="TupleExtensions\TupleExtensions.MinOfNullableDecimal.cs" />
+    <Compile Include="TupleExtensions\TupleExtensions.MinofNullableDouble.cs" />
+    <Compile Include="TupleExtensions\TupleExtensions.MinOfNullableInteger.cs" />
+    <Compile Include="TupleExtensions\TupleExtensions.MinOfNullableLong.cs" />
+    <Compile Include="TupleExtensions\TupleExtensions.MinOfNullableShort.cs" />
+    <Compile Include="TupleExtensions\TupleExtensions.MinOfShort.cs" />
+    <Compile Include="TupleExtensions\TupleExtensions.Reverse.cs" />
+    <Compile Include="TupleExtensions\TupleExtensions.SumOfDecimal.cs" />
+    <Compile Include="TupleExtensions\TupleExtensions.SumOfDouble.cs" />
+    <Compile Include="TupleExtensions\TupleExtensions.SumOfInteger.cs" />
+    <Compile Include="TupleExtensions\TupleExtensions.SumOfLong.cs" />
+    <Compile Include="TupleExtensions\TupleExtensions.SumOfNullableDecimal.cs" />
+    <Compile Include="TupleExtensions\TupleExtensions.SumOfNullableDouble.cs" />
+    <Compile Include="TupleExtensions\TupleExtensions.SumofNullableInteger.cs" />
+    <Compile Include="TupleExtensions\TupleExtensions.SumOfNullableLong.cs" />
+    <Compile Include="TupleExtensions\TupleExtensions.SumOfNullableShort.cs" />
+    <Compile Include="TupleExtensions\TupleExtensions.SumOfShort.cs" />
+    <Compile Include="TupleExtensions\TupleExtensions.Tail.cs" />
+    <Compile Include="TupleExtensions\TupleExtensions.MaxOfDecimal.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Noaber.snk" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="TupleExtensions\TupleExtensions.Concat.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
