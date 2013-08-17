@@ -9,6 +9,14 @@ namespace Tests
     public partial class TupleSumTests
     {
         [TestMethod]
+        public void IntegerSumOnOneTuple()
+        {
+            Tuple<int> sut = new Tuple<int>(1);
+            int expected = sut.AsEnumerable().Cast<int>().Sum();
+            int actual = sut.Sum(x => (int)x);
+            Assert.AreEqual(expected, actual);
+        }
+        [TestMethod]
         public void IntegerSumOnTwoTuple()
         {
             Tuple<int, int> sut = new Tuple<int, int>(1, 2);

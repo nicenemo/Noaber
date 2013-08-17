@@ -9,6 +9,15 @@ namespace Tests
     public partial class TupleSumTests
     {
         [TestMethod]
+        public void ShortSumOnOneTuple()
+        {
+            Tuple<short> sut = new Tuple<short>(1);
+            short expected = sut.AsEnumerable().Cast<short>().Sum();
+            short actual = sut.Sum(x => (short)x);
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
         public void ShortSumOnTwoTuple()
         {
             Tuple<short, short> sut = new Tuple<short, short>(1, 2);

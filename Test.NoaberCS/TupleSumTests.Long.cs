@@ -9,6 +9,15 @@ namespace Tests
     public partial class TupleSumTests
     {
         [TestMethod]
+        public void LongSumOnOneTuple()
+        {
+            Tuple<long> sut = new Tuple<long>(1);
+            long expected = sut.AsEnumerable().Cast<long>().Sum();
+            long actual = sut.Sum(x => (long)x);
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
         public void LongSumOnTwoTuple()
         {
             Tuple<long, long> sut = new Tuple<long, long>(1, 2);
