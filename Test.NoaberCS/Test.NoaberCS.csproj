@@ -69,6 +69,7 @@
     <Compile Include="TupleReverseTests.cs" />
     <Compile Include="TupleSumTests.cs" />
     <Compile Include="TupleSumTests.Double.cs" />
+    <Compile Include="TupleSumTests.Short.cs" />
     <Compile Include="TupleTailTests.cs" />
     <Compile Include="TupleSumTests.Integer.cs" />
   </ItemGroup>
