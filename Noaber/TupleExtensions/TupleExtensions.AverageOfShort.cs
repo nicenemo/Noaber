@@ -9,7 +9,7 @@ using System.Runtime.CompilerServices;
 /// <averagemary>
 /// Extensions for Tuples
 /// </averagemary>
-public static partial class TuplesExtensions
+public static partial class TupleExtensions
 {
   #region "Average of int"
 

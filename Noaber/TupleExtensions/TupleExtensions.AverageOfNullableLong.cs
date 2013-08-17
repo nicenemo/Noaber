@@ -7,7 +7,7 @@ using System.Linq.Expressions;
 using System.Runtime.CompilerServices;
 
 
-public static partial class TuplesExtensions
+public static partial class TupleExtensions
 {
     #region "Average of long?"
 

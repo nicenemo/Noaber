@@ -9,7 +9,7 @@ using System.Runtime.CompilerServices;
 /// <summary>
 /// Extensions for Tuples
 /// </summary>
-public static partial class TuplesExtensions
+public static partial class TupleExtensions
 {
     #region "Cast"
     public static Tuple<TResult> Cast<TResult, T1>(this Tuple<T1> value)

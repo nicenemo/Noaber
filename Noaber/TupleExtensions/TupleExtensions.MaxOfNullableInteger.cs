@@ -9,7 +9,7 @@ using System.Runtime.CompilerServices;
 /// <summary>
 /// Extensions for Tuples
 /// </summary>
-public static partial class TuplesExtensions
+public static partial class TupleExtensions
 {
     #region "Max of Integer?"
 
