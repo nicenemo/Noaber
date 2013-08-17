@@ -13,30 +13,30 @@ public static partial class TuplesExtensions
 {
     #region "Min of Long?"
 
-    public static long? Min<T1>(this Tuple<T1> value, Func<object, long?> f)
+    public static long? Min<T1>(this Tuple<T1> value, Func<object, long?> func)
     {
         if (value == null)
         {
             throw new ArgumentNullException("value", "value is null");
         }
 
-        if (f == null)
+        if (func == null)
         {
-            throw new ArgumentNullException("f", "f is null");
+            throw new ArgumentNullException("func", "func is null");
         }
-        return f(value.Item1);
+        return func(value.Item1);
     }
 
-    public static long? Min<T1, T2>(this Tuple<T1, T2> value, Func<object, long?> f)
+    public static long? Min<T1, T2>(this Tuple<T1, T2> value, Func<object, long?> func)
     {
         if (value == null)
         {
             throw new ArgumentNullException("value", "value is null");
         }
 
-        if (f == null)
+        if (func == null)
         {
-            throw new ArgumentNullException("f", "f is null");
+            throw new ArgumentNullException("func", "func is null");
         }
         long? min = long.MaxValue;
         int i = value.Count();
@@ -44,7 +44,7 @@ public static partial class TuplesExtensions
         {
             i--;
             object v = value.Item(i);
-            long? fValue = f(v);
+            long? fValue = func(v);
             if (fValue.HasValue)
             {
                 min = System.Math.Min(min.Value, fValue.Value);
@@ -53,16 +53,16 @@ public static partial class TuplesExtensions
         return min;
     }
 
-    public static long? Min<T1, T2, T3>(this Tuple<T1, T2, T3> value, Func<object, long?> f)
+    public static long? Min<T1, T2, T3>(this Tuple<T1, T2, T3> value, Func<object, long?> func)
     {
         if (value == null)
         {
             throw new ArgumentNullException("value", "value is null");
         }
 
-        if (f == null)
+        if (func == null)
         {
-            throw new ArgumentNullException("f", "f is null");
+            throw new ArgumentNullException("func", "func is null");
         }
         long? min = long.MaxValue;
         int i = value.Count();
@@ -70,7 +70,7 @@ public static partial class TuplesExtensions
         {
             i--;
             object v = value.Item(i);
-            long? fValue = f(v);
+            long? fValue = func(v);
             if (fValue.HasValue)
             {
                 min = System.Math.Min(min.Value, fValue.Value);
@@ -79,16 +79,16 @@ public static partial class TuplesExtensions
         return min;
     }
 
-    public static long? Min<T1, T2, T3, T4>(this Tuple<T1, T2, T3, T4> value, Func<object, long?> f)
+    public static long? Min<T1, T2, T3, T4>(this Tuple<T1, T2, T3, T4> value, Func<object, long?> func)
     {
         if (value == null)
         {
             throw new ArgumentNullException("value", "value is null");
         }
 
-        if (f == null)
+        if (func == null)
         {
-            throw new ArgumentNullException("f", "f is null");
+            throw new ArgumentNullException("func", "func is null");
         }
         long? min = long.MaxValue;
         int i = value.Count();
@@ -96,7 +96,7 @@ public static partial class TuplesExtensions
         {
             i--;
             object v = value.Item(i);
-            long? fValue = f(v);
+            long? fValue = func(v);
             if (fValue.HasValue)
             {
                 if (fValue.HasValue)
@@ -108,16 +108,16 @@ public static partial class TuplesExtensions
         return min;
     }
 
-    public static long? Min<T1, T2, T3, T4, T5>(this Tuple<T1, T2, T3, T4, T5> value, Func<object, long?> f)
+    public static long? Min<T1, T2, T3, T4, T5>(this Tuple<T1, T2, T3, T4, T5> value, Func<object, long?> func)
     {
         if (value == null)
         {
             throw new ArgumentNullException("value", "value is null");
         }
 
-        if (f == null)
+        if (func == null)
         {
-            throw new ArgumentNullException("f", "f is null");
+            throw new ArgumentNullException("func", "func is null");
         }
         long? min = long.MaxValue;
         int i = value.Count();
@@ -125,7 +125,7 @@ public static partial class TuplesExtensions
         {
             i--;
             object v = value.Item(i);
-            long? fValue = f(v);
+            long? fValue = func(v);
             if (fValue.HasValue)
             {
                 min = System.Math.Min(min.Value, fValue.Value);
@@ -134,16 +134,16 @@ public static partial class TuplesExtensions
         return min;
     }
 
-    public static long? Min<T1, T2, T3, T4, T5, T6>(this Tuple<T1, T2, T3, T4, T5, T6> value, Func<object, long?> f)
+    public static long? Min<T1, T2, T3, T4, T5, T6>(this Tuple<T1, T2, T3, T4, T5, T6> value, Func<object, long?> func)
     {
         if (value == null)
         {
             throw new ArgumentNullException("value", "value is null");
         }
 
-        if (f == null)
+        if (func == null)
         {
-            throw new ArgumentNullException("f", "f is null");
+            throw new ArgumentNullException("func", "func is null");
         }
         long? min = long.MaxValue;
         int i = value.Count();
@@ -151,7 +151,7 @@ public static partial class TuplesExtensions
         {
             i--;
             object v = value.Item(i);
-            long? fValue = f(v);
+            long? fValue = func(v);
             if (fValue.HasValue)
             {
                 min = System.Math.Min(min.Value, fValue.Value);
@@ -160,16 +160,16 @@ public static partial class TuplesExtensions
         return min;
     }
 
-    public static long? Min<T1, T2, T3, T4, T5, T6, T7>(this Tuple<T1, T2, T3, T4, T5, T6, T7> value, Func<object, long?> f)
+    public static long? Min<T1, T2, T3, T4, T5, T6, T7>(this Tuple<T1, T2, T3, T4, T5, T6, T7> value, Func<object, long?> func)
     {
         if (value == null)
         {
             throw new ArgumentNullException("value", "value is null");
         }
 
-        if (f == null)
+        if (func == null)
         {
-            throw new ArgumentNullException("f", "f is null");
+            throw new ArgumentNullException("func", "func is null");
         }
         long? min = long.MaxValue;
         int i = value.Count();
@@ -177,7 +177,7 @@ public static partial class TuplesExtensions
         {
             i--;
             object v = value.Item(i);
-            long? fValue = f(v);
+            long? fValue = func(v);
             if (fValue.HasValue)
             {
                 min = System.Math.Min(min.Value, fValue.Value);

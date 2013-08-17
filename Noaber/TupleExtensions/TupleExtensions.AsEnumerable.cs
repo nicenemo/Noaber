@@ -9,7 +9,7 @@ using System.Runtime.CompilerServices;
 /// <summary>
 /// Extensions for Tuples
 /// </summary>
-public static partial class TuplesExtensions
+public static partial class TupleExtensions
 {
     #region "AsEnumerable"
     //REMARK: AsEnumerable seems to be required for C# because C# demands instance an Instance Method for MoveNext and a Property for Current.
