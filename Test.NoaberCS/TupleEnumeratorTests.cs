@@ -141,7 +141,6 @@ namespace Tests
 
         #region "Tuple Iteration tests"
         [TestMethod()]
-        [ExpectedException(typeof(ArgumentOutOfRangeException))]
         public void Test1TupleIteration()
         {
             Tuple<int> t = new Tuple<int>(-1);
@@ -155,7 +154,6 @@ namespace Tests
             Assert.AreEqual(expected, actual);
         }
         [TestMethod()]
-        [ExpectedException(typeof(ArgumentOutOfRangeException))]
         public void Test2TupleIteration()
         {
             Tuple<int, int> t = new Tuple<int, int>(-1, -2);
@@ -168,7 +166,6 @@ namespace Tests
             Assert.AreEqual(expected, actual);
         }
         [TestMethod()]
-        [ExpectedException(typeof(ArgumentOutOfRangeException))]
         public void Test3TupleIteration()
         {
             Tuple<int, int, int> t = new Tuple<int, int, int>(-1, -2, -3);
@@ -181,11 +178,10 @@ namespace Tests
             Assert.AreEqual(expected, actual);
         }
         [TestMethod()]
-        [ExpectedException(typeof(ArgumentOutOfRangeException))]
         public void Test4TupleIteration()
         {
             Tuple<int, int, int, int> t = new Tuple<int, int, int, int>(-1, -2, -3, -4);
-            const int expected = -7;
+            const int expected = -10;
             int actual = 0;
             foreach (int v in t.AsEnumerable())
             {
@@ -195,11 +191,10 @@ namespace Tests
         }
 
         [TestMethod()]
-        [ExpectedException(typeof(ArgumentOutOfRangeException))]
         public void Test5TupleIteration()
         {
             Tuple<int, int, int, int, int> t = new Tuple<int, int, int, int, int>(-1, -2, -3, -4, -5);
-            const int expected = -14;
+            const int expected = -15;
             int actual = 0;
             foreach (int v in t.AsEnumerable())
             {
@@ -208,10 +203,9 @@ namespace Tests
             Assert.AreEqual(expected, actual);
         }
         [TestMethod()]
-        [ExpectedException(typeof(ArgumentOutOfRangeException))]
         public void Test6TupleIteration()
         {
-            Tuple<int, int, int, int, int, int> t = new Tuple<int, int, int, int, int, int>(-1, 2, -3, -4, -5, -6);
+            Tuple<int, int, int, int, int, int> t = new Tuple<int, int, int, int, int, int>(-1, -2, -3, -4, -5, -6);
             const int expected = -21;
             int actual = 0;
             foreach (int v in t.AsEnumerable())
@@ -222,7 +216,6 @@ namespace Tests
         }
 
         [TestMethod()]
-        [ExpectedException(typeof(ArgumentOutOfRangeException))]
         public void Test7TupleIteration()
         {
             Tuple<int, int, int, int, int, int, int> t = new Tuple<int, int, int, int, int, int, int>(-1, -2, -3, -4, -5, -6, -7);

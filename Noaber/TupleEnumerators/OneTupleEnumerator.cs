@@ -5,7 +5,7 @@ internal class OneTupleEnumerator<T> : TupleEnumerator
 
     private readonly Tuple<T> value;
     public OneTupleEnumerator(Tuple<T> value)
-        : base(1)
+        : base(0)
     {
         this.value = value;
     }

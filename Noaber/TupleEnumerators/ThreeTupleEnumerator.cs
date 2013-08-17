@@ -5,7 +5,7 @@ internal sealed class ThreeTupleEnumerator<T1, T2, T3> : TupleEnumerator
 
     private readonly Tuple<T1, T2, T3> value;
     public ThreeTupleEnumerator(Tuple<T1, T2, T3> value)
-        : base(3)
+        : base(2)
     {
         this.value = value;
     }

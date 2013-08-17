@@ -67,7 +67,10 @@
     <Compile Include="TupleFirstAndLastTests.cs" />
     <Compile Include="TupleLengthTests.cs" />
     <Compile Include="TupleReverseTests.cs" />
+    <Compile Include="TupleSumTests.cs" />
+    <Compile Include="TupleSumTests.Double.cs" />
     <Compile Include="TupleTailTests.cs" />
+    <Compile Include="TupleSumTests.Integer.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Noaber\Noaber.csproj">
@@ -77,6 +80,8 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Noaber.snk" />
+    <Compile Include="TupleSumTests.Decimal.cs" />
+    <Compile Include="TupleSumTests.Long.cs" />
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
