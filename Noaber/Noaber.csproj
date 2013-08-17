@@ -72,6 +72,7 @@
     <Compile Include="TupleExtensions\TupleExtensions.AverageOfDouble.cs" />
     <Compile Include="TupleExtensions\TupleExtensions.AverageOfDecimal.cs" />
     <Compile Include="TupleExtensions\TupleExtensions.AsEnumerable.cs" />
+    <Compile Include="TupleExtensions\TupleExtensions.AverageOfShort.cs" />
     <Compile Include="TupleExtensions\TupleExtensions.Cast.cs" />
     <Compile Include="TupleExtensions\TupleExtensions.Cons.cs" />
     <Compile Include="TupleExtensions\TupleExtensions.Count.cs" />

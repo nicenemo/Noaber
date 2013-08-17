@@ -13,7 +13,7 @@ public static partial class TuplesExtensions
 {
     #region "Average of short?"
 
-    public static short? Average<T1>(this Tuple<T1> value, Func<object, short?> f)
+    public static double? Average<T1>(this Tuple<T1> value, Func<object, short?> f)
     {
         if (value == null)
         {
@@ -24,10 +24,10 @@ public static partial class TuplesExtensions
         {
             throw new ArgumentNullException("f", "f is null");
         }
-        return f(value.Item1);
+        return (double?)f(value.Item1);
     }
 
-    public static short? Average<T1, T2>(this Tuple<T1, T2> value, Func<object, short?> f)
+    public static double? Average<T1, T2>(this Tuple<T1, T2> value, Func<object, short?> f)
     {
         if (value == null)
         {
@@ -38,11 +38,11 @@ public static partial class TuplesExtensions
         {
             throw new ArgumentNullException("f", "f is null");
         }
-        short? average = (short)(value.Sum(f) / value.Count());
+        double? average = (double?)(value.Sum(f) / (double?) value.Count());
         return average;
     }
 
-    public static short? Average<T1, T2, T3>(this Tuple<T1, T2, T3> value, Func<object, short?> f)
+    public static double? Average<T1, T2, T3>(this Tuple<T1, T2, T3> value, Func<object, short?> f)
     {
         if (value == null)
         {
@@ -53,11 +53,11 @@ public static partial class TuplesExtensions
         {
             throw new ArgumentNullException("f", "f is null");
         }
-        short? average = (short)(value.Sum(f) / value.Count());
+        double? average = (double?)(value.Sum(f) / (double?)value.Count());
         return average;
     }
 
-    public static short? Average<T1, T2, T3, T4>(this Tuple<T1, T2, T3, T4> value, Func<object, short?> f)
+    public static double? Average<T1, T2, T3, T4>(this Tuple<T1, T2, T3, T4> value, Func<object, short?> f)
     {
         if (value == null)
         {
@@ -68,11 +68,11 @@ public static partial class TuplesExtensions
         {
             throw new ArgumentNullException("f", "f is null");
         }
-        short? average = (short)(value.Sum(f) / value.Count());
+        double? average = (double?)(value.Sum(f) / (double?)value.Count());
         return average;
     }
 
-    public static short? Average<T1, T2, T3, T4, T5>(this Tuple<T1, T2, T3, T4, T5> value, Func<object, short?> f)
+    public static double? Average<T1, T2, T3, T4, T5>(this Tuple<T1, T2, T3, T4, T5> value, Func<object, short?> f)
     {
         if (value == null)
         {
@@ -83,11 +83,11 @@ public static partial class TuplesExtensions
         {
             throw new ArgumentNullException("f", "f is null");
         }
-        short? average = (short)(value.Sum(f) / value.Count());
+        double? average = (double?)(value.Sum(f) / (double?)value.Count());
         return average;
     }
 
-    public static short? Average<T1, T2, T3, T4, T5, T6>(this Tuple<T1, T2, T3, T4, T5, T6> value, Func<object, short?> f)
+    public static double? Average<T1, T2, T3, T4, T5, T6>(this Tuple<T1, T2, T3, T4, T5, T6> value, Func<object, short?> f)
     {
         if (value == null)
         {
@@ -98,11 +98,11 @@ public static partial class TuplesExtensions
         {
             throw new ArgumentNullException("f", "f is null");
         }
-        short? average = (short)(value.Sum(f) / value.Count());
+        double? average = (double?)(value.Sum(f) / (double?)value.Count());
         return average;
     }
 
-    public static short? Average<T1, T2, T3, T4, T5, T6, T7>(this Tuple<T1, T2, T3, T4, T5, T6, T7> value, Func<object, short?> f)
+    public static double? Average<T1, T2, T3, T4, T5, T6, T7>(this Tuple<T1, T2, T3, T4, T5, T6, T7> value, Func<object, short?> f)
     {
         if (value == null)
         {
@@ -113,7 +113,7 @@ public static partial class TuplesExtensions
         {
             throw new ArgumentNullException("f", "f is null");
         }
-        short? average = (short) (value.Sum(f) / value.Count());
+        double? average = (double?)(value.Sum(f) / (double?)value.Count());
         return average;
     }
     #endregion

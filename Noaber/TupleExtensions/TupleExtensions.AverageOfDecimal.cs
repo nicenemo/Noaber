@@ -38,7 +38,7 @@ public static partial class TuplesExtensions
         {
             throw new ArgumentNullException("f", "f is null");
         }
-        decimal average = value.Sum(f) / value.Count();
+        decimal average = value.Sum(f)/ (decimal) value.Count();
         return average;
     }
 
@@ -53,7 +53,7 @@ public static partial class TuplesExtensions
         {
             throw new ArgumentNullException("f", "f is null");
         }
-        decimal average = value.Sum(f) / value.Count();
+        decimal average = value.Sum(f)/ (decimal) value.Count();
         return average;
     }
 
@@ -68,7 +68,7 @@ public static partial class TuplesExtensions
         {
             throw new ArgumentNullException("f", "f is null");
         }
-        decimal average = value.Sum(f) / value.Count();
+        decimal average = value.Sum(f)/ (decimal) value.Count();
         return average;
     }
 
@@ -83,7 +83,7 @@ public static partial class TuplesExtensions
         {
             throw new ArgumentNullException("f", "f is null");
         }
-        decimal average = value.Sum(f) / value.Count();
+        decimal average = value.Sum(f)/ (decimal) value.Count();
         return average;
     }
 
@@ -98,7 +98,7 @@ public static partial class TuplesExtensions
         {
             throw new ArgumentNullException("f", "f is null");
         }
-        decimal average = value.Sum(f) / value.Count();
+        decimal average = value.Sum(f)/ (decimal) value.Count();
         return average;
     }
 
@@ -113,7 +113,7 @@ public static partial class TuplesExtensions
         {
             throw new ArgumentNullException("f", "f is null");
         }
-        decimal average = value.Sum(f) / value.Count();
+        decimal average = value.Sum(f)/ (decimal) value.Count();
         return average;
     }
     #endregion

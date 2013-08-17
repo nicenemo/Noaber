@@ -60,12 +60,29 @@
   </Choose>
   <ItemGroup>
     <Compile Include="GlobalSuppressions.cs" />
+    <Compile Include="TupleAverageTests.cs" />
+    <Compile Include="TupleAverageTests.Decimal.cs" />
+    <Compile Include="TupleAverageTests.Double.cs" />
+    <Compile Include="TupleAverageTests.Integer.cs" />
+    <Compile Include="TupleAverageTests.Long.cs" />
+    <Compile Include="TupleAverageTests.Short.cs" />
     <Compile Include="TupleConcatenationTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TupleConsTests.cs" />
     <Compile Include="TupleEnumeratorTests.cs" />
     <Compile Include="TupleFirstAndLastTests.cs" />
     <Compile Include="TupleLengthTests.cs" />
+    <Compile Include="TupleMaxTests.cs" />
+    <Compile Include="TupleMaxTests.Double.cs" />
+    <Compile Include="TupleMaxTests.Integer.cs" />
+    <Compile Include="TupleMaxTests.Long.cs" />
+    <Compile Include="TupleMaxTests.Short.cs" />
+    <Compile Include="TupleMinTests.cs" />
+    <Compile Include="TupleMinTests.Decimal.cs" />
+    <Compile Include="TupleMinTests.Double.cs" />
+    <Compile Include="TupleMinTests.Integer.cs" />
+    <Compile Include="TupleMinTests.Long.cs" />
+    <Compile Include="TupleMinTests.Short.cs" />
     <Compile Include="TupleReverseTests.cs" />
     <Compile Include="TupleSumTests.cs" />
     <Compile Include="TupleSumTests.Double.cs" />
@@ -83,6 +100,7 @@
     <None Include="Noaber.snk" />
     <Compile Include="TupleSumTests.Decimal.cs" />
     <Compile Include="TupleSumTests.Long.cs" />
+    <Compile Include="TupleMaxTests.Decimal.cs" />
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
