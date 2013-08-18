@@ -5,7 +5,6 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Tests
 {
-
   public partial class TupleAverageTests
   {
     private readonly Func<object, long> nullFuncLong = null;
@@ -21,9 +20,8 @@ namespace Tests
     [TestMethod]
     public void LongAverageOnOneTupleFuncNull()
     {
-      Tuple<long> sut = new Tuple<long>(1);
-      Func<object, long> func = null;
-      sut.Average(func);
+      Tuple<long> sut = new Tuple<long>(1);    
+      sut.Average(nullFuncLong);
     }
 
     [ExpectedException(typeof(ArgumentNullException))]
@@ -38,9 +36,8 @@ namespace Tests
     [TestMethod]
     public void LongAverageOnTwoTupleFuncNull()
     {
-      Tuple<long, long> sut = new Tuple<long, long>(1, 2);
-      Func<object, long> func = null;
-      sut.Average(func);
+      Tuple<long, long> sut = new Tuple<long, long>(1, 2); 
+      sut.Average(nullFuncLong);
     }
 
     [ExpectedException(typeof(ArgumentNullException))]
@@ -55,9 +52,8 @@ namespace Tests
     [TestMethod]
     public void LongAverageOnThreeTupleFuncNull()
     {
-      Tuple<long, long, long> sut = new Tuple<long, long, long>(1, 2, 3);
-      Func<object, long> func = null;
-      sut.Average(func);
+      Tuple<long, long, long> sut = new Tuple<long, long, long>(1, 2, 3);  
+      sut.Average(nullFuncLong);
     }
 
     [ExpectedException(typeof(ArgumentNullException))]
@@ -72,9 +68,8 @@ namespace Tests
     [TestMethod]
     public void LongAverageOnFourTupleFuncNull()
     {
-      Tuple<long, long, long, long> sut = new Tuple<long, long, long, long>(1, 2, 3, 4);
-      Func<object, long> func = null;
-      sut.Average(func);
+      Tuple<long, long, long, long> sut = new Tuple<long, long, long, long>(1, 2, 3, 4);   
+      sut.Average(nullFuncLong);
     }
 
     [ExpectedException(typeof(ArgumentNullException))]
@@ -89,9 +84,8 @@ namespace Tests
     [TestMethod]
     public void LongAverageOnFiveTupleFuncNull()
     {
-      Tuple<long, long, long, long, long> sut = new Tuple<long, long, long, long, long>(1, 2, 3, 4, 5);
-      Func<object, long> func = null;
-      sut.Average(func);
+      Tuple<long, long, long, long, long> sut = new Tuple<long, long, long, long, long>(1, 2, 3, 4, 5);   
+      sut.Average(nullFuncLong);
     }
 
     [ExpectedException(typeof(ArgumentNullException))]
@@ -106,9 +100,8 @@ namespace Tests
     [TestMethod]
     public void LongAverageOnSixTupleFuncNull()
     {
-      Tuple<long, long, long, long, long, long> sut = new Tuple<long, long, long, long, long, long>(1, 2, 3, 4, 5, 6);
-      Func<object, long> func = null;
-      sut.Average(func);
+      Tuple<long, long, long, long, long, long> sut = new Tuple<long, long, long, long, long, long>(1, 2, 3, 4, 5, 6);  
+      sut.Average(nullFuncLong);
     }
 
     [ExpectedException(typeof(ArgumentNullException))]
@@ -123,9 +116,8 @@ namespace Tests
     [TestMethod]
     public void LongAverageOnSevenTupleFuncNull()
     {
-      Tuple<long, long, long, long, long, long, long> sut = new Tuple<long, long, long, long, long, long, long>(1, 2, 3, 4, 5, 6, 7);
-      Func<object, long> func = null;
-      sut.Average(func);
+      Tuple<long, long, long, long, long, long, long> sut = new Tuple<long, long, long, long, long, long, long>(1, 2, 3, 4, 5, 6, 7);   
+      sut.Average(nullFuncLong);
     }
   }
 }

@@ -5,7 +5,6 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Tests
 {
-
   public partial class TupleMaxTests
   {
     private readonly Func<object, int> nullFuncInteger = null;
@@ -22,8 +21,7 @@ namespace Tests
     public void IntegerMaxOnOneTupleFuncNull()
     {
       Tuple<int> sut = new Tuple<int>(1);
-      Func<object, int> func = null;
-      sut.Max(func);
+      sut.Max(nullFuncInteger);
     }
 
     [ExpectedException(typeof(ArgumentNullException))]
@@ -38,9 +36,8 @@ namespace Tests
     [TestMethod]
     public void IntegerMaxOnTwoTupleFuncNull()
     {
-      Tuple<int, int> sut = new Tuple<int, int>(1, 2);
-      Func<object, int> func = null;
-      sut.Max(func);
+      Tuple<int, int> sut = new Tuple<int, int>(1, 2);    
+      sut.Max(nullFuncInteger);
     }
 
     [ExpectedException(typeof(ArgumentNullException))]
@@ -55,9 +52,8 @@ namespace Tests
     [TestMethod]
     public void IntegerMaxOnThreeTupleFuncNull()
     {
-      Tuple<int, int, int> sut = new Tuple<int, int, int>(1, 2, 3);
-      Func<object, int> func = null;
-      sut.Max(func);
+      Tuple<int, int, int> sut = new Tuple<int, int, int>(1, 2, 3);   
+      sut.Max(nullFuncInteger);
     }
 
     [ExpectedException(typeof(ArgumentNullException))]
@@ -72,9 +68,8 @@ namespace Tests
     [TestMethod]
     public void IntegerMaxOnFourTupleFuncNull()
     {
-      Tuple<int, int, int, int> sut = new Tuple<int, int, int, int>(1, 2, 3, 4);
-      Func<object, int> func = null;
-      sut.Max(func);
+      Tuple<int, int, int, int> sut = new Tuple<int, int, int, int>(1, 2, 3, 4);   
+      sut.Max(nullFuncInteger);
     }
 
     [ExpectedException(typeof(ArgumentNullException))]
@@ -89,9 +84,8 @@ namespace Tests
     [TestMethod]
     public void IntegerMaxOnFiveTupleFuncNull()
     {
-      Tuple<int, int, int, int, int> sut = new Tuple<int, int, int, int, int>(1, 2, 3, 4, 5);
-      Func<object, int> func = null;
-      sut.Max(func);
+      Tuple<int, int, int, int, int> sut = new Tuple<int, int, int, int, int>(1, 2, 3, 4, 5);     
+      sut.Max(nullFuncInteger);
     }
 
     [ExpectedException(typeof(ArgumentNullException))]
@@ -106,9 +100,8 @@ namespace Tests
     [TestMethod]
     public void IntegerMaxOnSixTupleFuncNull()
     {
-      Tuple<int, int, int, int, int, int> sut = new Tuple<int, int, int, int, int, int>(1, 2, 3, 4, 5, 6);
-      Func<object, int> func = null;
-      sut.Max(func);
+      Tuple<int, int, int, int, int, int> sut = new Tuple<int, int, int, int, int, int>(1, 2, 3, 4, 5, 6);     
+      sut.Max(nullFuncInteger);
     }
 
     [ExpectedException(typeof(ArgumentNullException))]
@@ -123,9 +116,8 @@ namespace Tests
     [TestMethod]
     public void IntegerMaxOnSevenTupleFuncNull()
     {
-      Tuple<int, int, int, int, int, int, int> sut = new Tuple<int, int, int, int, int, int, int>(1, 2, 3, 4, 5, 6, 7);
-      Func<object, int> func = null;
-      sut.Max(func);
+      Tuple<int, int, int, int, int, int, int> sut = new Tuple<int, int, int, int, int, int, int>(1, 2, 3, 4, 5, 6, 7);  
+      sut.Max(nullFuncInteger);
     }
   }
 }

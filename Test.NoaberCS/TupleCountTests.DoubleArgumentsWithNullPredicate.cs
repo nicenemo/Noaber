@@ -5,119 +5,118 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Tests
 {
-  public partial class TupleMinTests
+  public partial class TupleCountTests
   {
-    private readonly Func<object, double> nullFuncDouble = null;
     [ExpectedException(typeof(ArgumentNullException))]
     [TestMethod]
-    public void DoubleMinOnOneTupleNullEnumerable()
+    public void DoubleCountOnOneTupleNullEnumerableWithNullPredicate()
     {
       Tuple<double> sut = null;
-      sut.Min(nullFuncDouble);
+      sut.Count(nullPredicate);
     }
 
     [ExpectedException(typeof(ArgumentNullException))]
     [TestMethod]
-    public void DoubleMinOnOneTupleFuncNull()
+    public void DoubleCountOnOneTupleFuncNullWithNullPredicate()
     {
       Tuple<double> sut = new Tuple<double>(1);
-      sut.Min(nullFuncDouble);
+      sut.Count(nullPredicate);
     }
 
     [ExpectedException(typeof(ArgumentNullException))]
     [TestMethod]
-    public void DoubleMinOnTwoTupleNullEnumerable()
+    public void DoubleCountOnTwoTupleNullEnumerableWithNullPredicate()
     {
       Tuple<double, double> sut = null;
-      sut.Min(nullFuncDouble);
+      sut.Count(nullPredicate);
     }
 
     [ExpectedException(typeof(ArgumentNullException))]
     [TestMethod]
-    public void DoubleMinOnTwoTupleFuncNull()
+    public void DoubleCountOnTwoTupleFuncNullWithNullPredicate()
     {
       Tuple<double, double> sut = new Tuple<double, double>(1, 2);
-      sut.Min(nullFuncDouble);
+      sut.Count(nullPredicate);
     }
 
     [ExpectedException(typeof(ArgumentNullException))]
     [TestMethod]
-    public void DoubleMinOnThreeTupleNullEnumerable()
+    public void DoubleCountOnThreeTupleNullEnumerableWithNullPredicate()
     {
       Tuple<double, double, double> sut = null;
-      sut.Min(nullFuncDouble);
+      sut.Count(nullPredicate);
     }
 
     [ExpectedException(typeof(ArgumentNullException))]
     [TestMethod]
-    public void DoubleMinOnThreeTupleFuncNull()
+    public void DoubleCountOnThreeTupleFuncNullWithNullPredicate()
     {
       Tuple<double, double, double> sut = new Tuple<double, double, double>(1, 2, 3);
-      sut.Min(nullFuncDouble);
+      sut.Count(nullPredicate);
     }
 
     [ExpectedException(typeof(ArgumentNullException))]
     [TestMethod]
-    public void DoubleMinOnFourTupleNullEnumerable()
+    public void DoubleCountOnFourTupleNullEnumerableWithNullPredicate()
     {
       Tuple<double, double, double, double> sut = null;
-      sut.Min(nullFuncDouble);
+      sut.Count(nullPredicate);
     }
 
     [ExpectedException(typeof(ArgumentNullException))]
     [TestMethod]
-    public void DoubleMinOnFourTupleFuncNull()
+    public void DoubleCountOnFourTupleFuncNullWithNullPredicate()
     {
       Tuple<double, double, double, double> sut = new Tuple<double, double, double, double>(1, 2, 3, 4);
-      sut.Min(nullFuncDouble);
+      sut.Count(nullPredicate);
     }
 
     [ExpectedException(typeof(ArgumentNullException))]
     [TestMethod]
-    public void DoubleMinOnFiveTupleNullEnumerable()
+    public void DoubleCountOnFiveTupleNullEnumerableWithNullPredicate()
     {
       Tuple<double, double, double, double, double> sut = null;
-      sut.Min(nullFuncDouble);
+      sut.Count(nullPredicate);
     }
 
     [ExpectedException(typeof(ArgumentNullException))]
     [TestMethod]
-    public void DoubleMinOnFiveTupleFuncNull()
+    public void DoubleCountOnFiveTupleFuncNullWithNullPredicate()
     {
       Tuple<double, double, double, double, double> sut = new Tuple<double, double, double, double, double>(1, 2, 3, 4, 5);
-      sut.Min(nullFuncDouble);
+      sut.Count(nullPredicate);
     }
 
     [ExpectedException(typeof(ArgumentNullException))]
     [TestMethod]
-    public void DoubleMinOnSixTupleNullEnumerable()
+    public void DoubleCountOnSixTupleNullEnumerableWithNullPredicate()
     {
       Tuple<double, double, double, double, double, double> sut = null;
-      sut.Min(nullFuncDouble);
+      sut.Count(nullPredicate);
     }
 
     [ExpectedException(typeof(ArgumentNullException))]
     [TestMethod]
-    public void DoubleMinOnSixTupleFuncNull()
+    public void DoubleCountOnSixTupleFuncNullWithNullPredicate()
     {
       Tuple<double, double, double, double, double, double> sut = new Tuple<double, double, double, double, double, double>(1, 2, 3, 4, 5, 6);
-      sut.Min(nullFuncDouble);
+      sut.Count(nullPredicate);
     }
 
     [ExpectedException(typeof(ArgumentNullException))]
     [TestMethod]
-    public void DoubleMinOnSevenTupleNullEnumerable()
+    public void DoubleCountOnSevenTupleNullEnumerableWithNullPredicate()
     {
       Tuple<double, double, double, double, double, double, double> sut = null;
-      sut.Min(nullFuncDouble);
+      sut.Count(nullPredicate);
     }
 
     [ExpectedException(typeof(ArgumentNullException))]
     [TestMethod]
-    public void DoubleMinOnSevenTupleFuncNull()
+    public void DoubleCountOnSevenTupleFuncNullWithNullPredicate()
     {
       Tuple<double, double, double, double, double, double, double> sut = new Tuple<double, double, double, double, double, double, double>(1, 2, 3, 4, 5, 6, 7);
-      sut.Min(nullFuncDouble);
+      sut.Count(nullPredicate);
     }
   }
 }

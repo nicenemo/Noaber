@@ -5,120 +5,118 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Tests
 {
-  public partial class TupleMaxTests
+  public partial class TupleCountTests
   {
-    private readonly Func<object, short> nullFuncShort = null;
     [ExpectedException(typeof(ArgumentNullException))]
     [TestMethod]
-    public void ShortMaxOnOneTupleNullEnumerable()
+    public void ShortCountOnOneTupleNullEnumerableWithNullPredicate()
     {
       Tuple<short> sut = null;
-      sut.Max(nullFuncShort);
+      sut.Count(nullPredicate);
     }
 
     [ExpectedException(typeof(ArgumentNullException))]
     [TestMethod]
-    public void ShortMaxOnOneTupleFuncNull()
+    public void ShortCountOnOneTupleFuncNullWithNullPredicate()
     {
       Tuple<short> sut = new Tuple<short>(1);
-      sut.Max(nullFuncShort);
+      sut.Count(nullPredicate);
     }
 
     [ExpectedException(typeof(ArgumentNullException))]
     [TestMethod]
-    public void ShortMaxOnTwoTupleNullEnumerable()
+    public void ShortCountOnTwoTupleNullEnumerableWithNullPredicate()
     {
       Tuple<short, short> sut = null;
-      sut.Max(nullFuncShort);
+      sut.Count(nullPredicate);
     }
 
     [ExpectedException(typeof(ArgumentNullException))]
     [TestMethod]
-    public void ShortMaxOnTwoTupleFuncNull()
+    public void ShortCountOnTwoTupleFuncNullWithNullPredicate()
     {
-      Tuple<short, short> sut = new Tuple<short, short>(1, 2); 
-      sut.Max(nullFuncShort);
+      Tuple<short, short> sut = new Tuple<short, short>(1, 2);
+      sut.Count(nullPredicate);
     }
 
     [ExpectedException(typeof(ArgumentNullException))]
     [TestMethod]
-    public void ShortMaxOnThreeTupleNullEnumerable()
+    public void ShortCountOnThreeTupleNullEnumerableWithNullPredicate()
     {
       Tuple<short, short, short> sut = null;
-      sut.Max(nullFuncShort);
+      sut.Count(nullPredicate);
     }
 
     [ExpectedException(typeof(ArgumentNullException))]
     [TestMethod]
-    public void ShortMaxOnThreeTupleFuncNull()
+    public void ShortCountOnThreeTupleFuncNullWithNullPredicate()
     {
-      Tuple<short, short, short> sut = new Tuple<short, short, short>(1, 2, 3);  
-      sut.Max(nullFuncShort);
+      Tuple<short, short, short> sut = new Tuple<short, short, short>(1, 2, 3);
+      sut.Count(nullPredicate);
     }
 
     [ExpectedException(typeof(ArgumentNullException))]
     [TestMethod]
-    public void ShortMaxOnFourTupleNullEnumerable()
+    public void ShortCountOnFourTupleNullEnumerableWithNullPredicate()
     {
       Tuple<short, short, short, short> sut = null;
-      sut.Max(nullFuncShort);
+      sut.Count(nullPredicate);
     }
 
     [ExpectedException(typeof(ArgumentNullException))]
     [TestMethod]
-    public void ShortMaxOnFourTupleFuncNull()
+    public void ShortCountOnFourTupleFuncNullWithNullPredicate()
     {
-      Tuple<short, short, short, short> sut = new Tuple<short, short, short, short>(1, 2, 3, 4); 
-      sut.Max(nullFuncShort);
+      Tuple<short, short, short, short> sut = new Tuple<short, short, short, short>(1, 2, 3, 4);
+      sut.Count(nullPredicate);
     }
 
     [ExpectedException(typeof(ArgumentNullException))]
     [TestMethod]
-    public void ShortMaxOnFiveTupleNullEnumerable()
+    public void ShortCountOnFiveTupleNullEnumerableWithNullPredicate()
     {
       Tuple<short, short, short, short, short> sut = null;
-      sut.Max(nullFuncShort);
+      sut.Count(nullPredicate);
     }
 
     [ExpectedException(typeof(ArgumentNullException))]
     [TestMethod]
-    public void ShortMaxOnFiveTupleFuncNull()
+    public void ShortCountOnFiveTupleFuncNullWithNullPredicate()
     {
-      Tuple<short, short, short, short, short> sut = new Tuple<short, short, short, short, short>(1, 2, 3, 4, 5);    
-      sut.Max(nullFuncShort);
+      Tuple<short, short, short, short, short> sut = new Tuple<short, short, short, short, short>(1, 2, 3, 4, 5);
+      sut.Count(nullPredicate);
     }
 
     [ExpectedException(typeof(ArgumentNullException))]
     [TestMethod]
-    public void ShortMaxOnSixTupleNullEnumerable()
+    public void ShortCountOnSixTupleNullEnumerableWithNullPredicate()
     {
       Tuple<short, short, short, short, short, short> sut = null;
-      sut.Max(nullFuncShort);
+      sut.Count(nullPredicate);
     }
 
     [ExpectedException(typeof(ArgumentNullException))]
     [TestMethod]
-    public void ShortMaxOnSixTupleFuncNull()
+    public void ShortCountOnSixTupleFuncNullWithNullPredicate()
     {
       Tuple<short, short, short, short, short, short> sut = new Tuple<short, short, short, short, short, short>(1, 2, 3, 4, 5, 6);
-      
-      sut.Max(nullFuncShort);
+      sut.Count(nullPredicate);
     }
 
     [ExpectedException(typeof(ArgumentNullException))]
     [TestMethod]
-    public void ShortMaxOnSevenTupleNullEnumerable()
+    public void ShortCountOnSevenTupleNullEnumerableWithNullPredicate()
     {
       Tuple<short, short, short, short, short, short, short> sut = null;
-      sut.Max(nullFuncShort);
+      sut.Count(nullPredicate);
     }
 
     [ExpectedException(typeof(ArgumentNullException))]
     [TestMethod]
-    public void ShortMaxOnSevenTupleFuncNull()
+    public void ShortCountOnSevenTupleFuncNullWithNullPredicate()
     {
       Tuple<short, short, short, short, short, short, short> sut = new Tuple<short, short, short, short, short, short, short>(1, 2, 3, 4, 5, 6, 7);
-      sut.Max(nullFuncShort);
+      sut.Count(nullPredicate);
     }
   }
 }

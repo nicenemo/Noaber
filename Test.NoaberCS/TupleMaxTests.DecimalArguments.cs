@@ -5,7 +5,6 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Tests
 {
-
   public partial class TupleMaxTests
   {
     private readonly Func<object, decimal> nullFuncDecimal = null;
@@ -21,9 +20,8 @@ namespace Tests
     [TestMethod]
     public void DecimalMaxOnOneTupleFuncNull()
     {
-      Tuple<decimal> sut = new Tuple<decimal>(1);
-      Func<object, decimal> func = null;
-      sut.Max(func);
+      Tuple<decimal> sut = new Tuple<decimal>(1);   
+      sut.Max(nullFuncDecimal);
     }
 
     [ExpectedException(typeof(ArgumentNullException))]
@@ -38,9 +36,8 @@ namespace Tests
     [TestMethod]
     public void DecimalMaxOnTwoTupleFuncNull()
     {
-      Tuple<decimal, decimal> sut = new Tuple<decimal, decimal>(1, 2);
-      Func<object, decimal> func = null;
-      sut.Max(func);
+      Tuple<decimal, decimal> sut = new Tuple<decimal, decimal>(1, 2);  
+      sut.Max(nullFuncDecimal);
     }
 
     [ExpectedException(typeof(ArgumentNullException))]
@@ -55,9 +52,8 @@ namespace Tests
     [TestMethod]
     public void DecimalMaxOnThreeTupleFuncNull()
     {
-      Tuple<decimal, decimal, decimal> sut = new Tuple<decimal, decimal, decimal>(1, 2, 3);
-      Func<object, decimal> func = null;
-      sut.Max(func);
+      Tuple<decimal, decimal, decimal> sut = new Tuple<decimal, decimal, decimal>(1, 2, 3); 
+      sut.Max(nullFuncDecimal);
     }
 
     [ExpectedException(typeof(ArgumentNullException))]
@@ -73,8 +69,7 @@ namespace Tests
     public void DecimalMaxOnFourTupleFuncNull()
     {
       Tuple<decimal, decimal, decimal, decimal> sut = new Tuple<decimal, decimal, decimal, decimal>(1, 2, 3, 4);
-      Func<object, decimal> func = null;
-      sut.Max(func);
+      sut.Max(nullFuncDecimal);
     }
 
     [ExpectedException(typeof(ArgumentNullException))]
@@ -90,8 +85,7 @@ namespace Tests
     public void DecimalMaxOnFiveTupleFuncNull()
     {
       Tuple<decimal, decimal, decimal, decimal, decimal> sut = new Tuple<decimal, decimal, decimal, decimal, decimal>(1, 2, 3, 4, 5);
-      Func<object, decimal> func = null;
-      sut.Max(func);
+      sut.Max(nullFuncDecimal);
     }
 
     [ExpectedException(typeof(ArgumentNullException))]
@@ -107,8 +101,7 @@ namespace Tests
     public void DecimalMaxOnSixTupleFuncNull()
     {
       Tuple<decimal, decimal, decimal, decimal, decimal, decimal> sut = new Tuple<decimal, decimal, decimal, decimal, decimal, decimal>(1, 2, 3, 4, 5, 6);
-      Func<object, decimal> func = null;
-      sut.Max(func);
+      sut.Max(nullFuncDecimal);
     }
 
     [ExpectedException(typeof(ArgumentNullException))]
@@ -123,9 +116,8 @@ namespace Tests
     [TestMethod]
     public void DecimalMaxOnSevenTupleFuncNull()
     {
-      Tuple<decimal, decimal, decimal, decimal, decimal, decimal, decimal> sut = new Tuple<decimal, decimal, decimal, decimal, decimal, decimal, decimal>(1, 2, 3, 4, 5, 6, 7);
-      Func<object, decimal> func = null;
-      sut.Max(func);
+      Tuple<decimal, decimal, decimal, decimal, decimal, decimal, decimal> sut = new Tuple<decimal, decimal, decimal, decimal, decimal, decimal, decimal>(1, 2, 3, 4, 5, 6, 7); 
+      sut.Max(nullFuncDecimal);
     }
   }
 }

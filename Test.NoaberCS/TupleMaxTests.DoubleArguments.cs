@@ -5,7 +5,6 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Tests
 {
-
   public partial class TupleMaxTests
   {
     private readonly Func<object, double> nullFuncDouble = null;
@@ -21,9 +20,8 @@ namespace Tests
     [TestMethod]
     public void DoubleMaxOnOneTupleFuncNull()
     {
-      Tuple<double> sut = new Tuple<double>(1);
-      Func<object, double> func = null;
-      sut.Max(func);
+      Tuple<double> sut = new Tuple<double>(1);    
+      sut.Max(nullFuncDouble);
     }
 
     [ExpectedException(typeof(ArgumentNullException))]
@@ -38,9 +36,8 @@ namespace Tests
     [TestMethod]
     public void DoubleMaxOnTwoTupleFuncNull()
     {
-      Tuple<double, double> sut = new Tuple<double, double>(1, 2);
-      Func<object, double> func = null;
-      sut.Max(func);
+      Tuple<double, double> sut = new Tuple<double, double>(1, 2);   
+      sut.Max(nullFuncDouble);
     }
 
     [ExpectedException(typeof(ArgumentNullException))]
@@ -55,9 +52,8 @@ namespace Tests
     [TestMethod]
     public void DoubleMaxOnThreeTupleFuncNull()
     {
-      Tuple<double, double, double> sut = new Tuple<double, double, double>(1, 2, 3);
-      Func<object, double> func = null;
-      sut.Max(func);
+      Tuple<double, double, double> sut = new Tuple<double, double, double>(1, 2, 3);  
+      sut.Max(nullFuncDouble);
     }
 
     [ExpectedException(typeof(ArgumentNullException))]
@@ -72,9 +68,8 @@ namespace Tests
     [TestMethod]
     public void DoubleMaxOnFourTupleFuncNull()
     {
-      Tuple<double, double, double, double> sut = new Tuple<double, double, double, double>(1, 2, 3, 4);
-      Func<object, double> func = null;
-      sut.Max(func);
+      Tuple<double, double, double, double> sut = new Tuple<double, double, double, double>(1, 2, 3, 4);   
+      sut.Max(nullFuncDouble);
     }
 
     [ExpectedException(typeof(ArgumentNullException))]
@@ -89,9 +84,8 @@ namespace Tests
     [TestMethod]
     public void DoubleMaxOnFiveTupleFuncNull()
     {
-      Tuple<double, double, double, double, double> sut = new Tuple<double, double, double, double, double>(1, 2, 3, 4, 5);
-      Func<object, double> func = null;
-      sut.Max(func);
+      Tuple<double, double, double, double, double> sut = new Tuple<double, double, double, double, double>(1, 2, 3, 4, 5);    
+      sut.Max(nullFuncDouble);
     }
 
     [ExpectedException(typeof(ArgumentNullException))]
@@ -106,9 +100,8 @@ namespace Tests
     [TestMethod]
     public void DoubleMaxOnSixTupleFuncNull()
     {
-      Tuple<double, double, double, double, double, double> sut = new Tuple<double, double, double, double, double, double>(1, 2, 3, 4, 5, 6);
-      Func<object, double> func = null;
-      sut.Max(func);
+      Tuple<double, double, double, double, double, double> sut = new Tuple<double, double, double, double, double, double>(1, 2, 3, 4, 5, 6);     
+      sut.Max(nullFuncDouble);
     }
 
     [ExpectedException(typeof(ArgumentNullException))]
@@ -123,9 +116,8 @@ namespace Tests
     [TestMethod]
     public void DoubleMaxOnSevenTupleFuncNull()
     {
-      Tuple<double, double, double, double, double, double, double> sut = new Tuple<double, double, double, double, double, double, double>(1, 2, 3, 4, 5, 6, 7);
-      Func<object, double> func = null;
-      sut.Max(func);
+      Tuple<double, double, double, double, double, double, double> sut = new Tuple<double, double, double, double, double, double, double>(1, 2, 3, 4, 5, 6, 7);    
+      sut.Max(nullFuncDouble);
     }
   }
 }

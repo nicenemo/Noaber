@@ -5,119 +5,118 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Tests
 {
-  public partial class TupleSumTests
+  public partial class TupleCountTests
   {
-    private readonly Func<object, long> nullFuncLong = null;
     [ExpectedException(typeof(ArgumentNullException))]
     [TestMethod]
-    public void LongSumOnOneTupleNullEnumerable()
+    public void LongCountOnOneTupleNullEnumerableWithNullPredicate()
     {
       Tuple<long> sut = null;
-      sut.Sum(nullFuncLong);
+      sut.Count(nullPredicate);
     }
 
     [ExpectedException(typeof(ArgumentNullException))]
     [TestMethod]
-    public void LongSumOnOneTupleFuncNull()
+    public void LongCountOnOneTupleFuncNullWithNullPredicate()
     {
       Tuple<long> sut = new Tuple<long>(1);
-      sut.Sum(nullFuncLong);
+      sut.Count(nullPredicate);
     }
 
     [ExpectedException(typeof(ArgumentNullException))]
     [TestMethod]
-    public void LongSumOnTwoTupleNullEnumerable()
+    public void LongCountOnTwoTupleNullEnumerableWithNullPredicate()
     {
       Tuple<long, long> sut = null;
-      sut.Sum(nullFuncLong);
+      sut.Count(nullPredicate);
     }
 
     [ExpectedException(typeof(ArgumentNullException))]
     [TestMethod]
-    public void LongSumOnTwoTupleFuncNull()
+    public void LongCountOnTwoTupleFuncNullWithNullPredicate()
     {
       Tuple<long, long> sut = new Tuple<long, long>(1, 2);
-      sut.Sum(nullFuncLong);
+      sut.Count(nullPredicate);
     }
 
     [ExpectedException(typeof(ArgumentNullException))]
     [TestMethod]
-    public void LongSumOnThreeTupleNullEnumerable()
+    public void LongCountOnThreeTupleNullEnumerableWithNullPredicate()
     {
       Tuple<long, long, long> sut = null;
-      sut.Sum(nullFuncLong);
+      sut.Count(nullPredicate);
     }
 
     [ExpectedException(typeof(ArgumentNullException))]
     [TestMethod]
-    public void LongSumOnThreeTupleFuncNull()
+    public void LongCountOnThreeTupleFuncNullWithNullPredicate()
     {
       Tuple<long, long, long> sut = new Tuple<long, long, long>(1, 2, 3);
-      sut.Sum(nullFuncLong);
+      sut.Count(nullPredicate);
     }
 
     [ExpectedException(typeof(ArgumentNullException))]
     [TestMethod]
-    public void LongSumOnFourTupleNullEnumerable()
+    public void LongCountOnFourTupleNullEnumerableWithNullPredicate()
     {
       Tuple<long, long, long, long> sut = null;
-      sut.Sum(nullFuncLong);
+      sut.Count(nullPredicate);
     }
 
     [ExpectedException(typeof(ArgumentNullException))]
     [TestMethod]
-    public void LongSumOnFourTupleFuncNull()
+    public void LongCountOnFourTupleFuncNullWithNullPredicate()
     {
       Tuple<long, long, long, long> sut = new Tuple<long, long, long, long>(1, 2, 3, 4);
-      sut.Sum(nullFuncLong);
+      sut.Count(nullPredicate);
     }
 
     [ExpectedException(typeof(ArgumentNullException))]
     [TestMethod]
-    public void LongSumOnFiveTupleNullEnumerable()
+    public void LongCountOnFiveTupleNullEnumerableWithNullPredicate()
     {
       Tuple<long, long, long, long, long> sut = null;
-      sut.Sum(nullFuncLong);
+      sut.Count(nullPredicate);
     }
 
     [ExpectedException(typeof(ArgumentNullException))]
     [TestMethod]
-    public void LongSumOnFiveTupleFuncNull()
+    public void LongCountOnFiveTupleFuncNullWithNullPredicate()
     {
       Tuple<long, long, long, long, long> sut = new Tuple<long, long, long, long, long>(1, 2, 3, 4, 5);
-      sut.Sum(nullFuncLong);
+      sut.Count(nullPredicate);
     }
 
     [ExpectedException(typeof(ArgumentNullException))]
     [TestMethod]
-    public void LongSumOnSixTupleNullEnumerable()
+    public void LongCountOnSixTupleNullEnumerableWithNullPredicate()
     {
       Tuple<long, long, long, long, long, long> sut = null;
-      sut.Sum(nullFuncLong);
+      sut.Count(nullPredicate);
     }
 
     [ExpectedException(typeof(ArgumentNullException))]
     [TestMethod]
-    public void LongSumOnSixTupleFuncNull()
+    public void LongCountOnSixTupleFuncNullWithNullPredicate()
     {
       Tuple<long, long, long, long, long, long> sut = new Tuple<long, long, long, long, long, long>(1, 2, 3, 4, 5, 6);
-      sut.Sum(nullFuncLong);
+      sut.Count(nullPredicate);
     }
 
     [ExpectedException(typeof(ArgumentNullException))]
     [TestMethod]
-    public void LongSumOnSevenTupleNullEnumerable()
+    public void LongCountOnSevenTupleNullEnumerableWithNullPredicate()
     {
       Tuple<long, long, long, long, long, long, long> sut = null;
-      sut.Sum(nullFuncLong);
+      sut.Count(nullPredicate);
     }
 
     [ExpectedException(typeof(ArgumentNullException))]
     [TestMethod]
-    public void LongSumOnSevenTupleFuncNull()
+    public void LongCountOnSevenTupleFuncNullWithNullPredicate()
     {
       Tuple<long, long, long, long, long, long, long> sut = new Tuple<long, long, long, long, long, long, long>(1, 2, 3, 4, 5, 6, 7);
-      sut.Sum(nullFuncLong);
+      sut.Count(nullPredicate);
     }
   }
 }

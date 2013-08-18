@@ -5,7 +5,6 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Tests
 {
-
   public partial class TupleSumTests
   {
     private readonly Func<object, int> nullFuncInteger = null;
@@ -21,9 +20,8 @@ namespace Tests
     [TestMethod]
     public void IntegerSumOnOneTupleFuncNull()
     {
-      Tuple<int> sut = new Tuple<int>(1);
-      Func<object, int> func = null;
-      sut.Sum(func);
+      Tuple<int> sut = new Tuple<int>(1);   
+      sut.Sum(nullFuncInteger);
     }
 
     [ExpectedException(typeof(ArgumentNullException))]
@@ -38,9 +36,8 @@ namespace Tests
     [TestMethod]
     public void IntegerSumOnTwoTupleFuncNull()
     {
-      Tuple<int, int> sut = new Tuple<int, int>(1, 2);
-      Func<object, int> func = null;
-      sut.Sum(func);
+      Tuple<int, int> sut = new Tuple<int, int>(1, 2);  
+      sut.Sum(nullFuncInteger);
     }
 
     [ExpectedException(typeof(ArgumentNullException))]
@@ -55,9 +52,8 @@ namespace Tests
     [TestMethod]
     public void IntegerSumOnThreeTupleFuncNull()
     {
-      Tuple<int, int, int> sut = new Tuple<int, int, int>(1, 2, 3);
-      Func<object, int> func = null;
-      sut.Sum(func);
+      Tuple<int, int, int> sut = new Tuple<int, int, int>(1, 2, 3); 
+      sut.Sum(nullFuncInteger);
     }
 
     [ExpectedException(typeof(ArgumentNullException))]
@@ -73,8 +69,7 @@ namespace Tests
     public void IntegerSumOnFourTupleFuncNull()
     {
       Tuple<int, int, int, int> sut = new Tuple<int, int, int, int>(1, 2, 3, 4);
-      Func<object, int> func = null;
-      sut.Sum(func);
+      sut.Sum(nullFuncInteger);
     }
 
     [ExpectedException(typeof(ArgumentNullException))]
@@ -89,9 +84,8 @@ namespace Tests
     [TestMethod]
     public void IntegerSumOnFiveTupleFuncNull()
     {
-      Tuple<int, int, int, int, int> sut = new Tuple<int, int, int, int, int>(1, 2, 3, 4, 5);
-      Func<object, int> func = null;
-      sut.Sum(func);
+      Tuple<int, int, int, int, int> sut = new Tuple<int, int, int, int, int>(1, 2, 3, 4, 5);    
+      sut.Sum(nullFuncInteger);
     }
 
     [ExpectedException(typeof(ArgumentNullException))]
@@ -106,9 +100,8 @@ namespace Tests
     [TestMethod]
     public void IntegerSumOnSixTupleFuncNull()
     {
-      Tuple<int, int, int, int, int, int> sut = new Tuple<int, int, int, int, int, int>(1, 2, 3, 4, 5, 6);
-      Func<object, int> func = null;
-      sut.Sum(func);
+      Tuple<int, int, int, int, int, int> sut = new Tuple<int, int, int, int, int, int>(1, 2, 3, 4, 5, 6);    
+      sut.Sum(nullFuncInteger);
     }
 
     [ExpectedException(typeof(ArgumentNullException))]
@@ -123,9 +116,8 @@ namespace Tests
     [TestMethod]
     public void IntegerSumOnSevenTupleFuncNull()
     {
-      Tuple<int, int, int, int, int, int, int> sut = new Tuple<int, int, int, int, int, int, int>(1, 2, 3, 4, 5, 6, 7);
-      Func<object, int> func = null;
-      sut.Sum(func);
+      Tuple<int, int, int, int, int, int, int> sut = new Tuple<int, int, int, int, int, int, int>(1, 2, 3, 4, 5, 6, 7);   
+      sut.Sum(nullFuncInteger);
     }
   }
 }

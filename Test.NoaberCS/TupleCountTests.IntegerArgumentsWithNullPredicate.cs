@@ -5,119 +5,118 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Tests
 {
-  public partial class TupleAverageTests
+  public partial class TupleCountTests
   {
-    private readonly Func<object, int> nullFuncInteger = null;
     [ExpectedException(typeof(ArgumentNullException))]
     [TestMethod]
-    public void IntegerAverageOnOneTupleNullEnumerable()
+    public void IntegerCountOnOneTupleNullEnumerableWithNullPredicate()
     {
       Tuple<int> sut = null;
-      sut.Average(nullFuncInteger);
+      sut.Count(nullPredicate);
     }
 
     [ExpectedException(typeof(ArgumentNullException))]
     [TestMethod]
-    public void IntegerAverageOnOneTupleFuncNull()
+    public void IntegerCountOnOneTupleFuncNullWithNullPredicate()
     {
       Tuple<int> sut = new Tuple<int>(1);
-      sut.Average(nullFuncInteger);
+      sut.Count(nullPredicate);
     }
 
     [ExpectedException(typeof(ArgumentNullException))]
     [TestMethod]
-    public void IntegerAverageOnTwoTupleNullEnumerable()
+    public void IntegerCountOnTwoTupleNullEnumerableWithNullPredicate()
     {
       Tuple<int, int> sut = null;
-      sut.Average(nullFuncInteger);
+      sut.Count(nullPredicate);
     }
 
     [ExpectedException(typeof(ArgumentNullException))]
     [TestMethod]
-    public void IntegerAverageOnTwoTupleFuncNull()
+    public void IntegerCountOnTwoTupleFuncNullWithNullPredicate()
     {
       Tuple<int, int> sut = new Tuple<int, int>(1, 2);
-      sut.Average(nullFuncInteger);
+      sut.Count(nullPredicate);
     }
 
     [ExpectedException(typeof(ArgumentNullException))]
     [TestMethod]
-    public void IntegerAverageOnThreeTupleNullEnumerable()
+    public void IntegerCountOnThreeTupleNullEnumerableWithNullPredicate()
     {
       Tuple<int, int, int> sut = null;
-      sut.Average(nullFuncInteger);
+      sut.Count(nullPredicate);
     }
 
     [ExpectedException(typeof(ArgumentNullException))]
     [TestMethod]
-    public void IntegerAverageOnThreeTupleFuncNull()
+    public void IntegerCountOnThreeTupleFuncNullWithNullPredicate()
     {
       Tuple<int, int, int> sut = new Tuple<int, int, int>(1, 2, 3);
-      sut.Average(nullFuncInteger);
+      sut.Count(nullPredicate);
     }
 
     [ExpectedException(typeof(ArgumentNullException))]
     [TestMethod]
-    public void IntegerAverageOnFourTupleNullEnumerable()
+    public void IntegerCountOnFourTupleNullEnumerableWithNullPredicate()
     {
       Tuple<int, int, int, int> sut = null;
-      sut.Average(nullFuncInteger);
+      sut.Count(nullPredicate);
     }
 
     [ExpectedException(typeof(ArgumentNullException))]
     [TestMethod]
-    public void IntegerAverageOnFourTupleFuncNull()
+    public void IntegerCountOnFourTupleFuncNullWithNullPredicate()
     {
       Tuple<int, int, int, int> sut = new Tuple<int, int, int, int>(1, 2, 3, 4);
-      sut.Average(nullFuncInteger);
+      sut.Count(nullPredicate);
     }
 
     [ExpectedException(typeof(ArgumentNullException))]
     [TestMethod]
-    public void IntegerAverageOnFiveTupleNullEnumerable()
+    public void IntegerCountOnFiveTupleNullEnumerableWithNullPredicate()
     {
       Tuple<int, int, int, int, int> sut = null;
-      sut.Average(nullFuncInteger);
+      sut.Count(nullPredicate);
     }
 
     [ExpectedException(typeof(ArgumentNullException))]
     [TestMethod]
-    public void IntegerAverageOnFiveTupleFuncNull()
+    public void IntegerCountOnFiveTupleFuncNullWithNullPredicate()
     {
       Tuple<int, int, int, int, int> sut = new Tuple<int, int, int, int, int>(1, 2, 3, 4, 5);
-      sut.Average(nullFuncInteger);
+      sut.Count(nullPredicate);
     }
 
     [ExpectedException(typeof(ArgumentNullException))]
     [TestMethod]
-    public void IntegerAverageOnSixTupleNullEnumerable()
+    public void IntegerCountOnSixTupleNullEnumerableWithNullPredicate()
     {
       Tuple<int, int, int, int, int, int> sut = null;
-      sut.Average(nullFuncInteger);
+      sut.Count(nullPredicate);
     }
 
     [ExpectedException(typeof(ArgumentNullException))]
     [TestMethod]
-    public void IntegerAverageOnSixTupleFuncNull()
+    public void IntegerCountOnSixTupleFuncNullWithNullPredicate()
     {
       Tuple<int, int, int, int, int, int> sut = new Tuple<int, int, int, int, int, int>(1, 2, 3, 4, 5, 6);
-      sut.Average(nullFuncInteger);
+      sut.Count(nullPredicate);
     }
 
     [ExpectedException(typeof(ArgumentNullException))]
     [TestMethod]
-    public void IntegerAverageOnSevenTupleNullEnumerable()
+    public void IntegerCountOnSevenTupleNullEnumerableWithNullPredicate()
     {
       Tuple<int, int, int, int, int, int, int> sut = null;
-      sut.Average(nullFuncInteger);
+      sut.Count(nullPredicate);
     }
 
     [ExpectedException(typeof(ArgumentNullException))]
     [TestMethod]
-    public void IntegerAverageOnSevenTupleFuncNull()
+    public void IntegerCountOnSevenTupleFuncNullWithNullPredicate()
     {
       Tuple<int, int, int, int, int, int, int> sut = new Tuple<int, int, int, int, int, int, int>(1, 2, 3, 4, 5, 6, 7);
-      sut.Average(nullFuncInteger);
+      sut.Count(nullPredicate);
     }
   }
 }

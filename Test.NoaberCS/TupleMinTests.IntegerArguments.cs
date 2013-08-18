@@ -5,7 +5,6 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Tests
 {
-
   public partial class TupleMinTests
   {
     private readonly Func<object, int> nullFuncInteger = null;
@@ -22,8 +21,7 @@ namespace Tests
     public void IntegerMinOnOneTupleFuncNull()
     {
       Tuple<int> sut = new Tuple<int>(1);
-      Func<object, int> func = null;
-      sut.Min(func);
+      sut.Min(nullFuncInteger);
     }
 
     [ExpectedException(typeof(ArgumentNullException))]
@@ -39,8 +37,7 @@ namespace Tests
     public void IntegerMinOnTwoTupleFuncNull()
     {
       Tuple<int, int> sut = new Tuple<int, int>(1, 2);
-      Func<object, int> func = null;
-      sut.Min(func);
+      sut.Min(nullFuncInteger);
     }
 
     [ExpectedException(typeof(ArgumentNullException))]
@@ -56,8 +53,7 @@ namespace Tests
     public void IntegerMinOnThreeTupleFuncNull()
     {
       Tuple<int, int, int> sut = new Tuple<int, int, int>(1, 2, 3);
-      Func<object, int> func = null;
-      sut.Min(func);
+      sut.Min(nullFuncInteger);
     }
 
     [ExpectedException(typeof(ArgumentNullException))]
@@ -73,8 +69,7 @@ namespace Tests
     public void IntegerMinOnFourTupleFuncNull()
     {
       Tuple<int, int, int, int> sut = new Tuple<int, int, int, int>(1, 2, 3, 4);
-      Func<object, int> func = null;
-      sut.Min(func);
+      sut.Min(nullFuncInteger);
     }
 
     [ExpectedException(typeof(ArgumentNullException))]
@@ -90,8 +85,7 @@ namespace Tests
     public void IntegerMinOnFiveTupleFuncNull()
     {
       Tuple<int, int, int, int, int> sut = new Tuple<int, int, int, int, int>(1, 2, 3, 4, 5);
-      Func<object, int> func = null;
-      sut.Min(func);
+      sut.Min(nullFuncInteger);
     }
 
     [ExpectedException(typeof(ArgumentNullException))]
@@ -107,8 +101,7 @@ namespace Tests
     public void IntegerMinOnSixTupleFuncNull()
     {
       Tuple<int, int, int, int, int, int> sut = new Tuple<int, int, int, int, int, int>(1, 2, 3, 4, 5, 6);
-      Func<object, int> func = null;
-      sut.Min(func);
+      sut.Min(nullFuncInteger);
     }
 
     [ExpectedException(typeof(ArgumentNullException))]
@@ -124,8 +117,7 @@ namespace Tests
     public void IntegerMinOnSevenTupleFuncNull()
     {
       Tuple<int, int, int, int, int, int, int> sut = new Tuple<int, int, int, int, int, int, int>(1, 2, 3, 4, 5, 6, 7);
-      Func<object, int> func = null;
-      sut.Min(func);
+      sut.Min(nullFuncInteger);
     }
   }
 }

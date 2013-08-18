@@ -5,7 +5,6 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Tests
 {
-
   public partial class TupleAverageTests
   {
     private readonly Func<object, short> nullFuncShort = null;
@@ -22,8 +21,7 @@ namespace Tests
     public void ShortAverageOnOneTupleFuncNull()
     {
       Tuple<short> sut = new Tuple<short>(1);
-      Func<object, short> func = null;
-      sut.Average(func);
+      sut.Average(nullFuncShort);
     }
 
     [ExpectedException(typeof(ArgumentNullException))]
@@ -39,8 +37,7 @@ namespace Tests
     public void ShortAverageOnTwoTupleFuncNull()
     {
       Tuple<short, short> sut = new Tuple<short, short>(1, 2);
-      Func<object, short> func = null;
-      sut.Average(func);
+      sut.Average(nullFuncShort);
     }
 
     [ExpectedException(typeof(ArgumentNullException))]
@@ -56,8 +53,7 @@ namespace Tests
     public void ShortAverageOnThreeTupleFuncNull()
     {
       Tuple<short, short, short> sut = new Tuple<short, short, short>(1, 2, 3);
-      Func<object, short> func = null;
-      sut.Average(func);
+      sut.Average(nullFuncShort);
     }
 
     [ExpectedException(typeof(ArgumentNullException))]
@@ -73,8 +69,7 @@ namespace Tests
     public void ShortAverageOnFourTupleFuncNull()
     {
       Tuple<short, short, short, short> sut = new Tuple<short, short, short, short>(1, 2, 3, 4);
-      Func<object, short> func = null;
-      sut.Average(func);
+      sut.Average(nullFuncShort);
     }
 
     [ExpectedException(typeof(ArgumentNullException))]
@@ -90,8 +85,7 @@ namespace Tests
     public void ShortAverageOnFiveTupleFuncNull()
     {
       Tuple<short, short, short, short, short> sut = new Tuple<short, short, short, short, short>(1, 2, 3, 4, 5);
-      Func<object, short> func = null;
-      sut.Average(func);
+      sut.Average(nullFuncShort);
     }
 
     [ExpectedException(typeof(ArgumentNullException))]
@@ -107,8 +101,7 @@ namespace Tests
     public void ShortAverageOnSixTupleFuncNull()
     {
       Tuple<short, short, short, short, short, short> sut = new Tuple<short, short, short, short, short, short>(1, 2, 3, 4, 5, 6);
-      Func<object, short> func = null;
-      sut.Average(func);
+      sut.Average(nullFuncShort);
     }
 
     [ExpectedException(typeof(ArgumentNullException))]
@@ -124,8 +117,7 @@ namespace Tests
     public void ShortAverageOnSevenTupleFuncNull()
     {
       Tuple<short, short, short, short, short, short, short> sut = new Tuple<short, short, short, short, short, short, short>(1, 2, 3, 4, 5, 6, 7);
-      Func<object, short> func = null;
-      sut.Average(func);
+      sut.Average(nullFuncShort);
     }
   }
 }

@@ -5,7 +5,6 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Tests
 {
-
   public partial class TupleSumTests
   {
     private readonly Func<object, double> nullFuncDouble = null;
@@ -22,8 +21,7 @@ namespace Tests
     public void DoubleSumOnOneTupleFuncNull()
     {
       Tuple<double> sut = new Tuple<double>(1);
-      Func<object, double> func = null;
-      sut.Sum(func);
+      sut.Sum(nullFuncDouble);
     }
 
     [ExpectedException(typeof(ArgumentNullException))]
@@ -39,8 +37,7 @@ namespace Tests
     public void DoubleSumOnTwoTupleFuncNull()
     {
       Tuple<double, double> sut = new Tuple<double, double>(1, 2);
-      Func<object, double> func = null;
-      sut.Sum(func);
+      sut.Sum(nullFuncDouble);
     }
 
     [ExpectedException(typeof(ArgumentNullException))]
@@ -56,8 +53,7 @@ namespace Tests
     public void DoubleSumOnThreeTupleFuncNull()
     {
       Tuple<double, double, double> sut = new Tuple<double, double, double>(1, 2, 3);
-      Func<object, double> func = null;
-      sut.Sum(func);
+      sut.Sum(nullFuncDouble);
     }
 
     [ExpectedException(typeof(ArgumentNullException))]
@@ -73,8 +69,7 @@ namespace Tests
     public void DoubleSumOnFourTupleFuncNull()
     {
       Tuple<double, double, double, double> sut = new Tuple<double, double, double, double>(1, 2, 3, 4);
-      Func<object, double> func = null;
-      sut.Sum(func);
+      sut.Sum(nullFuncDouble);
     }
 
     [ExpectedException(typeof(ArgumentNullException))]
@@ -90,8 +85,7 @@ namespace Tests
     public void DoubleSumOnFiveTupleFuncNull()
     {
       Tuple<double, double, double, double, double> sut = new Tuple<double, double, double, double, double>(1, 2, 3, 4, 5);
-      Func<object, double> func = null;
-      sut.Sum(func);
+      sut.Sum(nullFuncDouble);
     }
 
     [ExpectedException(typeof(ArgumentNullException))]
@@ -107,8 +101,7 @@ namespace Tests
     public void DoubleSumOnSixTupleFuncNull()
     {
       Tuple<double, double, double, double, double, double> sut = new Tuple<double, double, double, double, double, double>(1, 2, 3, 4, 5, 6);
-      Func<object, double> func = null;
-      sut.Sum(func);
+      sut.Sum(nullFuncDouble);
     }
 
     [ExpectedException(typeof(ArgumentNullException))]
@@ -124,8 +117,7 @@ namespace Tests
     public void DoubleSumOnSevenTupleFuncNull()
     {
       Tuple<double, double, double, double, double, double, double> sut = new Tuple<double, double, double, double, double, double, double>(1, 2, 3, 4, 5, 6, 7);
-      Func<object, double> func = null;
-      sut.Sum(func);
+      sut.Sum(nullFuncDouble);
     }
   }
 }

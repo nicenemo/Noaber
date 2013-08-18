@@ -5,119 +5,119 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Tests
 {
-  public partial class TupleAverageTests
+  public partial class TupleCountTests
   {
-    private readonly Func<object, decimal> nullFuncDecimal = null;
+    
     [ExpectedException(typeof(ArgumentNullException))]
     [TestMethod]
-    public void DecimalAverageOnOneTupleNullEnumerable()
+    public void DecimalCountOnOneTupleNullEnumerableWithNullPredicate()
     {
       Tuple<decimal> sut = null;
-      sut.Average(nullFuncDecimal);
+      sut.Count(nullPredicate);
     }
 
     [ExpectedException(typeof(ArgumentNullException))]
     [TestMethod]
-    public void DecimalAverageOnOneTupleFuncNull()
+    public void DecimalCountOnOneTupleFuncNullWithNullPredicate()
     {
       Tuple<decimal> sut = new Tuple<decimal>(1);
-      sut.Average(nullFuncDecimal);
+      sut.Count(nullPredicate);
     }
 
     [ExpectedException(typeof(ArgumentNullException))]
     [TestMethod]
-    public void DecimalAverageOnTwoTupleNullEnumerable()
+    public void DecimalCountOnTwoTupleNullEnumerableWithNullPredicate()
     {
       Tuple<decimal, decimal> sut = null;
-      sut.Average(nullFuncDecimal);
+      sut.Count(nullPredicate);
     }
 
     [ExpectedException(typeof(ArgumentNullException))]
     [TestMethod]
-    public void DecimalAverageOnTwoTupleFuncNull()
+    public void DecimalCountOnTwoTupleFuncNullWithNullPredicate()
     {
       Tuple<decimal, decimal> sut = new Tuple<decimal, decimal>(1, 2);
-      sut.Average(nullFuncDecimal);
+      sut.Count(nullPredicate);
     }
 
     [ExpectedException(typeof(ArgumentNullException))]
     [TestMethod]
-    public void DecimalAverageOnThreeTupleNullEnumerable()
+    public void DecimalCountOnThreeTupleNullEnumerableWithNullPredicate()
     {
       Tuple<decimal, decimal, decimal> sut = null;
-      sut.Average(nullFuncDecimal);
+      sut.Count(nullPredicate);
     }
 
     [ExpectedException(typeof(ArgumentNullException))]
     [TestMethod]
-    public void DecimalAverageOnThreeTupleFuncNull()
+    public void DecimalCountOnThreeTupleFuncNullWithNullPredicate()
     {
       Tuple<decimal, decimal, decimal> sut = new Tuple<decimal, decimal, decimal>(1, 2, 3);
-      sut.Average(nullFuncDecimal);
+      sut.Count(nullPredicate);
     }
 
     [ExpectedException(typeof(ArgumentNullException))]
     [TestMethod]
-    public void DecimalAverageOnFourTupleNullEnumerable()
+    public void DecimalCountOnFourTupleNullEnumerableWithNullPredicate()
     {
       Tuple<decimal, decimal, decimal, decimal> sut = null;
-      sut.Average(nullFuncDecimal);
+      sut.Count(nullPredicate);
     }
 
     [ExpectedException(typeof(ArgumentNullException))]
     [TestMethod]
-    public void DecimalAverageOnFourTupleFuncNull()
+    public void DecimalCountOnFourTupleFuncNullWithNullPredicate()
     {
       Tuple<decimal, decimal, decimal, decimal> sut = new Tuple<decimal, decimal, decimal, decimal>(1, 2, 3, 4);
-      sut.Average(nullFuncDecimal);
+      sut.Count(nullPredicate);
     }
 
     [ExpectedException(typeof(ArgumentNullException))]
     [TestMethod]
-    public void DecimalAverageOnFiveTupleNullEnumerable()
+    public void DecimalCountOnFiveTupleNullEnumerableWithNullPredicate()
     {
       Tuple<decimal, decimal, decimal, decimal, decimal> sut = null;
-      sut.Average(nullFuncDecimal);
+      sut.Count(nullPredicate);
     }
 
     [ExpectedException(typeof(ArgumentNullException))]
     [TestMethod]
-    public void DecimalAverageOnFiveTupleFuncNull()
+    public void DecimalCountOnFiveTupleFuncNullWithNullPredicate()
     {
       Tuple<decimal, decimal, decimal, decimal, decimal> sut = new Tuple<decimal, decimal, decimal, decimal, decimal>(1, 2, 3, 4, 5);
-      sut.Average(nullFuncDecimal);
+      sut.Count(nullPredicate);
     }
 
     [ExpectedException(typeof(ArgumentNullException))]
     [TestMethod]
-    public void DecimalAverageOnSixTupleNullEnumerable()
+    public void DecimalCountOnSixTupleNullEnumerableWithNullPredicate()
     {
       Tuple<decimal, decimal, decimal, decimal, decimal, decimal> sut = null;
-      sut.Average(nullFuncDecimal);
+      sut.Count(nullPredicate);
     }
 
     [ExpectedException(typeof(ArgumentNullException))]
     [TestMethod]
-    public void DecimalAverageOnSixTupleFuncNull()
+    public void DecimalCountOnSixTupleFuncNullWithNullPredicate()
     {
       Tuple<decimal, decimal, decimal, decimal, decimal, decimal> sut = new Tuple<decimal, decimal, decimal, decimal, decimal, decimal>(1, 2, 3, 4, 5, 6);
-      sut.Average(nullFuncDecimal);
+      sut.Count(nullPredicate);
     }
 
     [ExpectedException(typeof(ArgumentNullException))]
     [TestMethod]
-    public void DecimalAverageOnSevenTupleNullEnumerable()
+    public void DecimalCountOnSevenTupleNullEnumerableWithNullPredicate()
     {
       Tuple<decimal, decimal, decimal, decimal, decimal, decimal, decimal> sut = null;
-      sut.Average(nullFuncDecimal);
+      sut.Count(nullPredicate);
     }
 
     [ExpectedException(typeof(ArgumentNullException))]
     [TestMethod]
-    public void DecimalAverageOnSevenTupleFuncNull()
+    public void DecimalCountOnSevenTupleFuncNullWithNullPredicate()
     {
       Tuple<decimal, decimal, decimal, decimal, decimal, decimal, decimal> sut = new Tuple<decimal, decimal, decimal, decimal, decimal, decimal, decimal>(1, 2, 3, 4, 5, 6, 7);
-      sut.Average(nullFuncDecimal);
+      sut.Count(nullPredicate);
     }
   }
 }

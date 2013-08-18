@@ -59,6 +59,7 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="TupleCountTests.Long.cs" />
     <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="TupleAverageTests.ShortArguments.cs" />
     <Compile Include="TupleAverageTests.DecimalArguments.cs" />
@@ -74,6 +75,21 @@
     <Compile Include="TupleConcatenationTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TupleConsTests.cs" />
+    <Compile Include="TupleCountTests.Integer.cs" />
+    <Compile Include="TupleCountTests.cs" />
+    <Compile Include="TupleCountTests.Decimal.cs" />
+    <Compile Include="TupleCountTests.DecimalArguments.cs" />
+    <Compile Include="TupleCountTests.DecimalArgumentsWithNullPredicate.cs" />
+    <Compile Include="TupleCountTests.Double.cs" />
+    <Compile Include="TupleCountTests.DoubleArguments.cs" />
+    <Compile Include="TupleCountTests.DoubleArgumentsWithNullPredicate.cs" />
+    <Compile Include="TupleCountTests.IntegerArguments.cs" />
+    <Compile Include="TupleCountTests.IntegerArgumentsWithNullPredicate.cs" />
+    <Compile Include="TupleCountTests.LongArguments.cs" />
+    <Compile Include="TupleCountTests.LongArgumentsWithNullPredicate.cs" />
+    <Compile Include="TupleCountTests.Short.cs" />
+    <Compile Include="TupleCountTests.ShortArguments.cs" />
+    <Compile Include="TupleCountTests.ShortArgumentsWithNullPredicate.cs" />
     <Compile Include="TupleEnumeratorTests.cs" />
     <Compile Include="TupleFirstAndLastTests.cs" />
     <Compile Include="TupleLengthTests.cs" />
