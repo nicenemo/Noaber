@@ -16,6 +16,13 @@ using System.Runtime.CompilerServices;
            }
            return value.Aggregate((short acc,short v) => (short)(acc+v));     
        }
-
+       public static double Average(this IEnumerable<short> value)
+       {
+         if (value == null)
+         {
+           throw new ArgumentNullException("value", "value is null");
+         }
+         return value.Sum() / value.Count();
+       }
     }
 

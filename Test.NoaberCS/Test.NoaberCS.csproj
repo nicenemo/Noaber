@@ -60,11 +60,16 @@
   </Choose>
   <ItemGroup>
     <Compile Include="GlobalSuppressions.cs" />
+    <Compile Include="TupleAverageTests.ShortArguments.cs" />
+    <Compile Include="TupleAverageTests.DecimalArguments.cs" />
     <Compile Include="TupleAverageTests.cs" />
     <Compile Include="TupleAverageTests.Decimal.cs" />
     <Compile Include="TupleAverageTests.Double.cs" />
+    <Compile Include="TupleAverageTests.DoubleArguments.cs" />
     <Compile Include="TupleAverageTests.Integer.cs" />
+    <Compile Include="TupleAverageTests.IntegerArguments.cs" />
     <Compile Include="TupleAverageTests.Long.cs" />
+    <Compile Include="TupleAverageTests.LongArguments.cs" />
     <Compile Include="TupleAverageTests.Short.cs" />
     <Compile Include="TupleConcatenationTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -73,20 +78,35 @@
     <Compile Include="TupleFirstAndLastTests.cs" />
     <Compile Include="TupleLengthTests.cs" />
     <Compile Include="TupleMaxTests.cs" />
+    <Compile Include="TupleMaxTests.DecimalArguments.cs" />
     <Compile Include="TupleMaxTests.Double.cs" />
+    <Compile Include="TupleMaxTests.DoubleArguments.cs" />
     <Compile Include="TupleMaxTests.Integer.cs" />
+    <Compile Include="TupleMaxTests.IntegerArguments.cs" />
     <Compile Include="TupleMaxTests.Long.cs" />
+    <Compile Include="TupleMaxTests.LongArguments.cs" />
     <Compile Include="TupleMaxTests.Short.cs" />
+    <Compile Include="TupleMaxTests.ShortArguments.cs" />
     <Compile Include="TupleMinTests.cs" />
     <Compile Include="TupleMinTests.Decimal.cs" />
+    <Compile Include="TupleMinTests.DecimalArguments.cs" />
     <Compile Include="TupleMinTests.Double.cs" />
+    <Compile Include="TupleMinTests.DoubleArguments.cs" />
     <Compile Include="TupleMinTests.Integer.cs" />
+    <Compile Include="TupleMinTests.IntegerArguments.cs" />
     <Compile Include="TupleMinTests.Long.cs" />
+    <Compile Include="TupleMinTests.LongArguments.cs" />
     <Compile Include="TupleMinTests.Short.cs" />
+    <Compile Include="TupleMinTests.ShortArguments.cs" />
     <Compile Include="TupleReverseTests.cs" />
     <Compile Include="TupleSumTests.cs" />
+    <Compile Include="TupleSumTests.DecimalArguments.cs" />
     <Compile Include="TupleSumTests.Double.cs" />
+    <Compile Include="TupleSumTests.DoubleArguments.cs" />
+    <Compile Include="TupleSumTests.IntegerArguments.cs" />
+    <Compile Include="TupleSumTests.LongArguments.cs" />
     <Compile Include="TupleSumTests.Short.cs" />
+    <Compile Include="TupleSumTests.ShortArguments.cs" />
     <Compile Include="TupleTailTests.cs" />
     <Compile Include="TupleSumTests.Integer.cs" />
   </ItemGroup>
