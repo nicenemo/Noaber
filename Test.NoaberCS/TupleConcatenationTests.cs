@@ -13,7 +13,7 @@
 //public class ConcatenationTests
 //{
 //    #region "First Tuple is One Tuple"
-//    [TestMethod()]
+//    [TestMethod]
 //    [ExpectedException(typeof(ArgumentNullException))]
 //    public void ConCatTwoOneTuplesFirstIsNullShouldThrowArgumentNullException()
 //    {
@@ -22,7 +22,7 @@
 //        v1.Concat(v2);
 //    }
 
-//    [TestMethod()]
+//    [TestMethod]
 //    [ExpectedException(typeof(ArgumentNullException))]
 //    public void ConCatTwoOneTuplesSecondIsNullShouldThrowArgumentNullException()
 //    {
@@ -31,7 +31,7 @@
 //        v1.Concat(v2);
 //    }
 
-//    [TestMethod()]
+//    [TestMethod]
 //    [ExpectedException(typeof(ArgumentNullException))]
 //    public void ConCatTwoOneTuplesBothAreNullShouldThrowArgumentNullException()
 //    {
@@ -40,7 +40,7 @@
 //        v1.Concat(v2);
 //    }
 
-//    [TestMethod()]
+//    [TestMethod]
 //    public void ConcatTwoOneTuples()
 //    {
 //        Tuple<int> v1 = new Tuple<int>(42);
@@ -48,7 +48,7 @@
 //        Assert.AreEqual(v2, v1.Concat(v2).Tail);
 //    }
 
-//    [TestMethod()]
+//    [TestMethod]
 //    [ExpectedException(typeof(ArgumentNullException))]
 //    public void ConCatOneTupleTwoTupleFirstIsNullShouldThrowArgumentNullException()
 //    {
@@ -57,7 +57,7 @@
 //        v1.Concat(v2);
 //    }
 
-//    [TestMethod()]
+//    [TestMethod]
 //    [ExpectedException(typeof(ArgumentNullException))]
 //    public void ConCatOneTupleTwoTupleSecondIsNullShouldThrowArgumentNullException()
 //    {
@@ -66,7 +66,7 @@
 //        v1.Concat(v2);
 //    }
 
-//    [TestMethod()]
+//    [TestMethod]
 //    [ExpectedException(typeof(ArgumentNullException))]
 //    public void ConCatOneTupleTwoTupleBothAreNullShouldThrowArgumentNullException()
 //    {
@@ -75,7 +75,7 @@
 //        v1.Concat(v2);
 //    }
 
-//    [TestMethod()]
+//    [TestMethod]
 //    public void ConcatOneTupleTwoTuple()
 //    {
 //        Tuple<int> v1 = new Tuple<int>(42);
@@ -83,7 +83,7 @@
 //        Assert.AreEqual(v2, v1.Concat(v2).Tail);
 //    }
 
-//    [TestMethod()]
+//    [TestMethod]
 //    [ExpectedException(typeof(ArgumentNullException))]
 //    public void ConCatOneTupleThreeTupleFirstIsNullShouldThrowArgumentNullException()
 //    {
@@ -92,7 +92,7 @@
 //        v1.Concat(v2);
 //    }
 
-//    [TestMethod()]
+//    [TestMethod]
 //    [ExpectedException(typeof(ArgumentNullException))]
 //    public void ConCatOneTupleThreeTupleSecondIsNullShouldThrowArgumentNullException()
 //    {
@@ -101,7 +101,7 @@
 //        v1.Concat(v2);
 //    }
 
-//    [TestMethod()]
+//    [TestMethod]
 //    [ExpectedException(typeof(ArgumentNullException))]
 //    public void ConCatOneTupleThreeTupleBothAreNullShouldThrowArgumentNullException()
 //    {
@@ -110,7 +110,7 @@
 //        v1.Concat(v2);
 //    }
 
-//    [TestMethod()]
+//    [TestMethod]
 //    public void ConcatOneTupleThreeTuple()
 //    {
 //        Tuple<int> v1 = new Tuple<int>(42);
@@ -118,7 +118,7 @@
 //        Assert.AreEqual(v2, v1.Concat(v2).Tail);
 //    }
 
-//    [TestMethod()]
+//    [TestMethod]
 //    [ExpectedException(typeof(ArgumentNullException))]
 //    public void ConCatOneTupleFourTupleFirstIsNullShouldThrowArgumentNullException()
 //    {
@@ -127,7 +127,7 @@
 //        v1.Concat(v2);
 //    }
 
-//    [TestMethod()]
+//    [TestMethod]
 //    [ExpectedException(typeof(ArgumentNullException))]
 //    public void ConCatOneTupleFourTupleSecondIsNullShouldThrowArgumentNullException()
 //    {
@@ -136,7 +136,7 @@
 //        v1.Concat(v2);
 //    }
 
-//    [TestMethod()]
+//    [TestMethod]
 //    [ExpectedException(typeof(ArgumentNullException))]
 //    public void ConCatOneTupleFourTupleBothAreNullShouldThrowArgumentNullException()
 //    {
@@ -145,7 +145,7 @@
 //        v1.Concat(v2);
 //    }
 
-//    [TestMethod()]
+//    [TestMethod]
 //    public void ConcatOneTupleFourTuple()
 //    {
 //        Tuple<int> v1 = new Tuple<int>(42);
@@ -153,7 +153,7 @@
 //        Assert.AreEqual(v2, v1.Concat(v2).Tail);
 //    }
 
-//    [TestMethod()]
+//    [TestMethod]
 //    [ExpectedException(typeof(ArgumentNullException))]
 //    public void ConCatOneTupleFiveTupleFirstIsNullShouldThrowArgumentNullException()
 //    {
@@ -162,7 +162,7 @@
 //        v1.Concat(v2);
 //    }
 
-//    [TestMethod()]
+//    [TestMethod]
 //    [ExpectedException(typeof(ArgumentNullException))]
 //    public void ConCatOneTupleFiveTupleSecondIsNullShouldThrowArgumentNullException()
 //    {
@@ -171,7 +171,7 @@
 //        v1.Concat(v2);
 //    }
 
-//    [TestMethod()]
+//    [TestMethod]
 //    [ExpectedException(typeof(ArgumentNullException))]
 //    public void ConCatOneTupleFiveTupleBothAreNullShouldThrowArgumentNullException()
 //    {
@@ -180,7 +180,7 @@
 //        v1.Concat(v2);
 //    }
 
-//    [TestMethod()]
+//    [TestMethod]
 //    public void ConcatOneTupleFiveTuple()
 //    {
 //        Tuple<int> v1 = new Tuple<int>(42);
@@ -188,7 +188,7 @@
 //        Assert.AreEqual(v2, v1.Concat(v2).Tail);
 //    }
 
-//    [TestMethod()]
+//    [TestMethod]
 //    [ExpectedException(typeof(ArgumentNullException))]
 //    public void ConCatOneTupleSixTupleFirstIsNullShouldThrowArgumentNullException()
 //    {
@@ -197,7 +197,7 @@
 //        v1.Concat(v2);
 //    }
 
-//    [TestMethod()]
+//    [TestMethod]
 //    [ExpectedException(typeof(ArgumentNullException))]
 //    public void ConCatOneTupleSixTupleSecondIsNullShouldThrowArgumentNullException()
 //    {
@@ -206,7 +206,7 @@
 //        v1.Concat(v2);
 //    }
 
-//    [TestMethod()]
+//    [TestMethod]
 //    [ExpectedException(typeof(ArgumentNullException))]
 //    public void ConCatOneTupleSixTupleBothAreNullShouldThrowArgumentNullException()
 //    {
@@ -215,7 +215,7 @@
 //        v1.Concat(v2);
 //    }
 
-//    [TestMethod()]
+//    [TestMethod]
 //    public void ConcatOneTupleSixTuple()
 //    {
 //        Tuple<int> v1 = new Tuple<int>(42);
@@ -223,10 +223,10 @@
 //        Assert.AreEqual(v2, v1.Concat(v2).Tail);
 //    }
 
-//    #endregion
+//    
 
 //    #region "First Tuple is Two Tuple"
-//    [TestMethod()]
+//    [TestMethod]
 //    [ExpectedException(typeof(ArgumentNullException))]
 //    public void ConcatTwoTupleOneTupleFirstIsNullShouldThrowArgumentNullException()
 //    {
@@ -235,7 +235,7 @@
 //        v1.Concat(v2);
 //    }
 
-//    [TestMethod()]
+//    [TestMethod]
 //    [ExpectedException(typeof(ArgumentNullException))]
 //    public void ConcatTwoTupleOneTupleSecondIsNullShouldThrowArgumentNullException()
 //    {
@@ -244,7 +244,7 @@
 //        v1.Concat(v2);
 //    }
 
-//    [TestMethod()]
+//    [TestMethod]
 //    [ExpectedException(typeof(ArgumentNullException))]
 //    public void CConcatTwoTupleOneTupleBothAreNullShouldThrowArgumentNullException()
 //    {
@@ -253,7 +253,7 @@
 //        v1.Concat(v2);
 //    }
 
-//    [TestMethod()]
+//    [TestMethod]
 //    public void ConcatTwoTupleOneTuple()
 //    {
 //        Tuple<int, int> v1 = new Tuple<int, int>(42, 1);
@@ -261,7 +261,7 @@
 //        Assert.AreEqual(v2, v1.Concat(v2).Tail.Tail);
 //    }
 
-//    [TestMethod()]
+//    [TestMethod]
 //    [ExpectedException(typeof(ArgumentNullException))]
 //    public void ConcatTwoTupleTwoTupleFirstIsNullShouldThrowArgumentNullException()
 //    {
@@ -270,7 +270,7 @@
 //        v1.Concat(v2);
 //    }
 
-//    [TestMethod()]
+//    [TestMethod]
 //    [ExpectedException(typeof(ArgumentNullException))]
 //    public void ConcatTwoTupleTwoTupleSecondIsNullShouldThrowArgumentNullException()
 //    {
@@ -279,7 +279,7 @@
 //        v1.Concat(v2);
 //    }
 
-//    [TestMethod()]
+//    [TestMethod]
 //    [ExpectedException(typeof(ArgumentNullException))]
 //    public void ConcatTwoTupleTwoTupleBothAreNullShouldThrowArgumentNullException()
 //    {
@@ -288,7 +288,7 @@
 //        v1.Concat(v2);
 //    }
 
-//    [TestMethod()]
+//    [TestMethod]
 //    public void ConcatTwoTupleTwoTuple()
 //    {
 //        Tuple<int, int> v1 = new Tuple<int, int>(42, 1);
@@ -296,7 +296,7 @@
 //        Assert.AreEqual(v2, v1.Concat(v2).Tail.Tail);
 //    }
 
-//    [TestMethod()]
+//    [TestMethod]
 //    [ExpectedException(typeof(ArgumentNullException))]
 //    public void ConcatTwoTupleThreeTupleFirstIsNullShouldThrowArgumentNullException()
 //    {
@@ -305,7 +305,7 @@
 //        v1.Concat(v2);
 //    }
 
-//    [TestMethod()]
+//    [TestMethod]
 //    [ExpectedException(typeof(ArgumentNullException))]
 //    public void ConcatTwoTupleThreeTupleSecondIsNullShouldThrowArgumentNullException()
 //    {
@@ -314,7 +314,7 @@
 //        v1.Concat(v2);
 //    }
 
-//    [TestMethod()]
+//    [TestMethod]
 //    [ExpectedException(typeof(ArgumentNullException))]
 //    public void ConcatTwoTupleThreeTupleBothAreNullShouldThrowArgumentNullException()
 //    {
@@ -323,7 +323,7 @@
 //        v1.Concat(v2);
 //    }
 
-//    [TestMethod()]
+//    [TestMethod]
 //    public void ConcatTwoTupleThreeTuple()
 //    {
 //        Tuple<int, int> v1 = new Tuple<int, int>(42, 1);
@@ -331,7 +331,7 @@
 //        Assert.AreEqual(v2, v1.Concat(v2).Tail.Tail);
 //    }
 
-//    [TestMethod()]
+//    [TestMethod]
 //    [ExpectedException(typeof(ArgumentNullException))]
 //    public void ConcatTwoTupleFourTupleFirstIsNullShouldThrowArgumentNullException()
 //    {
@@ -340,7 +340,7 @@
 //        v1.Concat(v2);
 //    }
 
-//    [TestMethod()]
+//    [TestMethod]
 //    [ExpectedException(typeof(ArgumentNullException))]
 //    public void ConcatTwoTupleFourTupleSecondIsNullShouldThrowArgumentNullException()
 //    {
@@ -349,7 +349,7 @@
 //        v1.Concat(v2);
 //    }
 
-//    [TestMethod()]
+//    [TestMethod]
 //    [ExpectedException(typeof(ArgumentNullException))]
 //    public void ConcatTwoTupleFourTupleBothAreNullShouldThrowArgumentNullException()
 //    {
@@ -358,7 +358,7 @@
 //        v1.Concat(v2);
 //    }
 
-//    [TestMethod()]
+//    [TestMethod]
 //    public void ConcatTwoTupleFourTuple()
 //    {
 //        Tuple<int, int> v1 = new Tuple<int, int>(42, 1);
@@ -366,7 +366,7 @@
 //        Assert.AreEqual(v2, v1.Concat(v2).Tail.Tail);
 //    }
 
-//    [TestMethod()]
+//    [TestMethod]
 //    [ExpectedException(typeof(ArgumentNullException))]
 //    public void ConcatTwoTupleFiveTupleFirstIsNullShouldThrowArgumentNullException()
 //    {
@@ -375,7 +375,7 @@
 //        v1.Concat(v2);
 //    }
 
-//    [TestMethod()]
+//    [TestMethod]
 //    [ExpectedException(typeof(ArgumentNullException))]
 //    public void ConcatTwoTupleFiveTupleSecondIsNullShouldThrowArgumentNullException()
 //    {
@@ -384,7 +384,7 @@
 //        v1.Concat(v2);
 //    }
 
-//    [TestMethod()]
+//    [TestMethod]
 //    [ExpectedException(typeof(ArgumentNullException))]
 //    public void ConcatTwoTupleFiveTupleBothAreNullShouldThrowArgumentNullException()
 //    {
@@ -393,7 +393,7 @@
 //        v1.Concat(v2);
 //    }
 
-//    [TestMethod()]
+//    [TestMethod]
 //    public void ConcatTwoTupleFiveTuple()
 //    {
 //        Tuple<int, int> v1 = new Tuple<int, int>(42, 1);
@@ -401,10 +401,10 @@
 //        Assert.AreEqual(v2, v1.Concat(v2).Tail.Tail);
 //    }
 
-//    #endregion
+//    
 
 //    #region "First Tuple is three Tuple"
-//    [TestMethod()]
+//    [TestMethod]
 //    [ExpectedException(typeof(ArgumentNullException))]
 //    public void ConcatTreeTupleOneTupleFirstIsNullShouldThrowArgumentNullException()
 //    {
@@ -413,7 +413,7 @@
 //        v1.Concat(v2);
 //    }
 
-//    [TestMethod()]
+//    [TestMethod]
 //    [ExpectedException(typeof(ArgumentNullException))]
 //    public void ConcatTreeTupleOneTupleSecondIsNullShouldThrowArgumentNullException()
 //    {
@@ -422,7 +422,7 @@
 //        v1.Concat(v2);
 //    }
 
-//    [TestMethod()]
+//    [TestMethod]
 //    [ExpectedException(typeof(ArgumentNullException))]
 //    public void CConcatTreeTupleOneTupleBothAreNullShouldThrowArgumentNullException()
 //    {
@@ -431,7 +431,7 @@
 //        v1.Concat(v2);
 //    }
 
-//    [TestMethod()]
+//    [TestMethod]
 //    public void ConcatTreeTupleOneTuple()
 //    {
 //        Tuple<int, int, int> v1 = new Tuple<int, int, int>(42, 1, 1);
@@ -439,7 +439,7 @@
 //        Assert.AreEqual(v2, v1.Concat(v2).Tail.Tail.Tail);
 //    }
 
-//    [TestMethod()]
+//    [TestMethod]
 //    [ExpectedException(typeof(ArgumentNullException))]
 //    public void ConcatTreeTupleTreeTupleFirstIsNullShouldThrowArgumentNullException()
 //    {
@@ -448,7 +448,7 @@
 //        v1.Concat(v2);
 //    }
 
-//    [TestMethod()]
+//    [TestMethod]
 //    [ExpectedException(typeof(ArgumentNullException))]
 //    public void ConcatTreeTupleTreeTupleSecondIsNullShouldThrowArgumentNullException()
 //    {
@@ -457,7 +457,7 @@
 //        v1.Concat(v2);
 //    }
 
-//    [TestMethod()]
+//    [TestMethod]
 //    [ExpectedException(typeof(ArgumentNullException))]
 //    public void ConcatTreeTupleTreeTupleBothAreNullShouldThrowArgumentNullException()
 //    {
@@ -466,7 +466,7 @@
 //        v1.Concat(v2);
 //    }
 
-//    [TestMethod()]
+//    [TestMethod]
 //    public void ConcatTreeTupleTreeTuple()
 //    {
 //        Tuple<int, int, int> v1 = new Tuple<int, int, int>(42, 1, 1);
@@ -474,7 +474,7 @@
 //        Assert.AreEqual(v2, v1.Concat(v2).Tail.Tail.Tail);
 //    }
 
-//    [TestMethod()]
+//    [TestMethod]
 //    [ExpectedException(typeof(ArgumentNullException))]
 //    public void ConcatTreeTupleThreeTupleFirstIsNullShouldThrowArgumentNullException()
 //    {
@@ -483,7 +483,7 @@
 //        v1.Concat(v2);
 //    }
 
-//    [TestMethod()]
+//    [TestMethod]
 //    [ExpectedException(typeof(ArgumentNullException))]
 //    public void ConcatTreeTupleThreeTupleSecondIsNullShouldThrowArgumentNullException()
 //    {
@@ -492,7 +492,7 @@
 //        v1.Concat(v2);
 //    }
 
-//    [TestMethod()]
+//    [TestMethod]
 //    [ExpectedException(typeof(ArgumentNullException))]
 //    public void ConcatTreeTupleThreeTupleBothAreNullShouldThrowArgumentNullException()
 //    {
@@ -501,7 +501,7 @@
 //        v1.Concat(v2);
 //    }
 
-//    [TestMethod()]
+//    [TestMethod]
 //    public void ConcatTreeTupleThreeTuple()
 //    {
 //        Tuple<int, int, int> v1 = new Tuple<int, int, int>(42, 1, 1);
@@ -509,7 +509,7 @@
 //        Assert.AreEqual(v2, v1.Concat(v2).Tail.Tail.Tail);
 //    }
 
-//    [TestMethod()]
+//    [TestMethod]
 //    [ExpectedException(typeof(ArgumentNullException))]
 //    public void ConcatTreeTupleFourTupleFirstIsNullShouldThrowArgumentNullException()
 //    {
@@ -518,7 +518,7 @@
 //        v1.Concat(v2);
 //    }
 
-//    [TestMethod()]
+//    [TestMethod]
 //    [ExpectedException(typeof(ArgumentNullException))]
 //    public void ConcatTreeTupleFourTupleSecondIsNullShouldThrowArgumentNullException()
 //    {
@@ -527,7 +527,7 @@
 //        v1.Concat(v2);
 //    }
 
-//    [TestMethod()]
+//    [TestMethod]
 //    [ExpectedException(typeof(ArgumentNullException))]
 //    public void ConcatTreeTupleFourTupleBothAreNullShouldThrowArgumentNullException()
 //    {
@@ -536,7 +536,7 @@
 //        v1.Concat(v2);
 //    }
 
-//    [TestMethod()]
+//    [TestMethod]
 //    public void ConcatTreeTupleFourTuple()
 //    {
 //        Tuple<int, int, int> v1 = new Tuple<int, int, int>(42, 1, 1);
@@ -544,10 +544,10 @@
 //        Assert.AreEqual(v2, v1.Concat(v2).Tail.Tail.Tail);
 //    }
 
-//    #endregion
+//    
 
 //    #region "First Tuple is Four Tuple"
-//    [TestMethod()]
+//    [TestMethod]
 //    [ExpectedException(typeof(ArgumentNullException))]
 //    public void ConcatFourTupleOneTupleFirstIsNullShouldThrowArgumentNullException()
 //    {
@@ -556,7 +556,7 @@
 //        v1.Concat(v2);
 //    }
 
-//    [TestMethod()]
+//    [TestMethod]
 //    [ExpectedException(typeof(ArgumentNullException))]
 //    public void ConcatFourTupleOneTupleSecondIsNullShouldThrowArgumentNullException()
 //    {
@@ -565,7 +565,7 @@
 //        v1.Concat(v2);
 //    }
 
-//    [TestMethod()]
+//    [TestMethod]
 //    [ExpectedException(typeof(ArgumentNullException))]
 //    public void CConcatFourTupleOneTupleBothAreNullShouldThrowArgumentNullException()
 //    {
@@ -574,7 +574,7 @@
 //        v1.Concat(v2);
 //    }
 
-//    [TestMethod()]
+//    [TestMethod]
 //    public void ConcatFourTupleOneTuple()
 //    {
 //        Tuple<int, int, int, int> v1 = new Tuple<int, int, int, int>(42, 1, 1, 1);
@@ -582,7 +582,7 @@
 //        Assert.AreEqual(v2, v1.Concat(v2).Tail.Tail.Tail.Tail);
 //    }
 
-//    [TestMethod()]
+//    [TestMethod]
 //    [ExpectedException(typeof(ArgumentNullException))]
 //    public void ConcatFourTupleTreeTupleFirstIsNullShouldThrowArgumentNullException()
 //    {
@@ -591,7 +591,7 @@
 //        v1.Concat(v2);
 //    }
 
-//    [TestMethod()]
+//    [TestMethod]
 //    [ExpectedException(typeof(ArgumentNullException))]
 //    public void ConcatFourTupleTreeTupleSecondIsNullShouldThrowArgumentNullException()
 //    {
@@ -600,7 +600,7 @@
 //        v1.Concat(v2);
 //    }
 
-//    [TestMethod()]
+//    [TestMethod]
 //    [ExpectedException(typeof(ArgumentNullException))]
 //    public void ConcatFourTupleTreeTupleBothAreNullShouldThrowArgumentNullException()
 //    {
@@ -609,7 +609,7 @@
 //        v1.Concat(v2);
 //    }
 
-//    [TestMethod()]
+//    [TestMethod]
 //    public void ConcatFourTupleTwoTuple()
 //    {
 //        Tuple<int, int, int, int> v1 = new Tuple<int, int, int, int>(42, 1, 1, 1);
@@ -617,7 +617,7 @@
 //        Assert.AreEqual(v2, v1.Concat(v2).Tail.Tail.Tail.Tail);
 //    }
 
-//    [TestMethod()]
+//    [TestMethod]
 //    [ExpectedException(typeof(ArgumentNullException))]
 //    public void ConcatFourTupleThreeTupleFirstIsNullShouldThrowArgumentNullException()
 //    {
@@ -626,7 +626,7 @@
 //        v1.Concat(v2);
 //    }
 
-//    [TestMethod()]
+//    [TestMethod]
 //    [ExpectedException(typeof(ArgumentNullException))]
 //    public void ConcatFourTupleThreeTupleSecondIsNullShouldThrowArgumentNullException()
 //    {
@@ -635,7 +635,7 @@
 //        v1.Concat(v2);
 //    }
 
-//    [TestMethod()]
+//    [TestMethod]
 //    [ExpectedException(typeof(ArgumentNullException))]
 //    public void ConcatFourTupleThreeTupleBothAreNullShouldThrowArgumentNullException()
 //    {
@@ -644,17 +644,17 @@
 //        v1.Concat(v2);
 //    }
 
-//    [TestMethod()]
+//    [TestMethod]
 //    public void ConcatFourTupleThreeTuple()
 //    {
 //        Tuple<int, int, int, int> v1 = new Tuple<int, int, int, int>(42, 1, 1, 1);
 //        Tuple<string, string, string> v2 = new Tuple<string, string, string>("hello", "to", "world");
 //        Assert.AreEqual(v2, v1.Concat(v2).Tail.Tail.Tail.Tail);
 //    }
-//    #endregion
+//    
 
 //    #region "First Tuple is five Tuple"
-//    [TestMethod()]
+//    [TestMethod]
 //    [ExpectedException(typeof(ArgumentNullException))]
 //    public void ConcatFiveTupleOneTupleFirstIsNullShouldThrowArgumentNullException()
 //    {
@@ -663,7 +663,7 @@
 //        v1.Concat(v2);
 //    }
 
-//    [TestMethod()]
+//    [TestMethod]
 //    [ExpectedException(typeof(ArgumentNullException))]
 //    public void ConcatFiveTupleOneTupleSecondIsNullShouldThrowArgumentNullException()
 //    {
@@ -672,7 +672,7 @@
 //        v1.Concat(v2);
 //    }
 
-//    [TestMethod()]
+//    [TestMethod]
 //    [ExpectedException(typeof(ArgumentNullException))]
 //    public void CConcatFiveTupleOneTupleBothAreNullShouldThrowArgumentNullException()
 //    {
@@ -681,7 +681,7 @@
 //        v1.Concat(v2);
 //    }
 
-//    [TestMethod()]
+//    [TestMethod]
 //    public void ConcatFiveTupleOneTuple()
 //    {
 //        Tuple<int, int, int, int, int> v1 = new Tuple<int, int, int, int, int>(42, 1, 1, 1, 1);
@@ -689,7 +689,7 @@
 //        Assert.AreEqual(v2, v1.Concat(v2).Tail.Tail.Tail.Tail.Tail);
 //    }
 
-//    [TestMethod()]
+//    [TestMethod]
 //    [ExpectedException(typeof(ArgumentNullException))]
 //    public void ConcatFiveTupleTwoTupleFirstIsNullShouldThrowArgumentNullException()
 //    {
@@ -698,7 +698,7 @@
 //        v1.Concat(v2);
 //    }
 
-//    [TestMethod()]
+//    [TestMethod]
 //    [ExpectedException(typeof(ArgumentNullException))]
 //    public void ConcatFiveTupleTwoTupleSecondIsNullShouldThrowArgumentNullException()
 //    {
@@ -707,7 +707,7 @@
 //        v1.Concat(v2);
 //    }
 
-//    [TestMethod()]
+//    [TestMethod]
 //    [ExpectedException(typeof(ArgumentNullException))]
 //    public void ConcatFiveTupleTwoTupleBothAreNullShouldThrowArgumentNullException()
 //    {
@@ -716,16 +716,16 @@
 //        v1.Concat(v2);
 //    }
 
-//    [TestMethod()]
+//    [TestMethod]
 //    public void ConcatFiveTupleTwoTuple()
 //    {
 //        Tuple<int, int, int, int, int> v1 = new Tuple<int, int, int, int, int>(42, 1, 1, 1, 1);
 //        Tuple<string, string> v2 = new Tuple<string, string>("hello", "world");
 //        Assert.AreEqual(v2, v1.Concat(v2).Tail.Tail.Tail.Tail.Tail);
 //    }
-//    #endregion
+//    
 //    #region "First Tuple is six Tuple"
-//    [TestMethod()]
+//    [TestMethod]
 //    [ExpectedException(typeof(ArgumentNullException))]
 //    public void ConcatSixTupleOneTupleFirstIsNullShouldThrowArgumentNullException()
 //    {
@@ -734,7 +734,7 @@
 //        v1.Concat(v2);
 //    }
 
-//    [TestMethod()]
+//    [TestMethod]
 //    [ExpectedException(typeof(ArgumentNullException))]
 //    public void ConcatSixTupleOneTupleSecondIsNullShouldThrowArgumentNullException()
 //    {
@@ -743,7 +743,7 @@
 //        v1.Concat(v2);
 //    }
 
-//    [TestMethod()]
+//    [TestMethod]
 //    [ExpectedException(typeof(ArgumentNullException))]
 //    public void CConcatSixTupleOneTupleBothAreNullShouldThrowArgumentNullException()
 //    {
@@ -752,12 +752,13 @@
 //        v1.Concat(v2);
 //    }
 
-//    [TestMethod()]
+//    [TestMethod]
 //    public void ConcatSixTupleOneTuple()
 //    {
 //        Tuple<int, int, int, int, int, int> v1 = new Tuple<int, int, int, int, int, int>(42, 1, 1, 1, 1, 1);
 //        Tuple<string> v2 = new Tuple<string>("hello");
 //        Assert.AreEqual(v2, v1.Concat(v2).Tail.Tail.Tail.Tail.Tail.Tail);
 //    }
-//    #endregion
+//    
 //}
+

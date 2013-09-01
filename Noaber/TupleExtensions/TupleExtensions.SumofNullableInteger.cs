@@ -10,7 +10,6 @@ public static partial class TupleExtensions
   {
     Contract.Requires<ArgumentNullException>(value != null);
     Contract.Requires<ArgumentNullException>(func != null);
-
     return func(value.Item1);
   }
 

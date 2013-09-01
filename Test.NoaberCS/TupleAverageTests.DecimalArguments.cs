@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Tests
@@ -8,7 +6,8 @@ namespace Tests
   public partial class TupleAverageTests
   {
     private readonly Func<object, decimal> nullFuncDecimal = null;
-    [ExpectedException(typeof(ArgumentNullException))]
+
+    [ExpectedException(typeof (ArgumentNullException))]
     [TestMethod]
     public void DecimalAverageOnOneTupleNullEnumerable()
     {
@@ -16,15 +15,15 @@ namespace Tests
       sut.Average(nullFuncDecimal);
     }
 
-    [ExpectedException(typeof(ArgumentNullException))]
+    [ExpectedException(typeof (ArgumentNullException))]
     [TestMethod]
     public void DecimalAverageOnOneTupleFuncNull()
     {
-      Tuple<decimal> sut = new Tuple<decimal>(1);
+      var sut = new Tuple<decimal>(1);
       sut.Average(nullFuncDecimal);
     }
 
-    [ExpectedException(typeof(ArgumentNullException))]
+    [ExpectedException(typeof (ArgumentNullException))]
     [TestMethod]
     public void DecimalAverageOnTwoTupleNullEnumerable()
     {
@@ -32,15 +31,15 @@ namespace Tests
       sut.Average(nullFuncDecimal);
     }
 
-    [ExpectedException(typeof(ArgumentNullException))]
+    [ExpectedException(typeof (ArgumentNullException))]
     [TestMethod]
     public void DecimalAverageOnTwoTupleFuncNull()
     {
-      Tuple<decimal, decimal> sut = new Tuple<decimal, decimal>(1, 2);
+      var sut = new Tuple<decimal, decimal>(1, 2);
       sut.Average(nullFuncDecimal);
     }
 
-    [ExpectedException(typeof(ArgumentNullException))]
+    [ExpectedException(typeof (ArgumentNullException))]
     [TestMethod]
     public void DecimalAverageOnThreeTupleNullEnumerable()
     {
@@ -48,15 +47,15 @@ namespace Tests
       sut.Average(nullFuncDecimal);
     }
 
-    [ExpectedException(typeof(ArgumentNullException))]
+    [ExpectedException(typeof (ArgumentNullException))]
     [TestMethod]
     public void DecimalAverageOnThreeTupleFuncNull()
     {
-      Tuple<decimal, decimal, decimal> sut = new Tuple<decimal, decimal, decimal>(1, 2, 3);
+      var sut = new Tuple<decimal, decimal, decimal>(1, 2, 3);
       sut.Average(nullFuncDecimal);
     }
 
-    [ExpectedException(typeof(ArgumentNullException))]
+    [ExpectedException(typeof (ArgumentNullException))]
     [TestMethod]
     public void DecimalAverageOnFourTupleNullEnumerable()
     {
@@ -64,15 +63,15 @@ namespace Tests
       sut.Average(nullFuncDecimal);
     }
 
-    [ExpectedException(typeof(ArgumentNullException))]
+    [ExpectedException(typeof (ArgumentNullException))]
     [TestMethod]
     public void DecimalAverageOnFourTupleFuncNull()
     {
-      Tuple<decimal, decimal, decimal, decimal> sut = new Tuple<decimal, decimal, decimal, decimal>(1, 2, 3, 4);
+      var sut = new Tuple<decimal, decimal, decimal, decimal>(1, 2, 3, 4);
       sut.Average(nullFuncDecimal);
     }
 
-    [ExpectedException(typeof(ArgumentNullException))]
+    [ExpectedException(typeof (ArgumentNullException))]
     [TestMethod]
     public void DecimalAverageOnFiveTupleNullEnumerable()
     {
@@ -80,15 +79,15 @@ namespace Tests
       sut.Average(nullFuncDecimal);
     }
 
-    [ExpectedException(typeof(ArgumentNullException))]
+    [ExpectedException(typeof (ArgumentNullException))]
     [TestMethod]
     public void DecimalAverageOnFiveTupleFuncNull()
     {
-      Tuple<decimal, decimal, decimal, decimal, decimal> sut = new Tuple<decimal, decimal, decimal, decimal, decimal>(1, 2, 3, 4, 5);
+      var sut = new Tuple<decimal, decimal, decimal, decimal, decimal>(1, 2, 3, 4, 5);
       sut.Average(nullFuncDecimal);
     }
 
-    [ExpectedException(typeof(ArgumentNullException))]
+    [ExpectedException(typeof (ArgumentNullException))]
     [TestMethod]
     public void DecimalAverageOnSixTupleNullEnumerable()
     {
@@ -96,15 +95,15 @@ namespace Tests
       sut.Average(nullFuncDecimal);
     }
 
-    [ExpectedException(typeof(ArgumentNullException))]
+    [ExpectedException(typeof (ArgumentNullException))]
     [TestMethod]
     public void DecimalAverageOnSixTupleFuncNull()
     {
-      Tuple<decimal, decimal, decimal, decimal, decimal, decimal> sut = new Tuple<decimal, decimal, decimal, decimal, decimal, decimal>(1, 2, 3, 4, 5, 6);
+      var sut = new Tuple<decimal, decimal, decimal, decimal, decimal, decimal>(1, 2, 3, 4, 5, 6);
       sut.Average(nullFuncDecimal);
     }
 
-    [ExpectedException(typeof(ArgumentNullException))]
+    [ExpectedException(typeof (ArgumentNullException))]
     [TestMethod]
     public void DecimalAverageOnSevenTupleNullEnumerable()
     {
@@ -112,11 +111,11 @@ namespace Tests
       sut.Average(nullFuncDecimal);
     }
 
-    [ExpectedException(typeof(ArgumentNullException))]
+    [ExpectedException(typeof (ArgumentNullException))]
     [TestMethod]
     public void DecimalAverageOnSevenTupleFuncNull()
     {
-      Tuple<decimal, decimal, decimal, decimal, decimal, decimal, decimal> sut = new Tuple<decimal, decimal, decimal, decimal, decimal, decimal, decimal>(1, 2, 3, 4, 5, 6, 7);
+      var sut = new Tuple<decimal, decimal, decimal, decimal, decimal, decimal, decimal>(1, 2, 3, 4, 5, 6, 7);
       sut.Average(nullFuncDecimal);
     }
   }

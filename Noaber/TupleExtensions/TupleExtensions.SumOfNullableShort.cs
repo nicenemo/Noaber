@@ -31,60 +31,21 @@ public static partial class TupleExtensions
   {
     Contract.Requires<ArgumentNullException>(value != null);
     Contract.Requires<ArgumentNullException>(func != null);
-
-    short? sum = 0;
-    int i = value.Count();
-    while (0 < i)
-    {
-      i--;
-      object v = value.Item(i);
-      short? fValue = func(v);
-      if (fValue.HasValue)
-      {
-        sum += fValue.Value;
-      }
-    }
-    return sum;
+    return (from v in value select func(v)).Sum();
   }
 
   public static short? Sum<T1, T2, T3, T4, T5>(this Tuple<T1, T2, T3, T4, T5> value, Func<object, short?> func)
   {
     Contract.Requires<ArgumentNullException>(value != null);
     Contract.Requires<ArgumentNullException>(func != null);
-
-    short? sum = 0;
-    int i = value.Count();
-    while (0 < i)
-    {
-      i--;
-      object v = value.Item(i);
-      short? fValue = func(v);
-      if (fValue.HasValue)
-      {
-        sum += fValue.Value;
-      }
-    }
-    return sum;
+    return (from v in value select func(v)).Sum();
   }
 
   public static short? Sum<T1, T2, T3, T4, T5, T6>(this Tuple<T1, T2, T3, T4, T5, T6> value, Func<object, short?> func)
   {
     Contract.Requires<ArgumentNullException>(value != null);
     Contract.Requires<ArgumentNullException>(func != null);
-
-    short? sum = 0;
-    int i = value.Count();
-    while (0 < i)
-    {
-      i--;
-      object v = value.Item(i);
-      short? fValue = func(v);
-      if (fValue.HasValue)
-      {
-        sum += fValue.Value;
-      }
-    }
-    return sum;
+    return (from v in value select func(v)).Sum();
   }
 
   public static short? Sum<T1, T2, T3, T4, T5, T6, T7>(this Tuple<T1, T2, T3, T4, T5, T6, T7> value,
@@ -92,19 +53,6 @@ public static partial class TupleExtensions
   {
     Contract.Requires<ArgumentNullException>(value != null);
     Contract.Requires<ArgumentNullException>(func != null);
-
-    short? sum = 0;
-    int i = value.Count();
-    while (0 < i)
-    {
-      i--;
-      object v = value.Item(i);
-      short? fValue = func(v);
-      if (fValue.HasValue)
-      {
-        sum += fValue.Value;
-      }
-    }
-    return sum;
+  return (from v in value select func(v)).Sum();
   }
 }

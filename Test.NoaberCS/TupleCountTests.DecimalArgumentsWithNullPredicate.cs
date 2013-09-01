@@ -1,14 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Tests
 {
   public partial class TupleCountTests
   {
-    
-    [ExpectedException(typeof(ArgumentNullException))]
+    [ExpectedException(typeof (ArgumentNullException))]
     [TestMethod]
     public void DecimalCountOnOneTupleNullEnumerableWithNullPredicate()
     {
@@ -16,15 +13,15 @@ namespace Tests
       sut.Count(nullPredicate);
     }
 
-    [ExpectedException(typeof(ArgumentNullException))]
+    [ExpectedException(typeof (ArgumentNullException))]
     [TestMethod]
     public void DecimalCountOnOneTupleFuncNullWithNullPredicate()
     {
-      Tuple<decimal> sut = new Tuple<decimal>(1);
+      var sut = new Tuple<decimal>(1);
       sut.Count(nullPredicate);
     }
 
-    [ExpectedException(typeof(ArgumentNullException))]
+    [ExpectedException(typeof (ArgumentNullException))]
     [TestMethod]
     public void DecimalCountOnTwoTupleNullEnumerableWithNullPredicate()
     {
@@ -32,15 +29,15 @@ namespace Tests
       sut.Count(nullPredicate);
     }
 
-    [ExpectedException(typeof(ArgumentNullException))]
+    [ExpectedException(typeof (ArgumentNullException))]
     [TestMethod]
     public void DecimalCountOnTwoTupleFuncNullWithNullPredicate()
     {
-      Tuple<decimal, decimal> sut = new Tuple<decimal, decimal>(1, 2);
+      var sut = new Tuple<decimal, decimal>(1, 2);
       sut.Count(nullPredicate);
     }
 
-    [ExpectedException(typeof(ArgumentNullException))]
+    [ExpectedException(typeof (ArgumentNullException))]
     [TestMethod]
     public void DecimalCountOnThreeTupleNullEnumerableWithNullPredicate()
     {
@@ -48,15 +45,15 @@ namespace Tests
       sut.Count(nullPredicate);
     }
 
-    [ExpectedException(typeof(ArgumentNullException))]
+    [ExpectedException(typeof (ArgumentNullException))]
     [TestMethod]
     public void DecimalCountOnThreeTupleFuncNullWithNullPredicate()
     {
-      Tuple<decimal, decimal, decimal> sut = new Tuple<decimal, decimal, decimal>(1, 2, 3);
+      var sut = new Tuple<decimal, decimal, decimal>(1, 2, 3);
       sut.Count(nullPredicate);
     }
 
-    [ExpectedException(typeof(ArgumentNullException))]
+    [ExpectedException(typeof (ArgumentNullException))]
     [TestMethod]
     public void DecimalCountOnFourTupleNullEnumerableWithNullPredicate()
     {
@@ -64,15 +61,15 @@ namespace Tests
       sut.Count(nullPredicate);
     }
 
-    [ExpectedException(typeof(ArgumentNullException))]
+    [ExpectedException(typeof (ArgumentNullException))]
     [TestMethod]
     public void DecimalCountOnFourTupleFuncNullWithNullPredicate()
     {
-      Tuple<decimal, decimal, decimal, decimal> sut = new Tuple<decimal, decimal, decimal, decimal>(1, 2, 3, 4);
+      var sut = new Tuple<decimal, decimal, decimal, decimal>(1, 2, 3, 4);
       sut.Count(nullPredicate);
     }
 
-    [ExpectedException(typeof(ArgumentNullException))]
+    [ExpectedException(typeof (ArgumentNullException))]
     [TestMethod]
     public void DecimalCountOnFiveTupleNullEnumerableWithNullPredicate()
     {
@@ -80,15 +77,15 @@ namespace Tests
       sut.Count(nullPredicate);
     }
 
-    [ExpectedException(typeof(ArgumentNullException))]
+    [ExpectedException(typeof (ArgumentNullException))]
     [TestMethod]
     public void DecimalCountOnFiveTupleFuncNullWithNullPredicate()
     {
-      Tuple<decimal, decimal, decimal, decimal, decimal> sut = new Tuple<decimal, decimal, decimal, decimal, decimal>(1, 2, 3, 4, 5);
+      var sut = new Tuple<decimal, decimal, decimal, decimal, decimal>(1, 2, 3, 4, 5);
       sut.Count(nullPredicate);
     }
 
-    [ExpectedException(typeof(ArgumentNullException))]
+    [ExpectedException(typeof (ArgumentNullException))]
     [TestMethod]
     public void DecimalCountOnSixTupleNullEnumerableWithNullPredicate()
     {
@@ -96,15 +93,15 @@ namespace Tests
       sut.Count(nullPredicate);
     }
 
-    [ExpectedException(typeof(ArgumentNullException))]
+    [ExpectedException(typeof (ArgumentNullException))]
     [TestMethod]
     public void DecimalCountOnSixTupleFuncNullWithNullPredicate()
     {
-      Tuple<decimal, decimal, decimal, decimal, decimal, decimal> sut = new Tuple<decimal, decimal, decimal, decimal, decimal, decimal>(1, 2, 3, 4, 5, 6);
+      var sut = new Tuple<decimal, decimal, decimal, decimal, decimal, decimal>(1, 2, 3, 4, 5, 6);
       sut.Count(nullPredicate);
     }
 
-    [ExpectedException(typeof(ArgumentNullException))]
+    [ExpectedException(typeof (ArgumentNullException))]
     [TestMethod]
     public void DecimalCountOnSevenTupleNullEnumerableWithNullPredicate()
     {
@@ -112,11 +109,11 @@ namespace Tests
       sut.Count(nullPredicate);
     }
 
-    [ExpectedException(typeof(ArgumentNullException))]
+    [ExpectedException(typeof (ArgumentNullException))]
     [TestMethod]
     public void DecimalCountOnSevenTupleFuncNullWithNullPredicate()
     {
-      Tuple<decimal, decimal, decimal, decimal, decimal, decimal, decimal> sut = new Tuple<decimal, decimal, decimal, decimal, decimal, decimal, decimal>(1, 2, 3, 4, 5, 6, 7);
+      var sut = new Tuple<decimal, decimal, decimal, decimal, decimal, decimal, decimal>(1, 2, 3, 4, 5, 6, 7);
       sut.Count(nullPredicate);
     }
   }

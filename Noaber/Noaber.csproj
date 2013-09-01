@@ -89,6 +89,7 @@
     <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="Noaber.cs" />
     <Compile Include="TimeSpanExtensions.cs" />
+    <Compile Include="TupleExtensions.Where.cs" />
     <Compile Include="TupleExtensions\TupleExtensions.AverageOfNullableShort.cs" />
     <Compile Include="TupleExtensions\TupleExtensions.AverageOfNullableLong.cs" />
     <Compile Include="TupleExtensions\TupleExtensions.AverageOfNullableInteger.cs" />

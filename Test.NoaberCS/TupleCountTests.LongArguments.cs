@@ -1,14 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Tests
 {
   public partial class TupleCountTests
   {
-
-    [ExpectedException(typeof(ArgumentNullException))]
+    [ExpectedException(typeof (ArgumentNullException))]
     [TestMethod]
     public void LongCountOnOneTupleNullEnumerable()
     {
@@ -16,7 +13,7 @@ namespace Tests
       sut.Count();
     }
 
-    [ExpectedException(typeof(ArgumentNullException))]
+    [ExpectedException(typeof (ArgumentNullException))]
     [TestMethod]
     public void LongCountOnTwoTupleNullEnumerable()
     {
@@ -24,7 +21,7 @@ namespace Tests
       sut.Count();
     }
 
-    [ExpectedException(typeof(ArgumentNullException))]
+    [ExpectedException(typeof (ArgumentNullException))]
     [TestMethod]
     public void LongCountOnThreeTupleNullEnumerable()
     {
@@ -32,7 +29,7 @@ namespace Tests
       sut.Count();
     }
 
-    [ExpectedException(typeof(ArgumentNullException))]
+    [ExpectedException(typeof (ArgumentNullException))]
     [TestMethod]
     public void LongCountOnFourTupleNullEnumerable()
     {
@@ -40,7 +37,7 @@ namespace Tests
       sut.Count();
     }
 
-    [ExpectedException(typeof(ArgumentNullException))]
+    [ExpectedException(typeof (ArgumentNullException))]
     [TestMethod]
     public void LongCountOnFiveTupleNullEnumerable()
     {
@@ -48,7 +45,7 @@ namespace Tests
       sut.Count();
     }
 
-    [ExpectedException(typeof(ArgumentNullException))]
+    [ExpectedException(typeof (ArgumentNullException))]
     [TestMethod]
     public void LongCountOnSixTupleNullEnumerable()
     {
@@ -56,7 +53,7 @@ namespace Tests
       sut.Count();
     }
 
-    [ExpectedException(typeof(ArgumentNullException))]
+    [ExpectedException(typeof (ArgumentNullException))]
     [TestMethod]
     public void LongCountOnSevenTupleNullEnumerable()
     {

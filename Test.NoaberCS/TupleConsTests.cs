@@ -15,7 +15,7 @@
 
 //    #region "Cons Tests"
 
-//    [TestMethod()]
+//    [TestMethod]
 //    public void ConsOneTupleWithNull()
 //    {
 //        Tuple<int> expected = new Tuple<int>(1);
@@ -25,7 +25,7 @@
 //        Assert.IsNull(actual.Item1);
 //    }
 
-//    [TestMethod()]
+//    [TestMethod]
 //    [ExpectedException(typeof(ArgumentNullException))]
 //    public void ConsOnNullOneTupleShouldThrowException()
 //    {
@@ -34,7 +34,7 @@
 //        s.Cons(t);
 //    }
 
-//    [TestMethod()]
+//    [TestMethod]
 //    public void ConsOneTuple()
 //    {
 //        Tuple<int> expected = new Tuple<int>(1);
@@ -44,7 +44,7 @@
 //    }
 
 
-//    [TestMethod()]
+//    [TestMethod]
 //    public void ConsTwoTupleWithNull()
 //    {
 //        Tuple<int, int> expected = new Tuple<int, int>(1, 2);
@@ -54,7 +54,7 @@
 //        Assert.IsNull(actual.Item1);
 //    }
 
-//    [TestMethod()]
+//    [TestMethod]
 //    [ExpectedException(typeof(ArgumentNullException))]
 //    public void ConsOnNullTwoTupleShouldThrowException()
 //    {
@@ -63,7 +63,7 @@
 //        s.Cons(t);
 //    }
 
-//    [TestMethod()]
+//    [TestMethod]
 //    public void ConsOnTwoTuple()
 //    {
 //        Tuple<int, int> expected = new Tuple<int, int>(1, 1);
@@ -72,7 +72,7 @@
 //        Assert.AreEqual(expected, actual);
 //    }
 
-//    [TestMethod()]
+//    [TestMethod]
 //    public void ConsThreeTupleWithNull()
 //    {
 //        Tuple<int, int, int> expected = new Tuple<int, int, int>(1, 2, 3);
@@ -82,7 +82,7 @@
 //        Assert.IsNull(actual.Item1);
 //    }
 
-//    [TestMethod()]
+//    [TestMethod]
 //    [ExpectedException(typeof(ArgumentNullException))]
 //    public void ConsOnNullThreeTupleShouldThrowException()
 //    {
@@ -91,7 +91,7 @@
 //        s.Cons(t);
 //    }
 
-//    [TestMethod()]
+//    [TestMethod]
 //    public void ConsOnThreeTuple()
 //    {
 //        Tuple<int, int, int> expected = new Tuple<int, int, int>(1, 1, 1);
@@ -101,7 +101,7 @@
 //    }
 
 
-//    [TestMethod()]
+//    [TestMethod]
 //    public void ConsFourTupleWithNull()
 //    {
 //        Tuple<int, int, int, int> expected = new Tuple<int, int, int, int>(1, 2, 3, 4);
@@ -111,7 +111,7 @@
 //        Assert.IsNull(actual.Item1);
 //    }
 
-//    [TestMethod()]
+//    [TestMethod]
 //    [ExpectedException(typeof(ArgumentNullException))]
 //    public void ConsOnNullFourTupleShouldThrowException()
 //    {
@@ -120,7 +120,7 @@
 //        s.Cons(t);
 //    }
 
-//    [TestMethod()]
+//    [TestMethod]
 //    public void ConsOnFourTuple()
 //    {
 //        Tuple<int, int, int, int> expected = new Tuple<int, int, int, int>(1, 1, 1, 1);
@@ -130,7 +130,7 @@
 //    }
 
 
-//    [TestMethod()]
+//    [TestMethod]
 //    public void ConsFiveTupleWithNull()
 //    {
 //        Tuple<int, int, int, int, int> expected = new Tuple<int, int, int, int, int>(1, 2, 3, 4, 5);
@@ -140,7 +140,7 @@
 //        Assert.IsNull(actual.Item1);
 //    }
 
-//    [TestMethod()]
+//    [TestMethod]
 //    [ExpectedException(typeof(ArgumentNullException))]
 //    public void ConsOnNullFiveTupleShouldThrowException()
 //    {
@@ -149,7 +149,7 @@
 //        s.Cons(t);
 //    }
 
-//    [TestMethod()]
+//    [TestMethod]
 //    public void ConsOnFiveTuple()
 //    {
 //        Tuple<int, int, int, int, int> expected = new Tuple<int, int, int, int, int>(1, 1, 1, 1, 1);
@@ -158,7 +158,7 @@
 //        Assert.AreEqual(expected, actual);
 //    }
 
-//    [TestMethod()]
+//    [TestMethod]
 //    public void ConsSixTupleWithNull()
 //    {
 //        Tuple<int, int, int, int, int, int> expected = new Tuple<int, int, int, int, int, int>(1, 2, 3, 4, 5, 6);
@@ -168,7 +168,7 @@
 //        Assert.IsNull(actual.Item1);
 //    }
 
-//    [TestMethod()]
+//    [TestMethod]
 //    [ExpectedException(typeof(ArgumentNullException))]
 //    public void ConsOnNullSixTupleShouldThrowException()
 //    {
@@ -177,7 +177,7 @@
 //        s.Cons(t);
 //    }
 
-//    [TestMethod()]
+//    [TestMethod]
 //    public void ConsOnSixTuple()
 //    {
 //        Tuple<int, int, int, int, int, int> expected = new Tuple<int, int, int, int, int, int>(1, 1, 1, 1, 1, 1);
@@ -185,6 +185,7 @@
 //        Tuple<int, int, int, int, int, int> actual = t.Cons(expected).Tail();
 //        Assert.AreEqual(expected, actual);
 //    }
-//    #endregion
+//    
 
 //}
+

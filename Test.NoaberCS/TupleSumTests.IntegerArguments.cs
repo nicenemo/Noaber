@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Tests
@@ -8,7 +6,8 @@ namespace Tests
   public partial class TupleSumTests
   {
     private readonly Func<object, int> nullFuncInteger = null;
-    [ExpectedException(typeof(ArgumentNullException))]
+
+    [ExpectedException(typeof (ArgumentNullException))]
     [TestMethod]
     public void IntegerSumOnOneTupleNullEnumerable()
     {
@@ -16,15 +15,15 @@ namespace Tests
       sut.Sum(nullFuncInteger);
     }
 
-    [ExpectedException(typeof(ArgumentNullException))]
+    [ExpectedException(typeof (ArgumentNullException))]
     [TestMethod]
     public void IntegerSumOnOneTupleFuncNull()
     {
-      Tuple<int> sut = new Tuple<int>(1);   
+      var sut = new Tuple<int>(1);
       sut.Sum(nullFuncInteger);
     }
 
-    [ExpectedException(typeof(ArgumentNullException))]
+    [ExpectedException(typeof (ArgumentNullException))]
     [TestMethod]
     public void IntegerSumOnTwoTupleNullEnumerable()
     {
@@ -32,15 +31,15 @@ namespace Tests
       sut.Sum(nullFuncInteger);
     }
 
-    [ExpectedException(typeof(ArgumentNullException))]
+    [ExpectedException(typeof (ArgumentNullException))]
     [TestMethod]
     public void IntegerSumOnTwoTupleFuncNull()
     {
-      Tuple<int, int> sut = new Tuple<int, int>(1, 2);  
+      var sut = new Tuple<int, int>(1, 2);
       sut.Sum(nullFuncInteger);
     }
 
-    [ExpectedException(typeof(ArgumentNullException))]
+    [ExpectedException(typeof (ArgumentNullException))]
     [TestMethod]
     public void IntegerSumOnThreeTupleNullEnumerable()
     {
@@ -48,15 +47,15 @@ namespace Tests
       sut.Sum(nullFuncInteger);
     }
 
-    [ExpectedException(typeof(ArgumentNullException))]
+    [ExpectedException(typeof (ArgumentNullException))]
     [TestMethod]
     public void IntegerSumOnThreeTupleFuncNull()
     {
-      Tuple<int, int, int> sut = new Tuple<int, int, int>(1, 2, 3); 
+      var sut = new Tuple<int, int, int>(1, 2, 3);
       sut.Sum(nullFuncInteger);
     }
 
-    [ExpectedException(typeof(ArgumentNullException))]
+    [ExpectedException(typeof (ArgumentNullException))]
     [TestMethod]
     public void IntegerSumOnFourTupleNullEnumerable()
     {
@@ -64,15 +63,15 @@ namespace Tests
       sut.Sum(nullFuncInteger);
     }
 
-    [ExpectedException(typeof(ArgumentNullException))]
+    [ExpectedException(typeof (ArgumentNullException))]
     [TestMethod]
     public void IntegerSumOnFourTupleFuncNull()
     {
-      Tuple<int, int, int, int> sut = new Tuple<int, int, int, int>(1, 2, 3, 4);
+      var sut = new Tuple<int, int, int, int>(1, 2, 3, 4);
       sut.Sum(nullFuncInteger);
     }
 
-    [ExpectedException(typeof(ArgumentNullException))]
+    [ExpectedException(typeof (ArgumentNullException))]
     [TestMethod]
     public void IntegerSumOnFiveTupleNullEnumerable()
     {
@@ -80,15 +79,15 @@ namespace Tests
       sut.Sum(nullFuncInteger);
     }
 
-    [ExpectedException(typeof(ArgumentNullException))]
+    [ExpectedException(typeof (ArgumentNullException))]
     [TestMethod]
     public void IntegerSumOnFiveTupleFuncNull()
     {
-      Tuple<int, int, int, int, int> sut = new Tuple<int, int, int, int, int>(1, 2, 3, 4, 5);    
+      var sut = new Tuple<int, int, int, int, int>(1, 2, 3, 4, 5);
       sut.Sum(nullFuncInteger);
     }
 
-    [ExpectedException(typeof(ArgumentNullException))]
+    [ExpectedException(typeof (ArgumentNullException))]
     [TestMethod]
     public void IntegerSumOnSixTupleNullEnumerable()
     {
@@ -96,15 +95,15 @@ namespace Tests
       sut.Sum(nullFuncInteger);
     }
 
-    [ExpectedException(typeof(ArgumentNullException))]
+    [ExpectedException(typeof (ArgumentNullException))]
     [TestMethod]
     public void IntegerSumOnSixTupleFuncNull()
     {
-      Tuple<int, int, int, int, int, int> sut = new Tuple<int, int, int, int, int, int>(1, 2, 3, 4, 5, 6);    
+      var sut = new Tuple<int, int, int, int, int, int>(1, 2, 3, 4, 5, 6);
       sut.Sum(nullFuncInteger);
     }
 
-    [ExpectedException(typeof(ArgumentNullException))]
+    [ExpectedException(typeof (ArgumentNullException))]
     [TestMethod]
     public void IntegerSumOnSevenTupleNullEnumerable()
     {
@@ -112,11 +111,11 @@ namespace Tests
       sut.Sum(nullFuncInteger);
     }
 
-    [ExpectedException(typeof(ArgumentNullException))]
+    [ExpectedException(typeof (ArgumentNullException))]
     [TestMethod]
     public void IntegerSumOnSevenTupleFuncNull()
     {
-      Tuple<int, int, int, int, int, int, int> sut = new Tuple<int, int, int, int, int, int, int>(1, 2, 3, 4, 5, 6, 7);   
+      var sut = new Tuple<int, int, int, int, int, int, int>(1, 2, 3, 4, 5, 6, 7);
       sut.Sum(nullFuncInteger);
     }
   }

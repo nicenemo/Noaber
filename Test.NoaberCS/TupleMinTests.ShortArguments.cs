@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Tests
@@ -8,7 +6,8 @@ namespace Tests
   public partial class TupleMinTests
   {
     private readonly Func<object, short> nullFuncShort = null;
-    [ExpectedException(typeof(ArgumentNullException))]
+
+    [ExpectedException(typeof (ArgumentNullException))]
     [TestMethod]
     public void ShortMinOnOneTupleNullEnumerable()
     {
@@ -16,15 +15,15 @@ namespace Tests
       sut.Min(nullFuncShort);
     }
 
-    [ExpectedException(typeof(ArgumentNullException))]
+    [ExpectedException(typeof (ArgumentNullException))]
     [TestMethod]
     public void ShortMinOnOneTupleFuncNull()
     {
-      Tuple<short> sut = new Tuple<short>(1);
+      var sut = new Tuple<short>(1);
       sut.Min(nullFuncShort);
     }
 
-    [ExpectedException(typeof(ArgumentNullException))]
+    [ExpectedException(typeof (ArgumentNullException))]
     [TestMethod]
     public void ShortMinOnTwoTupleNullEnumerable()
     {
@@ -32,15 +31,15 @@ namespace Tests
       sut.Min(nullFuncShort);
     }
 
-    [ExpectedException(typeof(ArgumentNullException))]
+    [ExpectedException(typeof (ArgumentNullException))]
     [TestMethod]
     public void ShortMinOnTwoTupleFuncNull()
     {
-      Tuple<short, short> sut = new Tuple<short, short>(1, 2);
+      var sut = new Tuple<short, short>(1, 2);
       sut.Min(nullFuncShort);
     }
 
-    [ExpectedException(typeof(ArgumentNullException))]
+    [ExpectedException(typeof (ArgumentNullException))]
     [TestMethod]
     public void ShortMinOnThreeTupleNullEnumerable()
     {
@@ -48,15 +47,15 @@ namespace Tests
       sut.Min(nullFuncShort);
     }
 
-    [ExpectedException(typeof(ArgumentNullException))]
+    [ExpectedException(typeof (ArgumentNullException))]
     [TestMethod]
     public void ShortMinOnThreeTupleFuncNull()
     {
-      Tuple<short, short, short> sut = new Tuple<short, short, short>(1, 2, 3);
+      var sut = new Tuple<short, short, short>(1, 2, 3);
       sut.Min(nullFuncShort);
     }
 
-    [ExpectedException(typeof(ArgumentNullException))]
+    [ExpectedException(typeof (ArgumentNullException))]
     [TestMethod]
     public void ShortMinOnFourTupleNullEnumerable()
     {
@@ -64,15 +63,15 @@ namespace Tests
       sut.Min(nullFuncShort);
     }
 
-    [ExpectedException(typeof(ArgumentNullException))]
+    [ExpectedException(typeof (ArgumentNullException))]
     [TestMethod]
     public void ShortMinOnFourTupleFuncNull()
     {
-      Tuple<short, short, short, short> sut = new Tuple<short, short, short, short>(1, 2, 3, 4); 
+      var sut = new Tuple<short, short, short, short>(1, 2, 3, 4);
       sut.Min(nullFuncShort);
     }
 
-    [ExpectedException(typeof(ArgumentNullException))]
+    [ExpectedException(typeof (ArgumentNullException))]
     [TestMethod]
     public void ShortMinOnFiveTupleNullEnumerable()
     {
@@ -80,15 +79,15 @@ namespace Tests
       sut.Min(nullFuncShort);
     }
 
-    [ExpectedException(typeof(ArgumentNullException))]
+    [ExpectedException(typeof (ArgumentNullException))]
     [TestMethod]
     public void ShortMinOnFiveTupleFuncNull()
     {
-      Tuple<short, short, short, short, short> sut = new Tuple<short, short, short, short, short>(1, 2, 3, 4, 5); 
+      var sut = new Tuple<short, short, short, short, short>(1, 2, 3, 4, 5);
       sut.Min(nullFuncShort);
     }
 
-    [ExpectedException(typeof(ArgumentNullException))]
+    [ExpectedException(typeof (ArgumentNullException))]
     [TestMethod]
     public void ShortMinOnSixTupleNullEnumerable()
     {
@@ -96,15 +95,15 @@ namespace Tests
       sut.Min(nullFuncShort);
     }
 
-    [ExpectedException(typeof(ArgumentNullException))]
+    [ExpectedException(typeof (ArgumentNullException))]
     [TestMethod]
     public void ShortMinOnSixTupleFuncNull()
     {
-      Tuple<short, short, short, short, short, short> sut = new Tuple<short, short, short, short, short, short>(1, 2, 3, 4, 5, 6); 
+      var sut = new Tuple<short, short, short, short, short, short>(1, 2, 3, 4, 5, 6);
       sut.Min(nullFuncShort);
     }
 
-    [ExpectedException(typeof(ArgumentNullException))]
+    [ExpectedException(typeof (ArgumentNullException))]
     [TestMethod]
     public void ShortMinOnSevenTupleNullEnumerable()
     {
@@ -112,11 +111,11 @@ namespace Tests
       sut.Min(nullFuncShort);
     }
 
-    [ExpectedException(typeof(ArgumentNullException))]
+    [ExpectedException(typeof (ArgumentNullException))]
     [TestMethod]
     public void ShortMinOnSevenTupleFuncNull()
     {
-      Tuple<short, short, short, short, short, short, short> sut = new Tuple<short, short, short, short, short, short, short>(1, 2, 3, 4, 5, 6, 7);
+      var sut = new Tuple<short, short, short, short, short, short, short>(1, 2, 3, 4, 5, 6, 7);
       sut.Min(nullFuncShort);
     }
   }

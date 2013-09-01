@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Tests
@@ -8,7 +6,8 @@ namespace Tests
   public partial class TupleMaxTests
   {
     private readonly Func<object, int> nullFuncInteger = null;
-    [ExpectedException(typeof(ArgumentNullException))]
+
+    [ExpectedException(typeof (ArgumentNullException))]
     [TestMethod]
     public void IntegerMaxOnOneTupleNullEnumerable()
     {
@@ -16,15 +15,15 @@ namespace Tests
       sut.Max(nullFuncInteger);
     }
 
-    [ExpectedException(typeof(ArgumentNullException))]
+    [ExpectedException(typeof (ArgumentNullException))]
     [TestMethod]
     public void IntegerMaxOnOneTupleFuncNull()
     {
-      Tuple<int> sut = new Tuple<int>(1);
+      var sut = new Tuple<int>(1);
       sut.Max(nullFuncInteger);
     }
 
-    [ExpectedException(typeof(ArgumentNullException))]
+    [ExpectedException(typeof (ArgumentNullException))]
     [TestMethod]
     public void IntegerMaxOnTwoTupleNullEnumerable()
     {
@@ -32,15 +31,15 @@ namespace Tests
       sut.Max(nullFuncInteger);
     }
 
-    [ExpectedException(typeof(ArgumentNullException))]
+    [ExpectedException(typeof (ArgumentNullException))]
     [TestMethod]
     public void IntegerMaxOnTwoTupleFuncNull()
     {
-      Tuple<int, int> sut = new Tuple<int, int>(1, 2);    
+      var sut = new Tuple<int, int>(1, 2);
       sut.Max(nullFuncInteger);
     }
 
-    [ExpectedException(typeof(ArgumentNullException))]
+    [ExpectedException(typeof (ArgumentNullException))]
     [TestMethod]
     public void IntegerMaxOnThreeTupleNullEnumerable()
     {
@@ -48,15 +47,15 @@ namespace Tests
       sut.Max(nullFuncInteger);
     }
 
-    [ExpectedException(typeof(ArgumentNullException))]
+    [ExpectedException(typeof (ArgumentNullException))]
     [TestMethod]
     public void IntegerMaxOnThreeTupleFuncNull()
     {
-      Tuple<int, int, int> sut = new Tuple<int, int, int>(1, 2, 3);   
+      var sut = new Tuple<int, int, int>(1, 2, 3);
       sut.Max(nullFuncInteger);
     }
 
-    [ExpectedException(typeof(ArgumentNullException))]
+    [ExpectedException(typeof (ArgumentNullException))]
     [TestMethod]
     public void IntegerMaxOnFourTupleNullEnumerable()
     {
@@ -64,15 +63,15 @@ namespace Tests
       sut.Max(nullFuncInteger);
     }
 
-    [ExpectedException(typeof(ArgumentNullException))]
+    [ExpectedException(typeof (ArgumentNullException))]
     [TestMethod]
     public void IntegerMaxOnFourTupleFuncNull()
     {
-      Tuple<int, int, int, int> sut = new Tuple<int, int, int, int>(1, 2, 3, 4);   
+      var sut = new Tuple<int, int, int, int>(1, 2, 3, 4);
       sut.Max(nullFuncInteger);
     }
 
-    [ExpectedException(typeof(ArgumentNullException))]
+    [ExpectedException(typeof (ArgumentNullException))]
     [TestMethod]
     public void IntegerMaxOnFiveTupleNullEnumerable()
     {
@@ -80,15 +79,15 @@ namespace Tests
       sut.Max(nullFuncInteger);
     }
 
-    [ExpectedException(typeof(ArgumentNullException))]
+    [ExpectedException(typeof (ArgumentNullException))]
     [TestMethod]
     public void IntegerMaxOnFiveTupleFuncNull()
     {
-      Tuple<int, int, int, int, int> sut = new Tuple<int, int, int, int, int>(1, 2, 3, 4, 5);     
+      var sut = new Tuple<int, int, int, int, int>(1, 2, 3, 4, 5);
       sut.Max(nullFuncInteger);
     }
 
-    [ExpectedException(typeof(ArgumentNullException))]
+    [ExpectedException(typeof (ArgumentNullException))]
     [TestMethod]
     public void IntegerMaxOnSixTupleNullEnumerable()
     {
@@ -96,15 +95,15 @@ namespace Tests
       sut.Max(nullFuncInteger);
     }
 
-    [ExpectedException(typeof(ArgumentNullException))]
+    [ExpectedException(typeof (ArgumentNullException))]
     [TestMethod]
     public void IntegerMaxOnSixTupleFuncNull()
     {
-      Tuple<int, int, int, int, int, int> sut = new Tuple<int, int, int, int, int, int>(1, 2, 3, 4, 5, 6);     
+      var sut = new Tuple<int, int, int, int, int, int>(1, 2, 3, 4, 5, 6);
       sut.Max(nullFuncInteger);
     }
 
-    [ExpectedException(typeof(ArgumentNullException))]
+    [ExpectedException(typeof (ArgumentNullException))]
     [TestMethod]
     public void IntegerMaxOnSevenTupleNullEnumerable()
     {
@@ -112,11 +111,11 @@ namespace Tests
       sut.Max(nullFuncInteger);
     }
 
-    [ExpectedException(typeof(ArgumentNullException))]
+    [ExpectedException(typeof (ArgumentNullException))]
     [TestMethod]
     public void IntegerMaxOnSevenTupleFuncNull()
     {
-      Tuple<int, int, int, int, int, int, int> sut = new Tuple<int, int, int, int, int, int, int>(1, 2, 3, 4, 5, 6, 7);  
+      var sut = new Tuple<int, int, int, int, int, int, int>(1, 2, 3, 4, 5, 6, 7);
       sut.Max(nullFuncInteger);
     }
   }

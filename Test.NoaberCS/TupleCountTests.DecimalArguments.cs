@@ -1,14 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Tests
 {
   public partial class TupleCountTests
   {
-    
-    [ExpectedException(typeof(ArgumentNullException))]
+    [ExpectedException(typeof (ArgumentNullException))]
     [TestMethod]
     public void DecimalCountOnOneTupleNullEnumerable()
     {
@@ -16,7 +13,7 @@ namespace Tests
       sut.Count();
     }
 
-    [ExpectedException(typeof(ArgumentNullException))]
+    [ExpectedException(typeof (ArgumentNullException))]
     [TestMethod]
     public void DecimalCountOnTwoTupleNullEnumerable()
     {
@@ -24,7 +21,7 @@ namespace Tests
       sut.Count();
     }
 
-    [ExpectedException(typeof(ArgumentNullException))]
+    [ExpectedException(typeof (ArgumentNullException))]
     [TestMethod]
     public void DecimalCountOnThreeTupleNullEnumerable()
     {
@@ -32,7 +29,7 @@ namespace Tests
       sut.Count();
     }
 
-    [ExpectedException(typeof(ArgumentNullException))]
+    [ExpectedException(typeof (ArgumentNullException))]
     [TestMethod]
     public void DecimalCountOnFourTupleNullEnumerable()
     {
@@ -40,7 +37,7 @@ namespace Tests
       sut.Count();
     }
 
-    [ExpectedException(typeof(ArgumentNullException))]
+    [ExpectedException(typeof (ArgumentNullException))]
     [TestMethod]
     public void DecimalCountOnFiveTupleNullEnumerable()
     {
@@ -48,7 +45,7 @@ namespace Tests
       sut.Count();
     }
 
-    [ExpectedException(typeof(ArgumentNullException))]
+    [ExpectedException(typeof (ArgumentNullException))]
     [TestMethod]
     public void DecimalCountOnSixTupleNullEnumerable()
     {
@@ -56,7 +53,7 @@ namespace Tests
       sut.Count();
     }
 
-    [ExpectedException(typeof(ArgumentNullException))]
+    [ExpectedException(typeof (ArgumentNullException))]
     [TestMethod]
     public void DecimalCountOnSevenTupleNullEnumerable()
     {

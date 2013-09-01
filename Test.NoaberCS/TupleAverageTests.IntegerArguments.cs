@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Tests
@@ -8,7 +6,8 @@ namespace Tests
   public partial class TupleAverageTests
   {
     private readonly Func<object, int> nullFuncInteger = null;
-    [ExpectedException(typeof(ArgumentNullException))]
+
+    [ExpectedException(typeof (ArgumentNullException))]
     [TestMethod]
     public void IntegerAverageOnOneTupleNullEnumerable()
     {
@@ -16,15 +15,15 @@ namespace Tests
       sut.Average(nullFuncInteger);
     }
 
-    [ExpectedException(typeof(ArgumentNullException))]
+    [ExpectedException(typeof (ArgumentNullException))]
     [TestMethod]
     public void IntegerAverageOnOneTupleFuncNull()
     {
-      Tuple<int> sut = new Tuple<int>(1);
+      var sut = new Tuple<int>(1);
       sut.Average(nullFuncInteger);
     }
 
-    [ExpectedException(typeof(ArgumentNullException))]
+    [ExpectedException(typeof (ArgumentNullException))]
     [TestMethod]
     public void IntegerAverageOnTwoTupleNullEnumerable()
     {
@@ -32,15 +31,15 @@ namespace Tests
       sut.Average(nullFuncInteger);
     }
 
-    [ExpectedException(typeof(ArgumentNullException))]
+    [ExpectedException(typeof (ArgumentNullException))]
     [TestMethod]
     public void IntegerAverageOnTwoTupleFuncNull()
     {
-      Tuple<int, int> sut = new Tuple<int, int>(1, 2);
+      var sut = new Tuple<int, int>(1, 2);
       sut.Average(nullFuncInteger);
     }
 
-    [ExpectedException(typeof(ArgumentNullException))]
+    [ExpectedException(typeof (ArgumentNullException))]
     [TestMethod]
     public void IntegerAverageOnThreeTupleNullEnumerable()
     {
@@ -48,15 +47,15 @@ namespace Tests
       sut.Average(nullFuncInteger);
     }
 
-    [ExpectedException(typeof(ArgumentNullException))]
+    [ExpectedException(typeof (ArgumentNullException))]
     [TestMethod]
     public void IntegerAverageOnThreeTupleFuncNull()
     {
-      Tuple<int, int, int> sut = new Tuple<int, int, int>(1, 2, 3);
+      var sut = new Tuple<int, int, int>(1, 2, 3);
       sut.Average(nullFuncInteger);
     }
 
-    [ExpectedException(typeof(ArgumentNullException))]
+    [ExpectedException(typeof (ArgumentNullException))]
     [TestMethod]
     public void IntegerAverageOnFourTupleNullEnumerable()
     {
@@ -64,15 +63,15 @@ namespace Tests
       sut.Average(nullFuncInteger);
     }
 
-    [ExpectedException(typeof(ArgumentNullException))]
+    [ExpectedException(typeof (ArgumentNullException))]
     [TestMethod]
     public void IntegerAverageOnFourTupleFuncNull()
     {
-      Tuple<int, int, int, int> sut = new Tuple<int, int, int, int>(1, 2, 3, 4);
+      var sut = new Tuple<int, int, int, int>(1, 2, 3, 4);
       sut.Average(nullFuncInteger);
     }
 
-    [ExpectedException(typeof(ArgumentNullException))]
+    [ExpectedException(typeof (ArgumentNullException))]
     [TestMethod]
     public void IntegerAverageOnFiveTupleNullEnumerable()
     {
@@ -80,15 +79,15 @@ namespace Tests
       sut.Average(nullFuncInteger);
     }
 
-    [ExpectedException(typeof(ArgumentNullException))]
+    [ExpectedException(typeof (ArgumentNullException))]
     [TestMethod]
     public void IntegerAverageOnFiveTupleFuncNull()
     {
-      Tuple<int, int, int, int, int> sut = new Tuple<int, int, int, int, int>(1, 2, 3, 4, 5);
+      var sut = new Tuple<int, int, int, int, int>(1, 2, 3, 4, 5);
       sut.Average(nullFuncInteger);
     }
 
-    [ExpectedException(typeof(ArgumentNullException))]
+    [ExpectedException(typeof (ArgumentNullException))]
     [TestMethod]
     public void IntegerAverageOnSixTupleNullEnumerable()
     {
@@ -96,15 +95,15 @@ namespace Tests
       sut.Average(nullFuncInteger);
     }
 
-    [ExpectedException(typeof(ArgumentNullException))]
+    [ExpectedException(typeof (ArgumentNullException))]
     [TestMethod]
     public void IntegerAverageOnSixTupleFuncNull()
     {
-      Tuple<int, int, int, int, int, int> sut = new Tuple<int, int, int, int, int, int>(1, 2, 3, 4, 5, 6);
+      var sut = new Tuple<int, int, int, int, int, int>(1, 2, 3, 4, 5, 6);
       sut.Average(nullFuncInteger);
     }
 
-    [ExpectedException(typeof(ArgumentNullException))]
+    [ExpectedException(typeof (ArgumentNullException))]
     [TestMethod]
     public void IntegerAverageOnSevenTupleNullEnumerable()
     {
@@ -112,11 +111,11 @@ namespace Tests
       sut.Average(nullFuncInteger);
     }
 
-    [ExpectedException(typeof(ArgumentNullException))]
+    [ExpectedException(typeof (ArgumentNullException))]
     [TestMethod]
     public void IntegerAverageOnSevenTupleFuncNull()
     {
-      Tuple<int, int, int, int, int, int, int> sut = new Tuple<int, int, int, int, int, int, int>(1, 2, 3, 4, 5, 6, 7);
+      var sut = new Tuple<int, int, int, int, int, int, int>(1, 2, 3, 4, 5, 6, 7);
       sut.Average(nullFuncInteger);
     }
   }

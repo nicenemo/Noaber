@@ -1,13 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Tests
 {
   public partial class TupleCountTests
   {
-    [ExpectedException(typeof(ArgumentNullException))]
+    [ExpectedException(typeof (ArgumentNullException))]
     [TestMethod]
     public void DoubleCountOnOneTupleNullEnumerableWithNullPredicate()
     {
@@ -15,15 +13,15 @@ namespace Tests
       sut.Count(nullPredicate);
     }
 
-    [ExpectedException(typeof(ArgumentNullException))]
+    [ExpectedException(typeof (ArgumentNullException))]
     [TestMethod]
     public void DoubleCountOnOneTupleFuncNullWithNullPredicate()
     {
-      Tuple<double> sut = new Tuple<double>(1);
+      var sut = new Tuple<double>(1);
       sut.Count(nullPredicate);
     }
 
-    [ExpectedException(typeof(ArgumentNullException))]
+    [ExpectedException(typeof (ArgumentNullException))]
     [TestMethod]
     public void DoubleCountOnTwoTupleNullEnumerableWithNullPredicate()
     {
@@ -31,15 +29,15 @@ namespace Tests
       sut.Count(nullPredicate);
     }
 
-    [ExpectedException(typeof(ArgumentNullException))]
+    [ExpectedException(typeof (ArgumentNullException))]
     [TestMethod]
     public void DoubleCountOnTwoTupleFuncNullWithNullPredicate()
     {
-      Tuple<double, double> sut = new Tuple<double, double>(1, 2);
+      var sut = new Tuple<double, double>(1, 2);
       sut.Count(nullPredicate);
     }
 
-    [ExpectedException(typeof(ArgumentNullException))]
+    [ExpectedException(typeof (ArgumentNullException))]
     [TestMethod]
     public void DoubleCountOnThreeTupleNullEnumerableWithNullPredicate()
     {
@@ -47,15 +45,15 @@ namespace Tests
       sut.Count(nullPredicate);
     }
 
-    [ExpectedException(typeof(ArgumentNullException))]
+    [ExpectedException(typeof (ArgumentNullException))]
     [TestMethod]
     public void DoubleCountOnThreeTupleFuncNullWithNullPredicate()
     {
-      Tuple<double, double, double> sut = new Tuple<double, double, double>(1, 2, 3);
+      var sut = new Tuple<double, double, double>(1, 2, 3);
       sut.Count(nullPredicate);
     }
 
-    [ExpectedException(typeof(ArgumentNullException))]
+    [ExpectedException(typeof (ArgumentNullException))]
     [TestMethod]
     public void DoubleCountOnFourTupleNullEnumerableWithNullPredicate()
     {
@@ -63,15 +61,15 @@ namespace Tests
       sut.Count(nullPredicate);
     }
 
-    [ExpectedException(typeof(ArgumentNullException))]
+    [ExpectedException(typeof (ArgumentNullException))]
     [TestMethod]
     public void DoubleCountOnFourTupleFuncNullWithNullPredicate()
     {
-      Tuple<double, double, double, double> sut = new Tuple<double, double, double, double>(1, 2, 3, 4);
+      var sut = new Tuple<double, double, double, double>(1, 2, 3, 4);
       sut.Count(nullPredicate);
     }
 
-    [ExpectedException(typeof(ArgumentNullException))]
+    [ExpectedException(typeof (ArgumentNullException))]
     [TestMethod]
     public void DoubleCountOnFiveTupleNullEnumerableWithNullPredicate()
     {
@@ -79,15 +77,15 @@ namespace Tests
       sut.Count(nullPredicate);
     }
 
-    [ExpectedException(typeof(ArgumentNullException))]
+    [ExpectedException(typeof (ArgumentNullException))]
     [TestMethod]
     public void DoubleCountOnFiveTupleFuncNullWithNullPredicate()
     {
-      Tuple<double, double, double, double, double> sut = new Tuple<double, double, double, double, double>(1, 2, 3, 4, 5);
+      var sut = new Tuple<double, double, double, double, double>(1, 2, 3, 4, 5);
       sut.Count(nullPredicate);
     }
 
-    [ExpectedException(typeof(ArgumentNullException))]
+    [ExpectedException(typeof (ArgumentNullException))]
     [TestMethod]
     public void DoubleCountOnSixTupleNullEnumerableWithNullPredicate()
     {
@@ -95,15 +93,15 @@ namespace Tests
       sut.Count(nullPredicate);
     }
 
-    [ExpectedException(typeof(ArgumentNullException))]
+    [ExpectedException(typeof (ArgumentNullException))]
     [TestMethod]
     public void DoubleCountOnSixTupleFuncNullWithNullPredicate()
     {
-      Tuple<double, double, double, double, double, double> sut = new Tuple<double, double, double, double, double, double>(1, 2, 3, 4, 5, 6);
+      var sut = new Tuple<double, double, double, double, double, double>(1, 2, 3, 4, 5, 6);
       sut.Count(nullPredicate);
     }
 
-    [ExpectedException(typeof(ArgumentNullException))]
+    [ExpectedException(typeof (ArgumentNullException))]
     [TestMethod]
     public void DoubleCountOnSevenTupleNullEnumerableWithNullPredicate()
     {
@@ -111,11 +109,11 @@ namespace Tests
       sut.Count(nullPredicate);
     }
 
-    [ExpectedException(typeof(ArgumentNullException))]
+    [ExpectedException(typeof (ArgumentNullException))]
     [TestMethod]
     public void DoubleCountOnSevenTupleFuncNullWithNullPredicate()
     {
-      Tuple<double, double, double, double, double, double, double> sut = new Tuple<double, double, double, double, double, double, double>(1, 2, 3, 4, 5, 6, 7);
+      var sut = new Tuple<double, double, double, double, double, double, double>(1, 2, 3, 4, 5, 6, 7);
       sut.Count(nullPredicate);
     }
   }

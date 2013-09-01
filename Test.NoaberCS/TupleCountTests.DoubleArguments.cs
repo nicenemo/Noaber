@@ -1,14 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Tests
 {
   public partial class TupleCountTests
   {
-
-    [ExpectedException(typeof(ArgumentNullException))]
+    [ExpectedException(typeof (ArgumentNullException))]
     [TestMethod]
     public void DoubleCountOnOneTupleNullEnumerable()
     {
@@ -16,7 +13,7 @@ namespace Tests
       sut.Count();
     }
 
-    [ExpectedException(typeof(ArgumentNullException))]
+    [ExpectedException(typeof (ArgumentNullException))]
     [TestMethod]
     public void DoubleCountOnTwoTupleNullEnumerable()
     {
@@ -24,7 +21,7 @@ namespace Tests
       sut.Count();
     }
 
-    [ExpectedException(typeof(ArgumentNullException))]
+    [ExpectedException(typeof (ArgumentNullException))]
     [TestMethod]
     public void DoubleCountOnThreeTupleNullEnumerable()
     {
@@ -32,7 +29,7 @@ namespace Tests
       sut.Count();
     }
 
-    [ExpectedException(typeof(ArgumentNullException))]
+    [ExpectedException(typeof (ArgumentNullException))]
     [TestMethod]
     public void DoubleCountOnFourTupleNullEnumerable()
     {
@@ -40,7 +37,7 @@ namespace Tests
       sut.Count();
     }
 
-    [ExpectedException(typeof(ArgumentNullException))]
+    [ExpectedException(typeof (ArgumentNullException))]
     [TestMethod]
     public void DoubleCountOnFiveTupleNullEnumerable()
     {
@@ -48,7 +45,7 @@ namespace Tests
       sut.Count();
     }
 
-    [ExpectedException(typeof(ArgumentNullException))]
+    [ExpectedException(typeof (ArgumentNullException))]
     [TestMethod]
     public void DoubleCountOnSixTupleNullEnumerable()
     {
@@ -56,7 +53,7 @@ namespace Tests
       sut.Count();
     }
 
-    [ExpectedException(typeof(ArgumentNullException))]
+    [ExpectedException(typeof (ArgumentNullException))]
     [TestMethod]
     public void DoubleCountOnSevenTupleNullEnumerable()
     {

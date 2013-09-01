@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Tests
@@ -8,7 +6,8 @@ namespace Tests
   public partial class TupleMinTests
   {
     private readonly Func<object, decimal> nullFuncDecimal = null;
-    [ExpectedException(typeof(ArgumentNullException))]
+
+    [ExpectedException(typeof (ArgumentNullException))]
     [TestMethod]
     public void DecimalMinOnOneTupleNullEnumerable()
     {
@@ -16,15 +15,16 @@ namespace Tests
       sut.Min(nullFuncDecimal);
     }
 
-    [ExpectedException(typeof(ArgumentNullException))]
+    [ExpectedException(typeof (ArgumentNullException))]
     [TestMethod]
     public void DecimalMinOnOneTupleFuncNull()
     {
-      Tuple<decimal> sut = new Tuple<decimal>(1);  
-      sut.Min(nullFuncDecimal);;
+      var sut = new Tuple<decimal>(1);
+      sut.Min(nullFuncDecimal);
+      ;
     }
 
-    [ExpectedException(typeof(ArgumentNullException))]
+    [ExpectedException(typeof (ArgumentNullException))]
     [TestMethod]
     public void DecimalMinOnTwoTupleNullEnumerable()
     {
@@ -32,15 +32,16 @@ namespace Tests
       sut.Min(nullFuncDecimal);
     }
 
-    [ExpectedException(typeof(ArgumentNullException))]
+    [ExpectedException(typeof (ArgumentNullException))]
     [TestMethod]
     public void DecimalMinOnTwoTupleFuncNull()
     {
-      Tuple<decimal, decimal> sut = new Tuple<decimal, decimal>(1, 2);    
-      sut.Min(nullFuncDecimal);;
+      var sut = new Tuple<decimal, decimal>(1, 2);
+      sut.Min(nullFuncDecimal);
+      ;
     }
 
-    [ExpectedException(typeof(ArgumentNullException))]
+    [ExpectedException(typeof (ArgumentNullException))]
     [TestMethod]
     public void DecimalMinOnThreeTupleNullEnumerable()
     {
@@ -48,15 +49,16 @@ namespace Tests
       sut.Min(nullFuncDecimal);
     }
 
-    [ExpectedException(typeof(ArgumentNullException))]
+    [ExpectedException(typeof (ArgumentNullException))]
     [TestMethod]
     public void DecimalMinOnThreeTupleFuncNull()
     {
-      Tuple<decimal, decimal, decimal> sut = new Tuple<decimal, decimal, decimal>(1, 2, 3);   
-      sut.Min(nullFuncDecimal);;
+      var sut = new Tuple<decimal, decimal, decimal>(1, 2, 3);
+      sut.Min(nullFuncDecimal);
+      ;
     }
 
-    [ExpectedException(typeof(ArgumentNullException))]
+    [ExpectedException(typeof (ArgumentNullException))]
     [TestMethod]
     public void DecimalMinOnFourTupleNullEnumerable()
     {
@@ -64,15 +66,16 @@ namespace Tests
       sut.Min(nullFuncDecimal);
     }
 
-    [ExpectedException(typeof(ArgumentNullException))]
+    [ExpectedException(typeof (ArgumentNullException))]
     [TestMethod]
     public void DecimalMinOnFourTupleFuncNull()
     {
-      Tuple<decimal, decimal, decimal, decimal> sut = new Tuple<decimal, decimal, decimal, decimal>(1, 2, 3, 4);
-      sut.Min(nullFuncDecimal);;
+      var sut = new Tuple<decimal, decimal, decimal, decimal>(1, 2, 3, 4);
+      sut.Min(nullFuncDecimal);
+      ;
     }
 
-    [ExpectedException(typeof(ArgumentNullException))]
+    [ExpectedException(typeof (ArgumentNullException))]
     [TestMethod]
     public void DecimalMinOnFiveTupleNullEnumerable()
     {
@@ -80,15 +83,16 @@ namespace Tests
       sut.Min(nullFuncDecimal);
     }
 
-    [ExpectedException(typeof(ArgumentNullException))]
+    [ExpectedException(typeof (ArgumentNullException))]
     [TestMethod]
     public void DecimalMinOnFiveTupleFuncNull()
     {
-      Tuple<decimal, decimal, decimal, decimal, decimal> sut = new Tuple<decimal, decimal, decimal, decimal, decimal>(1, 2, 3, 4, 5);      
-      sut.Min(nullFuncDecimal);;
+      var sut = new Tuple<decimal, decimal, decimal, decimal, decimal>(1, 2, 3, 4, 5);
+      sut.Min(nullFuncDecimal);
+      ;
     }
 
-    [ExpectedException(typeof(ArgumentNullException))]
+    [ExpectedException(typeof (ArgumentNullException))]
     [TestMethod]
     public void DecimalMinOnSixTupleNullEnumerable()
     {
@@ -96,15 +100,16 @@ namespace Tests
       sut.Min(nullFuncDecimal);
     }
 
-    [ExpectedException(typeof(ArgumentNullException))]
+    [ExpectedException(typeof (ArgumentNullException))]
     [TestMethod]
     public void DecimalMinOnSixTupleFuncNull()
     {
-      Tuple<decimal, decimal, decimal, decimal, decimal, decimal> sut = new Tuple<decimal, decimal, decimal, decimal, decimal, decimal>(1, 2, 3, 4, 5, 6);
-      sut.Min(nullFuncDecimal);;
+      var sut = new Tuple<decimal, decimal, decimal, decimal, decimal, decimal>(1, 2, 3, 4, 5, 6);
+      sut.Min(nullFuncDecimal);
+      ;
     }
 
-    [ExpectedException(typeof(ArgumentNullException))]
+    [ExpectedException(typeof (ArgumentNullException))]
     [TestMethod]
     public void DecimalMinOnSevenTupleNullEnumerable()
     {
@@ -112,12 +117,13 @@ namespace Tests
       sut.Min(nullFuncDecimal);
     }
 
-    [ExpectedException(typeof(ArgumentNullException))]
+    [ExpectedException(typeof (ArgumentNullException))]
     [TestMethod]
     public void DecimalMinOnSevenTupleFuncNull()
     {
-      Tuple<decimal, decimal, decimal, decimal, decimal, decimal, decimal> sut = new Tuple<decimal, decimal, decimal, decimal, decimal, decimal, decimal>(1, 2, 3, 4, 5, 6, 7);
-      sut.Min(nullFuncDecimal);;
+      var sut = new Tuple<decimal, decimal, decimal, decimal, decimal, decimal, decimal>(1, 2, 3, 4, 5, 6, 7);
+      sut.Min(nullFuncDecimal);
+      ;
     }
   }
 }

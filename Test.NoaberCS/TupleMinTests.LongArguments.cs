@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Tests
@@ -8,7 +6,8 @@ namespace Tests
   public partial class TupleMinTests
   {
     private readonly Func<object, long> nullFuncLong = null;
-    [ExpectedException(typeof(ArgumentNullException))]
+
+    [ExpectedException(typeof (ArgumentNullException))]
     [TestMethod]
     public void LongMinOnOneTupleNullEnumerable()
     {
@@ -16,15 +15,15 @@ namespace Tests
       sut.Min(nullFuncLong);
     }
 
-    [ExpectedException(typeof(ArgumentNullException))]
+    [ExpectedException(typeof (ArgumentNullException))]
     [TestMethod]
     public void LongMinOnOneTupleFuncNull()
     {
-      Tuple<long> sut = new Tuple<long>(1);  
+      var sut = new Tuple<long>(1);
       sut.Min(nullFuncLong);
     }
 
-    [ExpectedException(typeof(ArgumentNullException))]
+    [ExpectedException(typeof (ArgumentNullException))]
     [TestMethod]
     public void LongMinOnTwoTupleNullEnumerable()
     {
@@ -32,15 +31,15 @@ namespace Tests
       sut.Min(nullFuncLong);
     }
 
-    [ExpectedException(typeof(ArgumentNullException))]
+    [ExpectedException(typeof (ArgumentNullException))]
     [TestMethod]
     public void LongMinOnTwoTupleFuncNull()
     {
-      Tuple<long, long> sut = new Tuple<long, long>(1, 2);  
+      var sut = new Tuple<long, long>(1, 2);
       sut.Min(nullFuncLong);
     }
 
-    [ExpectedException(typeof(ArgumentNullException))]
+    [ExpectedException(typeof (ArgumentNullException))]
     [TestMethod]
     public void LongMinOnThreeTupleNullEnumerable()
     {
@@ -48,15 +47,15 @@ namespace Tests
       sut.Min(nullFuncLong);
     }
 
-    [ExpectedException(typeof(ArgumentNullException))]
+    [ExpectedException(typeof (ArgumentNullException))]
     [TestMethod]
     public void LongMinOnThreeTupleFuncNull()
     {
-      Tuple<long, long, long> sut = new Tuple<long, long, long>(1, 2, 3); 
+      var sut = new Tuple<long, long, long>(1, 2, 3);
       sut.Min(nullFuncLong);
     }
 
-    [ExpectedException(typeof(ArgumentNullException))]
+    [ExpectedException(typeof (ArgumentNullException))]
     [TestMethod]
     public void LongMinOnFourTupleNullEnumerable()
     {
@@ -64,15 +63,15 @@ namespace Tests
       sut.Min(nullFuncLong);
     }
 
-    [ExpectedException(typeof(ArgumentNullException))]
+    [ExpectedException(typeof (ArgumentNullException))]
     [TestMethod]
     public void LongMinOnFourTupleFuncNull()
     {
-      Tuple<long, long, long, long> sut = new Tuple<long, long, long, long>(1, 2, 3, 4);
+      var sut = new Tuple<long, long, long, long>(1, 2, 3, 4);
       sut.Min(nullFuncLong);
     }
 
-    [ExpectedException(typeof(ArgumentNullException))]
+    [ExpectedException(typeof (ArgumentNullException))]
     [TestMethod]
     public void LongMinOnFiveTupleNullEnumerable()
     {
@@ -80,15 +79,15 @@ namespace Tests
       sut.Min(nullFuncLong);
     }
 
-    [ExpectedException(typeof(ArgumentNullException))]
+    [ExpectedException(typeof (ArgumentNullException))]
     [TestMethod]
     public void LongMinOnFiveTupleFuncNull()
     {
-      Tuple<long, long, long, long, long> sut = new Tuple<long, long, long, long, long>(1, 2, 3, 4, 5);  
+      var sut = new Tuple<long, long, long, long, long>(1, 2, 3, 4, 5);
       sut.Min(nullFuncLong);
     }
 
-    [ExpectedException(typeof(ArgumentNullException))]
+    [ExpectedException(typeof (ArgumentNullException))]
     [TestMethod]
     public void LongMinOnSixTupleNullEnumerable()
     {
@@ -96,15 +95,15 @@ namespace Tests
       sut.Min(nullFuncLong);
     }
 
-    [ExpectedException(typeof(ArgumentNullException))]
+    [ExpectedException(typeof (ArgumentNullException))]
     [TestMethod]
     public void LongMinOnSixTupleFuncNull()
     {
-      Tuple<long, long, long, long, long, long> sut = new Tuple<long, long, long, long, long, long>(1, 2, 3, 4, 5, 6); 
+      var sut = new Tuple<long, long, long, long, long, long>(1, 2, 3, 4, 5, 6);
       sut.Min(nullFuncLong);
     }
 
-    [ExpectedException(typeof(ArgumentNullException))]
+    [ExpectedException(typeof (ArgumentNullException))]
     [TestMethod]
     public void LongMinOnSevenTupleNullEnumerable()
     {
@@ -112,11 +111,11 @@ namespace Tests
       sut.Min(nullFuncLong);
     }
 
-    [ExpectedException(typeof(ArgumentNullException))]
+    [ExpectedException(typeof (ArgumentNullException))]
     [TestMethod]
     public void LongMinOnSevenTupleFuncNull()
     {
-      Tuple<long, long, long, long, long, long, long> sut = new Tuple<long, long, long, long, long, long, long>(1, 2, 3, 4, 5, 6, 7); 
+      var sut = new Tuple<long, long, long, long, long, long, long>(1, 2, 3, 4, 5, 6, 7);
       sut.Min(nullFuncLong);
     }
   }

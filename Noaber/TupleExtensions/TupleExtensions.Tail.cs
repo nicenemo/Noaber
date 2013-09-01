@@ -9,7 +9,6 @@ public static partial class TupleExtensions
     return new Tuple<T2>(value.Item2);
   }
 
-
   public static Tuple<T2, T3> Tail<T1, T2, T3>(this Tuple<T1, T2, T3> value)
   {
     Contract.Requires<ArgumentNullException>(value != null);
