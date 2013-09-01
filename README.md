@@ -1,4 +1,6 @@
 Noaber
 ======
 
-Noaber is a .NET library written in C# that helps with Functional programming in C# and VB.NET.
+Noaber is a .NET library written in C#.
+Currently it implements Linq to Tuples as a set of Extension Methods.
+It has has some extra extension methods for Collections.
