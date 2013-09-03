@@ -70,55 +70,6 @@ namespace Tests
     }
 
     [TestMethod]
-    public void FirstOrDefaultOnNullOneTuple()
-    {
-      Tuple<int> t = null;
-      Assert.AreEqual(0, t.FirstOrDefault());
-    }
-
-    [TestMethod]
-    public void FirstOrDefaultOnNullTwoTuple()
-    {
-      Tuple<int, int> t = null;
-      Assert.AreEqual(0, t.FirstOrDefault());
-    }
-
-    [TestMethod]
-    public void FirstOrDefaultOnNullThreeTuple()
-    {
-      Tuple<int, int, int> t = null;
-      Assert.AreEqual(0, t.FirstOrDefault());
-    }
-
-    [TestMethod]
-    public void FirstOrDefaultOnNullFourTuple()
-    {
-      Tuple<int, int, int, int> t = null;
-      Assert.AreEqual(0, t.FirstOrDefault());
-    }
-
-    [TestMethod]
-    public void FirstOrDefaultOnNullFiveTuple()
-    {
-      Tuple<int, int, int, int, int> t = null;
-      Assert.AreEqual(0, t.FirstOrDefault());
-    }
-
-    [TestMethod]
-    public void FirstOrDefaultOnNullOneSixTuple()
-    {
-      Tuple<int, int, int, int, int, int> t = null;
-      Assert.AreEqual(0, t.FirstOrDefault());
-    }
-
-    [TestMethod]
-    public void FirstOrDefaultOnNullSevenTuple()
-    {
-      Tuple<int, int, int, int, int, int, int> t = null;
-      Assert.AreEqual(0, t.FirstOrDefault());
-    }
-
-    [TestMethod]
     public void FirstOrDefaultOnOneTuple()
     {
       const int expected = 42;
@@ -243,55 +194,6 @@ namespace Tests
       var t = new Tuple<int, int, int, int, int, int, int>(1, 1, 1, 1, 1, 1, 42);
       int actual = t.Last();
       Assert.AreEqual(expected, actual);
-    }
-
-    [TestMethod]
-    public void LastOrDefaultOnNullOneTupleIsNull()
-    {
-      Tuple<int> t = null;
-      Assert.AreEqual(0, t.LastOrDefault());
-    }
-
-    [TestMethod]
-    public void LastOrDefaultOnNullTwoTupleIsNull()
-    {
-      Tuple<int, int> t = null;
-      Assert.AreEqual(0, t.LastOrDefault());
-    }
-
-    [TestMethod]
-    public void LastOrDefaultOnNullThreeTupleIsNull()
-    {
-      Tuple<int, int, int> t = null;
-      Assert.AreEqual(0, t.LastOrDefault());
-    }
-
-    [TestMethod]
-    public void LastOrDefaultOnNullFourTupleIsNull()
-    {
-      Tuple<int, int, int, int> t = null;
-      Assert.AreEqual(0, t.LastOrDefault());
-    }
-
-    [TestMethod]
-    public void LastOrDefaultOnNullFiveTupleIsNull()
-    {
-      Tuple<int, int, int, int, int> t = null;
-      Assert.AreEqual(0, t.LastOrDefault());
-    }
-
-    [TestMethod]
-    public void LastOrDefaultOnNullOneSixTupleIsNull()
-    {
-      Tuple<int, int, int, int, int, int> t = null;
-      Assert.AreEqual(0, t.LastOrDefault());
-    }
-
-    [TestMethod]
-    public void LastOrDefaultOnNullSevenTupleIsNull()
-    {
-      Tuple<int, int, int, int, int, int, int> t = null;
-      Assert.AreEqual(0, t.LastOrDefault());
     }
 
     [TestMethod]

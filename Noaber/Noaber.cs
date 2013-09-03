@@ -1,7 +1,4 @@
-﻿using System;
-using System.Diagnostics.Contracts;
-
-  public  static class Noaber
+﻿public  static class Noaber
   {
 
     

@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Diagnostics.Contracts;
-using System.Linq;
+
 /// <summary>
 ///   Extensions for Tuples
 /// </summary>

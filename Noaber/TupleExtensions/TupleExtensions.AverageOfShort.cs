@@ -19,7 +19,7 @@ public static partial class TupleExtensions
     Contract.Requires<ArgumentNullException>(value != null);
     Contract.Requires<ArgumentNullException>(func != null);
 
-    double average = value.Sum(func)/value.Count();
+    double average = value.Sum(func)/(double)value.Count();
     return average;
   }
 
@@ -28,7 +28,7 @@ public static partial class TupleExtensions
     Contract.Requires<ArgumentNullException>(value != null);
     Contract.Requires<ArgumentNullException>(func != null);
 
-    double average = value.Sum(func)/value.Count();
+    double average = value.Sum(func)/(double)value.Count();
     return average;
   }
 
@@ -37,7 +37,7 @@ public static partial class TupleExtensions
     Contract.Requires<ArgumentNullException>(value != null);
     Contract.Requires<ArgumentNullException>(func != null);
 
-    double average = value.Sum(func)/value.Count();
+    double average = value.Sum(func)/(double)value.Count();
     return average;
   }
 
@@ -46,7 +46,7 @@ public static partial class TupleExtensions
     Contract.Requires<ArgumentNullException>(value != null);
     Contract.Requires<ArgumentNullException>(func != null);
 
-    double average = value.Sum(func)/value.Count();
+    double average = value.Sum(func)/(double)value.Count();
     return average;
   }
 
@@ -56,7 +56,7 @@ public static partial class TupleExtensions
     Contract.Requires<ArgumentNullException>(value != null);
     Contract.Requires<ArgumentNullException>(func != null);
 
-    double average = value.Sum(func)/value.Count();
+    double average = value.Sum(func)/(double)value.Count();
     return average;
   }
 
@@ -66,7 +66,7 @@ public static partial class TupleExtensions
     Contract.Requires<ArgumentNullException>(value != null);
     Contract.Requires<ArgumentNullException>(func != null);
 
-    double average = value.Sum(func)/value.Count();
+    double average = value.Sum(func)/(double)value.Count();
     return average;
   }
 }
