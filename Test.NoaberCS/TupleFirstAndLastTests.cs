@@ -7,63 +7,6 @@ namespace Tests
   public class TupleFirstAndLastTests
   {
     [TestMethod]
-    [ExpectedException(typeof (ArgumentNullException))]
-    public void FirstOnNullOneTupleThrowsArgumentNullException()
-    {
-      Tuple<int> t = null;
-      t.First();
-    }
-
-    [TestMethod]
-    [ExpectedException(typeof (ArgumentNullException))]
-    public void FirstOnNullTwoTupleThrowsArgumentNullException()
-    {
-      Tuple<int, int> t = null;
-      t.First();
-    }
-
-    [TestMethod]
-    [ExpectedException(typeof (ArgumentNullException))]
-    public void FirstOnNullThreeTupleThrowsArgumentNullException()
-    {
-      Tuple<int, int, int> t = null;
-      t.First();
-    }
-
-    [TestMethod]
-    [ExpectedException(typeof (ArgumentNullException))]
-    public void FirstOnNullFourTupleThrowsArgumentNullException()
-    {
-      Tuple<int, int, int, int> t = null;
-      t.First();
-    }
-
-    [TestMethod]
-    [ExpectedException(typeof (ArgumentNullException))]
-    public void FirstOnNullFiveTupleThrowsArgumentNullException()
-    {
-      Tuple<int, int, int, int, int> t = null;
-      t.First();
-    }
-
-    [TestMethod]
-    [ExpectedException(typeof (ArgumentNullException))]
-    public void FirstOnNullOneSixTupleThrowsArgumentNullException()
-    {
-      Tuple<int, int, int, int, int, int> t = null;
-      t.First();
-    }
-
-    [TestMethod]
-    [ExpectedException(typeof (ArgumentNullException))]
-    public void FirstOnNullSevenTupleThrowsArgumentNullException()
-    {
-      Tuple<int, int, int, int, int, int, int> t = null;
-      t.First();
-    }
-
-
-    [TestMethod]
     public void FirstOnOneTuple()
     {
       const int expected = 42;
@@ -238,61 +181,6 @@ namespace Tests
       Assert.AreEqual(expected, actual);
     }
 
-    [TestMethod]
-    [ExpectedException(typeof (ArgumentNullException))]
-    public void LastOnNullOneTupleThrowsArgumentNullException()
-    {
-      Tuple<int> t = null;
-      t.Last();
-    }
-
-    [TestMethod]
-    [ExpectedException(typeof (ArgumentNullException))]
-    public void LastOnNullTwoTupleThrowsArgumentNullException()
-    {
-      Tuple<int, int> t = null;
-      t.Last();
-    }
-
-    [TestMethod]
-    [ExpectedException(typeof (ArgumentNullException))]
-    public void LastOnNullThreeTupleThrowsArgumentNullException()
-    {
-      Tuple<int, int, int> t = null;
-      t.Last();
-    }
-
-    [TestMethod]
-    [ExpectedException(typeof (ArgumentNullException))]
-    public void LastOnNullFourTupleThrowsArgumentNullException()
-    {
-      Tuple<int, int, int, int> t = null;
-      t.Last();
-    }
-
-    [TestMethod]
-    [ExpectedException(typeof (ArgumentNullException))]
-    public void LastOnNullFiveTupleThrowsArgumentNullException()
-    {
-      Tuple<int, int, int, int, int> t = null;
-      t.Last();
-    }
-
-    [TestMethod]
-    [ExpectedException(typeof (ArgumentNullException))]
-    public void LastOnNullOneSixTupleThrowsArgumentNullException()
-    {
-      Tuple<int, int, int, int, int, int> t = null;
-      t.Last();
-    }
-
-    [TestMethod]
-    [ExpectedException(typeof (ArgumentNullException))]
-    public void LastOnNullSevenTupleThrowsArgumentNullException()
-    {
-      Tuple<int, int, int, int, int, int, int> t = null;
-      t.Last();
-    }
 
     [TestMethod]
     public void LastOnOneTuple()

@@ -99,62 +99,6 @@ namespace Tests
     }
 
     [TestMethod]
-    [ExpectedException(typeof (ArgumentNullException))]
-    public void ItemOnNullOneTupleShouldThrowException()
-    {
-      Tuple<int> t = null;
-      t.Item(0);
-    }
-
-    [TestMethod]
-    [ExpectedException(typeof (ArgumentNullException))]
-    public void ItemOnNullTwoTupleShouldThrowException()
-    {
-      Tuple<int, int> t = null;
-      t.Item(0);
-    }
-
-    [TestMethod]
-    [ExpectedException(typeof (ArgumentNullException))]
-    public void ItemOnNullThreeTupleShouldThrowException()
-    {
-      Tuple<int, int, int> t = null;
-      t.Item(0);
-    }
-
-    [TestMethod]
-    [ExpectedException(typeof (ArgumentNullException))]
-    public void ItemOnNullFourTupleShouldThrowException()
-    {
-      Tuple<int, int, int, int> t = null;
-      t.Item(0);
-    }
-
-    [TestMethod]
-    [ExpectedException(typeof (ArgumentNullException))]
-    public void ItemOnNullFiveTupleShouldThrowException()
-    {
-      Tuple<int, int, int, int, int> t = null;
-      t.Item(0);
-    }
-
-    [TestMethod]
-    [ExpectedException(typeof (ArgumentNullException))]
-    public void ItemOnNullSixTupleShouldThrowException()
-    {
-      Tuple<int, int, int, int, int, int> t = null;
-      t.Item(0);
-    }
-
-    [TestMethod]
-    [ExpectedException(typeof (ArgumentNullException))]
-    public void ItemOnNullSevenTupleShouldThrowException()
-    {
-      Tuple<int, int, int, int, int, int, int> t = null;
-      t.Item(0);
-    }
-
-    [TestMethod]
     public void ItemOnOneTuple()
     {
       var t = new Tuple<int>(-1);

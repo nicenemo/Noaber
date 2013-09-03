@@ -7,28 +7,12 @@ namespace Tests
   public class TupleLengthTests
   {
     [TestMethod]
-    [ExpectedException(typeof (ArgumentNullException))]
-    public void LengthOnNullOneTupleShouldThrowException()
-    {
-      Tuple<int> t = null;
-      t.Length();
-    }
-
-    [TestMethod]
     public void LengthOnOneTuple()
     {
       const int expected = 1;
       var t = new Tuple<int>(-1);
       int actual = t.Length();
       Assert.AreEqual(expected, actual);
-    }
-
-    [TestMethod]
-    [ExpectedException(typeof (ArgumentNullException))]
-    public void LengthOnNullTwoTupleShouldThrowException()
-    {
-      Tuple<int, int> t = null;
-      t.Length();
     }
 
     [TestMethod]
@@ -40,13 +24,6 @@ namespace Tests
       Assert.AreEqual(expected, actual);
     }
 
-    [TestMethod]
-    [ExpectedException(typeof (ArgumentNullException))]
-    public void LengthOnNullThreeTupleShouldThrowException()
-    {
-      Tuple<int, int, int> t = null;
-      t.Length();
-    }
 
     [TestMethod]
     public void LengthOnThreeTuple()
@@ -57,13 +34,6 @@ namespace Tests
       Assert.AreEqual(expected, actual);
     }
 
-    [TestMethod]
-    [ExpectedException(typeof (ArgumentNullException))]
-    public void LengthOnNullFourTupleShouldThrowException()
-    {
-      Tuple<int, int, int, int> t = null;
-      t.Length();
-    }
 
     [TestMethod]
     public void LengthOnFourTuple()
@@ -74,13 +44,6 @@ namespace Tests
       Assert.AreEqual(expected, actual);
     }
 
-    [TestMethod]
-    [ExpectedException(typeof (ArgumentNullException))]
-    public void LengthOnNullFiveTupleShouldThrowException()
-    {
-      Tuple<int, int, int, int, int> t = null;
-      t.Length();
-    }
 
     [TestMethod]
     public void LengthOnFiveTuple()
@@ -93,14 +56,6 @@ namespace Tests
 
 
     [TestMethod]
-    [ExpectedException(typeof (ArgumentNullException))]
-    public void LengthOnNullSixTupleShouldThrowException()
-    {
-      Tuple<int, int, int, int, int, int> t = null;
-      t.Length();
-    }
-
-    [TestMethod]
     public void LengthOnSixTuple()
     {
       const int expected = 6;
@@ -110,29 +65,12 @@ namespace Tests
     }
 
     [TestMethod]
-    [ExpectedException(typeof (ArgumentNullException))]
-    public void LengthOnNullSevenTupleShouldThrowException()
-    {
-      Tuple<int, int, int, int, int, int, int> t = null;
-      t.Length();
-    }
-
-    [TestMethod]
     public void LengthOnSevenTuple()
     {
       const int expected = 7;
       var t = new Tuple<int, int, int, int, int, int, int>(-1, -2, -3, -4, -5, -6, -7);
       int actual = t.Length();
       Assert.AreEqual(expected, actual);
-    }
-
-
-    [TestMethod]
-    [ExpectedException(typeof (ArgumentNullException))]
-    public void LongLengthOnNullOneTupleShouldThrowException()
-    {
-      Tuple<int> t = null;
-      t.LongLength();
     }
 
     [TestMethod]
@@ -145,28 +83,12 @@ namespace Tests
     }
 
     [TestMethod]
-    [ExpectedException(typeof (ArgumentNullException))]
-    public void LongLengthOnNullTwoTupleShouldThrowException()
-    {
-      Tuple<int, int> t = null;
-      t.LongLength();
-    }
-
-    [TestMethod]
     public void LongLengthOnTwoTuple()
     {
       const long expected = 2;
       var t = new Tuple<int, int>(-1, -2);
       long actual = t.LongLength();
       Assert.AreEqual(expected, actual);
-    }
-
-    [TestMethod]
-    [ExpectedException(typeof (ArgumentNullException))]
-    public void LongLengthOnNullThreeTupleShouldThrowException()
-    {
-      Tuple<int, int, int> t = null;
-      t.LongLength();
     }
 
     [TestMethod]
@@ -179,14 +101,6 @@ namespace Tests
     }
 
     [TestMethod]
-    [ExpectedException(typeof (ArgumentNullException))]
-    public void LongLengthOnNullFourTupleShouldThrowException()
-    {
-      Tuple<int, int, int, int> t = null;
-      t.LongLength();
-    }
-
-    [TestMethod]
     public void LongLengthOnFourTuple()
     {
       const long expected = 4;
@@ -196,29 +110,12 @@ namespace Tests
     }
 
     [TestMethod]
-    [ExpectedException(typeof (ArgumentNullException))]
-    public void LongLengthOnNullFiveTupleShouldThrowException()
-    {
-      Tuple<int, int, int, int, int> t = null;
-      t.LongLength();
-    }
-
-    [TestMethod]
     public void LongLengthOnFiveTuple()
     {
       const long expected = 5;
       var t = new Tuple<int, int, int, int, int>(-1, -2, -3, -4, -5);
       long actual = t.LongLength();
       Assert.AreEqual(expected, actual);
-    }
-
-
-    [TestMethod]
-    [ExpectedException(typeof (ArgumentNullException))]
-    public void LongLengthOnNullSixTupleShouldThrowException()
-    {
-      Tuple<int, int, int, int, int, int> t = null;
-      t.LongLength();
     }
 
     [TestMethod]
@@ -231,28 +128,12 @@ namespace Tests
     }
 
     [TestMethod]
-    [ExpectedException(typeof (ArgumentNullException))]
-    public void LongLengthOnNullSevenTupleShouldThrowException()
-    {
-      Tuple<int, int, int, int, int, int, int> t = null;
-      t.LongLength();
-    }
-
-    [TestMethod]
     public void LongLengthOnSevenTuple()
     {
       const long expected = 7;
       var t = new Tuple<int, int, int, int, int, int, int>(-1, -2, -3, -4, -5, -6, -7);
       long actual = t.LongLength();
       Assert.AreEqual(expected, actual);
-    }
-
-    [TestMethod]
-    [ExpectedException(typeof (ArgumentNullException))]
-    public void CountOnNullOneTupleShouldThrowException()
-    {
-      Tuple<int> t = null;
-      t.Count();
     }
 
     [TestMethod]
@@ -265,28 +146,12 @@ namespace Tests
     }
 
     [TestMethod]
-    [ExpectedException(typeof (ArgumentNullException))]
-    public void CountOnNullTwoTupleShouldThrowException()
-    {
-      Tuple<int, int> t = null;
-      t.Count();
-    }
-
-    [TestMethod]
     public void CountOnTwoTuple()
     {
       const int expected = 2;
       var t = new Tuple<int, int>(-1, -2);
       int actual = t.Count();
       Assert.AreEqual(expected, actual);
-    }
-
-    [TestMethod]
-    [ExpectedException(typeof (ArgumentNullException))]
-    public void CountOnNullThreeTupleShouldThrowException()
-    {
-      Tuple<int, int, int> t = null;
-      t.Count();
     }
 
     [TestMethod]
@@ -299,28 +164,12 @@ namespace Tests
     }
 
     [TestMethod]
-    [ExpectedException(typeof (ArgumentNullException))]
-    public void CountOnNullFourTupleShouldThrowException()
-    {
-      Tuple<int, int, int, int> t = null;
-      t.Count();
-    }
-
-    [TestMethod]
     public void CountOnFourTuple()
     {
       const int expected = 4;
       var t = new Tuple<int, int, int, int>(-1, -2, -3, -4);
       int actual = t.Count();
       Assert.AreEqual(expected, actual);
-    }
-
-    [TestMethod]
-    [ExpectedException(typeof (ArgumentNullException))]
-    public void CountOnNullFiveTupleShouldThrowException()
-    {
-      Tuple<int, int, int, int, int> t = null;
-      t.Count();
     }
 
     [TestMethod]
@@ -332,15 +181,6 @@ namespace Tests
       Assert.AreEqual(expected, actual);
     }
 
-
-    [TestMethod]
-    [ExpectedException(typeof (ArgumentNullException))]
-    public void CountOnNullSixTupleShouldThrowException()
-    {
-      Tuple<int, int, int, int, int, int> t = null;
-      t.Count();
-    }
-
     [TestMethod]
     public void CountOnSixTuple()
     {
@@ -348,14 +188,6 @@ namespace Tests
       var t = new Tuple<int, int, int, int, int, int>(-1, -2, -3, -4, -5, -6);
       int actual = t.Count();
       Assert.AreEqual(expected, actual);
-    }
-
-    [TestMethod]
-    [ExpectedException(typeof (ArgumentNullException))]
-    public void CountOnNullSevenTupleShouldThrowException()
-    {
-      Tuple<int, int, int, int, int, int, int> t = null;
-      t.Count();
     }
 
     [TestMethod]

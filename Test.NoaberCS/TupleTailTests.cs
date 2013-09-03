@@ -7,54 +7,6 @@ namespace Tests
   public class TupleTailTests
   {
     [TestMethod]
-    [ExpectedException(typeof (ArgumentNullException))]
-    public void TailOnNullTwoTupleThrowsArgumentNullException()
-    {
-      Tuple<int, int> t = null;
-      t.Tail();
-    }
-
-    [TestMethod]
-    [ExpectedException(typeof (ArgumentNullException))]
-    public void TailOnNullThreeTupleThrowsArgumentNullException()
-    {
-      Tuple<int, int, int> t = null;
-      t.Tail();
-    }
-
-    [TestMethod]
-    [ExpectedException(typeof (ArgumentNullException))]
-    public void TailOnNullFourTupleThrowsArgumentNullException()
-    {
-      Tuple<int, int, int, int> t = null;
-      t.Tail();
-    }
-
-    [TestMethod]
-    [ExpectedException(typeof (ArgumentNullException))]
-    public void TailOnNullFiveTupleThrowsArgumentNullException()
-    {
-      Tuple<int, int, int, int, int> t = null;
-      t.Tail();
-    }
-
-    [TestMethod]
-    [ExpectedException(typeof (ArgumentNullException))]
-    public void TailOnNullOneSixTupleThrowsArgumentNullException()
-    {
-      Tuple<int, int, int, int, int, int> t = null;
-      t.Tail();
-    }
-
-    [TestMethod]
-    [ExpectedException(typeof (ArgumentNullException))]
-    public void TailOnNullSevenTupleThrowsArgumentNullException()
-    {
-      Tuple<int, int, int, int, int, int, int> t = null;
-      t.Tail();
-    }
-
-    [TestMethod]
     public void TailTwoTuple()
     {
       var expected = new Tuple<int>(1);
