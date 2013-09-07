@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Diagnostics.Contracts;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 
 
 public static  class CollectionExtensions
@@ -54,5 +55,19 @@ public static  class CollectionExtensions
       acc = func(acc, v);
     }
     return acc;
+  }
+
+  public static double Norm<T>(this IEnumerable<T> value, Func<T, Double> func)
+  {
+    Contract.Requires<ArgumentNullException>(value != null);
+    Contract.Requires<ArgumentNullException>(func != null);
+    return Math.Sqrt((from v in value select Math.Pow(func(v), 2.0)).Sum());
+  }
+
+  public static double Norm(this System.Collections.IEnumerable value, Func<object, Double> func)
+  {
+    Contract.Requires<ArgumentNullException>(value != null);
+    Contract.Requires<ArgumentNullException>(func != null);
+    return value.Cast<object>().Norm(func);
   }
 }
