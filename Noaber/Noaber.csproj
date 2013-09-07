@@ -136,6 +136,7 @@
     <Compile Include="TupleExtensions\TupleExtensions.MinOfNullableLong.cs" />
     <Compile Include="TupleExtensions\TupleExtensions.MinOfNullableShort.cs" />
     <Compile Include="TupleExtensions\TupleExtensions.MinOfShort.cs" />
+    <Compile Include="TupleExtensions\TupleExtensions.NormOfDouble.cs" />
     <Compile Include="TupleExtensions\TupleExtensions.Reverse.cs" />
     <Compile Include="TupleExtensions\TupleExtensions.Select.cs" />
     <Compile Include="TupleExtensions\TupleExtensions.SumOfDecimal.cs" />

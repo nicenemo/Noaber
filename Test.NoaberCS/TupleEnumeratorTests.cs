@@ -13,11 +13,8 @@ namespace Tests
       const int expected = -1;
       int actual = 0;
 
-      foreach (int v in t.AsEnumerable())
-      {
-        actual += v;
-      }
-      Assert.AreEqual(expected, actual);
+     foreach (int v in t.AsEnumerable()) actual += v;
+     Assert.AreEqual(expected, actual);
     }
 
     [TestMethod]
@@ -26,11 +23,8 @@ namespace Tests
       var t = new Tuple<int, int>(-1, -2);
       const int expected = -3;
       int actual = 0;
-      foreach (int v in t.AsEnumerable())
-      {
-        actual += v;
-      }
-      Assert.AreEqual(expected, actual);
+     foreach (int v in t.AsEnumerable()) actual += v;
+     Assert.AreEqual(expected, actual);
     }
 
     [TestMethod]
@@ -39,11 +33,8 @@ namespace Tests
       var t = new Tuple<int, int, int>(-1, -2, -3);
       const int expected = -6;
       int actual = 0;
-      foreach (int v in t.AsEnumerable())
-      {
-        actual += v;
-      }
-      Assert.AreEqual(expected, actual);
+      foreach (int v in t.AsEnumerable()) actual += v;
+     Assert.AreEqual(expected, actual);
     }
 
     [TestMethod]
@@ -52,11 +43,8 @@ namespace Tests
       var t = new Tuple<int, int, int, int>(-1, -2, -3, -4);
       const int expected = -10;
       int actual = 0;
-      foreach (int v in t.AsEnumerable())
-      {
-        actual += v;
-      }
-      Assert.AreEqual(expected, actual);
+      foreach (int v in t.AsEnumerable()) actual += v;
+     Assert.AreEqual(expected, actual);
     }
 
     [TestMethod]
@@ -65,10 +53,7 @@ namespace Tests
       var t = new Tuple<int, int, int, int, int>(-1, -2, -3, -4, -5);
       const int expected = -15;
       int actual = 0;
-      foreach (int v in t.AsEnumerable())
-      {
-        actual += v;
-      }
+      foreach (int v in t.AsEnumerable()) actual += v;
       Assert.AreEqual(expected, actual);
     }
 
@@ -78,10 +63,7 @@ namespace Tests
       var t = new Tuple<int, int, int, int, int, int>(-1, -2, -3, -4, -5, -6);
       const int expected = -21;
       int actual = 0;
-      foreach (int v in t.AsEnumerable())
-      {
-        actual += v;
-      }
+      foreach (int v in t.AsEnumerable()) actual += v;
       Assert.AreEqual(expected, actual);
     }
 
@@ -91,10 +73,7 @@ namespace Tests
       var t = new Tuple<int, int, int, int, int, int, int>(-1, -2, -3, -4, -5, -6, -7);
       const int expected = -28;
       int actual = 0;
-      foreach (int v in t.AsEnumerable())
-      {
-        actual += v;
-      }
+      foreach (int v in t.AsEnumerable()) actual += v;
       Assert.AreEqual(expected, actual);
     }
 

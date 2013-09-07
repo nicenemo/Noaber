@@ -91,6 +91,7 @@
     <Compile Include="TupleMinTests.Integer.cs" />
     <Compile Include="TupleMinTests.Long.cs" />
     <Compile Include="TupleMinTests.Short.cs" />
+    <Compile Include="TupleNormTests.Double.cs" />
     <Compile Include="TupleReverseTests.cs" />
     <Compile Include="TupleSumTests.cs" />
     <Compile Include="TupleSumTests.Double.cs" />
