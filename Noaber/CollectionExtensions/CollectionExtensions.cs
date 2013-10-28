@@ -70,4 +70,30 @@ public static  class CollectionExtensions
     Contract.Requires<ArgumentNullException>(func != null);
     return value.Cast<object>().Norm(func);
   }
+   
+   /// <summary>
+   /// Returns the maximum element out of an generic IEnumerable using an IComparer.
+   /// </summary>
+  /// <typeparam name="TSource">Type of the elements in the IEnumerable</typeparam>
+   /// <param name="value">enumerable to get the maximum value from</param>
+   /// <param name="comparer">comparer to use</param>
+   /// <returns>the maximum value from value if any</returns>
+  public static TSource Max<TSource>(this IEnumerable<TSource> value, IComparer<TSource> comparer) 
+  {
+      Contract.Requires<ArgumentNullException>(value != null);
+      return value.Aggregate<TSource>((acc, obj) => comparer.Compare(acc, obj) > 0 ? acc : obj);
+  }
+
+  /// <summary>
+  /// Returns the minimum element out of an generic IEnumerable sing an IComparer.
+  /// </summary>
+  /// <typeparam name="TSource">Type of the elements in the IEnumerable</typeparam>
+  /// <param name="value">enumerable to get the minimum value from</param>
+  /// <param name="comparer">comparer to use</param>
+  /// <returns>the minimum value from value if any</returns>
+  public static TSource Min<TSource>(this IEnumerable<TSource> value, IComparer<TSource> comparer)
+  {
+      Contract.Requires<ArgumentNullException>(value != null);
+      return value.Aggregate<TSource>((acc, obj) => comparer.Compare(acc, obj) < 0 ? acc : obj);
+  }
 }

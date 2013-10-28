@@ -86,6 +86,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CollectionExtensions\CollectionExtensions.cs" />
+    <Compile Include="ComparableExtensions.cs" />
     <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="Noaber.cs" />
     <Compile Include="TimeSpanExtensions.cs" />
