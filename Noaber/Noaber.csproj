@@ -90,6 +90,7 @@
     <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="Noaber.cs" />
     <Compile Include="TimeSpanExtensions.cs" />
+    <Compile Include="TupleExtensions\TupleExtensions.MinWithGenericIComparer.cs" />
     <Compile Include="TupleExtensions\TupleExtensions.Where.cs" />
     <Compile Include="TupleExtensions\TupleExtensions.AverageOfNullableShort.cs" />
     <Compile Include="TupleExtensions\TupleExtensions.AverageOfNullableLong.cs" />
@@ -155,6 +156,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Noaber.snk" />
+    <Compile Include="TupleExtensions\TupleExtensions.MaxWithGenericIComparer.cs" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="TupleExtensions\TupleExtensions.Concat.cs" />

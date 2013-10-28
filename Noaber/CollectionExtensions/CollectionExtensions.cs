@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics.Contracts;
 using System.Linq;
@@ -96,4 +97,37 @@ public static  class CollectionExtensions
       Contract.Requires<ArgumentNullException>(value != null);
       return value.Aggregate<TSource>((acc, obj) => comparer.Compare(acc, obj) < 0 ? acc : obj);
   }
+
+ //public static object Aggregate(this IEnumerable value,object defaultValue, Func<object,object,object> func){
+ //    Contract.Requires<ArgumentNullException>(value != null);
+ //    Contract.Requires<ArgumentNullException>(func != null);
+    
+
+ //}
+
+ // /// <summary>
+ // /// Returns the maximum element out of an generic IEnumerable using an IComparer.
+ // /// </summary>
+ // /// <typeparam name="TSource">Type of the elements in the IEnumerable</typeparam>
+ // /// <param name="value">enumerable to get the maximum value from</param>
+ // /// <param name="comparer">comparer to use</param>
+ // /// <returns>the maximum value from value if any</returns>
+ // public static object Max(this IEnumerable value, IComparer comparer)
+ // {
+ //     Contract.Requires<ArgumentNullException>(value != null);
+ //     return value.Aggregate((acc, obj) => comparer.Compare(acc, obj) > 0 ? acc : obj);
+ // }
+
+ // /// <summary>
+ // /// Returns the minimum element out of an generic IEnumerable sing an IComparer.
+ // /// </summary>
+ // /// <typeparam name="TSource">Type of the elements in the IEnumerable</typeparam>
+ // /// <param name="value">enumerable to get the minimum value from</param>
+ // /// <param name="comparer">comparer to use</param>
+ // /// <returns>the minimum value from value if any</returns>
+ // public static object Min(this IEnumerable value, IComparer comparer)
+ // {
+ //     Contract.Requires<ArgumentNullException>(value != null);
+ //     return value.Aggregate((acc, obj) => comparer.Compare(acc, obj) < 0 ? acc : obj);
+ // }
 }
