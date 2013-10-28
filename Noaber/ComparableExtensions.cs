@@ -5,7 +5,7 @@
  public static class ComparableExtensions
  {
      /// <summary>
-     /// Returns the Maximum of the two arguments
+     /// Returns the maximum of the two arguments
      /// </summary>
      /// <param name="value">IComparable value to compare an object to</param>
      /// <param name="obj">object to compare to</param>
@@ -14,7 +14,7 @@
             return value.CompareTo(obj) >0?value:obj;
       }
       /// <summary>
-      /// Returns the Minimum of the two arguments
+      /// Returns the minimum of the two arguments
       /// </summary>
       /// <param name="value">Icomparable value to compare an object to</param>
       /// <param name="obj"></param>
@@ -23,7 +23,7 @@
             return value.CompareTo(obj) >0?value:obj;
       }
       /// <summary>
-      /// Returns the Minimum of the two arguments
+      /// Returns the maximum of the two arguments
       /// </summary>
       /// <param name="value">Icomparable value to compare an object to</param>
       /// <param name="obj"></param>
@@ -33,7 +33,7 @@
           return value.CompareTo(obj)>0? (T) value:obj;
       }
       /// <summary>
-      /// Returns the Minimum of the two arguments
+      /// Returns the minimum of the two arguments
       /// </summary>
       /// <param name="value">Icomparable value to compare an object to</param>
       /// <param name="obj"></param>
